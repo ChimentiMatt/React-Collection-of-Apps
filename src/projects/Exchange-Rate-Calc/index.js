@@ -1,190 +1,239 @@
 import React, { useState } from "react";
+import Crypto from "./ERC-Crypto/ERC-Crypto.js";
 
 //https://www.exchangerate-api.com/
 
 export default function ERCPage() {
-  const [value1, setValue1] = useState("");
-  const [quantity1, setQuantity1] = useState(0)
-  const [value2, setValue2] = useState("");
-  const [quantity2, setQuantity2] = useState(0)
+  const [currency1, SetCurrency1] = useState("");
+  const [quantity1, setQuantity1] = useState(0);
+  const [currency2, setCurrency2] = useState("");
+  const [rate, setRate] = useState(0);
+
+  const [exRate, setExRate] = useState(0);
+  const [exRate2, setExRate2] = useState(0);
 
   function handleInputValue1(event) {
-    setValue1(event.target.value);
+    SetCurrency1(event.target.value);
+  }
+  function handleInputValue2(event) {
+    setCurrency2(event.target.value);
   }
   function handleQuantityValue1(event) {
     setQuantity1(event.target.value);
+
   }
-  function handleInputValue2(event) {
-    setValue2(event.target.value);
-  }
-  function handleQuantityValue2(event) {
-    setQuantity2(event.target.value);
-  }
-  const logValue = (event) => {
-    setValue1(event.target.value);
-    console.log(value1, "Value 1");
-    console.log(quantity1, ': Quanitiy 1')
-    console.log(value2, "Value 2");
-    console.log(quantity2, ': Quanitiy 2')
-  };
 
   function Button() {
-    return <button onClick={Calculate}> Covert</button>;
+    return (
+      <>
+        <button id="erc-btn" onClick={Calculate}>
+          {" "}
+          Convert
+        </button>
+      </>
+    );
   }
-  
-  function Calculate() {
+
+  function Calculate(rate) {
     // const currency_one = currencyEl_one.value;
-  
-    fetch(`https://api.exchangerate-api.com/v4/latest/USD`)
+
+    fetch(`https://api.exchangerate-api.com/v4/latest/${currency1}`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "USD Log");
-  
-        const rate = data.rates[value2];
-        let exch1 = `1 ${value1} = ${rate} ${value2}`
-        console.log(rate);
-        console.log(exch1, 'exch1');
+
+        setRate(data.rates[currency2]);
+        // let currency1V = { currency1 };
+        let rateV = data.rates[currency2];
+        let exRate = `${quantity1} ${currency1} = ${rateV} ${currency2}`;
+        let exRate2 = (quantity1 * rateV).toFixed(2);
+        setExRate(exRate);
+        setExRate2(exRate2);
       });
+
   }
-  
-  function Rate() {
-    return <div></div>;
-  }
+
   return (
     <>
-      <div>
-        <button onClick={logValue}>Log value</button>
+      <div className="cer-body">
+          <h1>Exchange Rate Converter</h1>
+        <div className="cer-container-form">
+
+          <div className="cer-main-row">
+            <div className="cer-amount">
+              <p>Amount</p>
+              <div className="cer-container-amount">
+                <input
+                  type="number"
+
+                  onChange={handleQuantityValue1}
+                  className="amount-one"
+                  placeholder="0.00"
+                ></input>
+              </div>
+            </div>
+            <div className="cer-from">
+              <p>From</p>
+              <form onChange={handleInputValue1}>
+                <select className="currency-one">
+                  <option value="AED">Select</option>
+                  <option value="AED">AED - Emirati Dirham</option>
+                  <option value="ARS">ARS- Argentine Peso</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="BGN">BGN- Bulgarian Lev</option>
+                  <option value="BRL">BRL - Brazilian Real</option>
+                  <option value="BSD">BSD - Bahamian Dollar</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CLP">CLP - Chilean Peso</option>
+                  <option value="CNY">CNY - Chinese Yuan Renminbi</option>
+                  <option value="COP">COP - Colombian Peso</option>
+                  <option value="CZK">CZK - Czech Koruna</option>
+                  <option value="DKK">DKK - Danish Krone</option>
+                  <option value="DOP">DOP - Dominican Peso</option>
+                  <option value="EGP">EGP - Egyptian Pound</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="FJD">FJD - Fijian Dollar</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="GTQ">GTQ - Guatemalan Quetzal</option>
+                  <option value="HKD">HKD - Hong Kong Dollar</option>
+                  <option value="HRK">HRK - Croatian Kuna</option>
+                  <option value="HUF">HUF - Hungarian Forint</option>
+                  <option value="IDR">IDR - Indonesian Rupiah</option>
+                  <option value="ILS">ILS - Israeli Shekel</option>
+                  <option value="INR">INR - Indian Rupee</option>
+                  <option value="ISK">ISK - Icelandic Krona</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="KRW">KRW - South Korean Won</option>
+                  <option value="KZT">KZT - Kazakhstani Tenge</option>
+                  <option value="MXN">MXN - Mexican Peso</option>
+                  <option value="MYR">MYR - Malaysian Ringgit</option>
+                  <option value="NOK">NOK - Norwegian Krone</option>
+                  <option value="NZD">NZD - New Zealand Dollar</option>
+                  <option value="PAB">PAB - Panamanian Balboa</option>
+                  <option value="PEN">PEN - Peruvian Sol</option>
+                  <option value="PHP">PHP - Philippine Peso</option>
+                  <option value="PKR">PKR - Pakistani Rupee</option>
+                  <option value="PLN">PLN - Polish Zloty</option>
+                  <option value="PYG">PYG - Paraguayan Guarani </option>
+                  <option value="RON">RON - Romanian Leu</option>
+                  <option value="RUB">RUB - Russian Ruble</option>
+                  <option value="SAR">SAR - Saudi Arabian Riyal</option>
+                  <option value="SEK">SEK - Swedish Krona</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="THB">THB - Thai Baht</option>
+                  <option value="TRY">TRY - Turkish Lira</option>
+                  <option value="TWD">TWD - Taiwan New Dollar</option>
+                  <option value="UAH">UAH - Ukrainian Hryvnia</option>
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="UYU">UYU - Uruguayan Peso</option>
+                  <option value="VND">VND - Vietnamese Dong</option>
+                  <option value="ZAR">ZAR - South African Rand</option>
+                </select>
+              </form>
+            </div>
+
+            <div>
+              <div className="cer-to">
+                <p>To</p>
+                <div className="cer-half-row2">
+                  <form onChange={handleInputValue2}>
+                    <select className="currency-two">
+                    <option value="AED">Select</option>
+                  <option value="AED">AED - Emirati Dirham</option>
+                  <option value="ARS">ARS- Argentine Peso</option>
+                  <option value="AUD">AUD - Australian Dollar</option>
+                  <option value="BGN">BGN- Bulgarian Lev</option>
+                  <option value="BRL">BRL - Brazilian Real</option>
+                  <option value="BSD">BSD - Bahamian Dollar</option>
+                  <option value="CAD">CAD - Canadian Dollar</option>
+                  <option value="CHF">CHF - Swiss Franc</option>
+                  <option value="CLP">CLP - Chilean Peso</option>
+                  <option value="CNY">CNY - Chinese Yuan Renminbi</option>
+                  <option value="COP">COP - Colombian Peso</option>
+                  <option value="CZK">CZK - Czech Koruna</option>
+                  <option value="DKK">DKK - Danish Krone</option>
+                  <option value="DOP">DOP - Dominican Peso</option>
+                  <option value="EGP">EGP - Egyptian Pound</option>
+                  <option value="EUR">EUR - Euro</option>
+                  <option value="FJD">FJD - Fijian Dollar</option>
+                  <option value="GBP">GBP - British Pound</option>
+                  <option value="GTQ">GTQ - Guatemalan Quetzal</option>
+                  <option value="HKD">HKD - Hong Kong Dollar</option>
+                  <option value="HRK">HRK - Croatian Kuna</option>
+                  <option value="HUF">HUF - Hungarian Forint</option>
+                  <option value="IDR">IDR - Indonesian Rupiah</option>
+                  <option value="ILS">ILS - Israeli Shekel</option>
+                  <option value="INR">INR - Indian Rupee</option>
+                  <option value="ISK">ISK - Icelandic Krona</option>
+                  <option value="JPY">JPY - Japanese Yen</option>
+                  <option value="KRW">KRW - South Korean Won</option>
+                  <option value="KZT">KZT - Kazakhstani Tenge</option>
+                  <option value="MXN">MXN - Mexican Peso</option>
+                  <option value="MYR">MYR - Malaysian Ringgit</option>
+                  <option value="NOK">NOK - Norwegian Krone</option>
+                  <option value="NZD">NZD - New Zealand Dollar</option>
+                  <option value="PAB">PAB - Panamanian Balboa</option>
+                  <option value="PEN">PEN - Peruvian Sol</option>
+                  <option value="PHP">PHP - Philippine Peso</option>
+                  <option value="PKR">PKR - Pakistani Rupee</option>
+                  <option value="PLN">PLN - Polish Zloty</option>
+                  <option value="PYG">PYG - Paraguayan Guarani </option>
+                  <option value="RON">RON - Romanian Leu</option>
+                  <option value="RUB">RUB - Russian Ruble</option>
+                  <option value="SAR">SAR - Saudi Arabian Riyal</option>
+                  <option value="SEK">SEK - Swedish Krona</option>
+                  <option value="SGD">SGD - Singapore Dollar</option>
+                  <option value="THB">THB - Thai Baht</option>
+                  <option value="TRY">TRY - Turkish Lira</option>
+                  <option value="TWD">TWD - Taiwan New Dollar</option>
+                  <option value="UAH">UAH - Ukrainian Hryvnia</option>
+                  <option value="USD">USD - US Dollar</option>
+                  <option value="UYU">UYU - Uruguayan Peso</option>
+                  <option value="VND">VND - Vietnamese Dong</option>
+                  <option value="ZAR">ZAR - South African Rand</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="erc-container-dispaly-results">
+            <div className="erc-dispaly-results" >
+              <DisplayRate
+                exRate={exRate}
+                exRate2={exRate2}
+                currency1={currency1}
+                currency2={currency2}
+                quantity1={quantity1}
+              />
+            </div>
+          </div>
+          <div className="erc-conctainer-btn-row">
+            <div className="erc-btn-row">
+              <Button />
+            </div>
+          </div>
+        </div>
       </div>
-      <form onChange={handleInputValue1}>
-        <select id="currency-one">
-          <option value="AED">AED</option>
-          <option value="ARS">ARS</option>
-          <option value="AUD">AUD</option>
-          <option value="BGN">BGN</option>
-          <option value="BRL">BRL</option>
-          <option value="BSD">BSD</option>
-          <option value="CAD">CAD</option>
-          <option value="CHF">CHF</option>
-          <option value="CLP">CLP</option>
-          <option value="CNY">CNY</option>
-          <option value="COP">COP</option>
-          <option value="CZK">CZK</option>
-          <option value="DKK">DKK</option>
-          <option value="DOP">DOP</option>
-          <option value="EGP">EGP</option>
-          <option value="EUR">EUR</option>
-          <option value="FJD">FJD</option>
-          <option value="GBP">GBP</option>
-          <option value="GTQ">GTQ</option>
-          <option value="HKD">HKD</option>
-          <option value="HRK">HRK</option>
-          <option value="HUF">HUF</option>
-          <option value="IDR">IDR</option>
-          <option value="ILS">ILS</option>
-          <option value="INR">INR</option>
-          <option value="ISK">ISK</option>
-          <option value="JPY">JPY</option>
-          <option value="KRW">KRW</option>
-          <option value="KZT">KZT</option>
-          <option value="MXN">MXN</option>
-          <option value="MYR">MYR</option>
-          <option value="NOK">NOK</option>
-          <option value="NZD">NZD</option>
-          <option value="PAB">PAB</option>
-          <option value="PEN">PEN</option>
-          <option value="PHP">PHP</option>
-          <option value="PKR">PKR</option>
-          <option value="PLN">PLN</option>
-          <option value="PYG">PYG</option>
-          <option value="RON">RON</option>
-          <option value="RUB">RUB</option>
-          <option value="SAR">SAR</option>
-          <option value="SEK">SEK</option>
-          <option value="SGD">SGD</option>
-          <option value="THB">THB</option>
-          <option value="TRY">TRY</option>
-          <option value="TWD">TWD</option>
-          <option value="UAH">UAH</option>
-          <option value="USD" defaultValue>
-            USD
-          </option>
-          <option value="UYU">UYU</option>
-          <option value="VND">VND</option>
-          <option value="ZAR">ZAR</option>
-        </select>
-      </form>
-
-
-
-      <input type="number" onChange={handleQuantityValue1} id="amount-one" placeholder="0"></input>
-      <div>
-
-
-
-        <form onChange={handleInputValue2}>
-          <select id="currency-one">
-            <option value="AED">AED</option>
-            <option value="ARS">ARS</option>
-            <option value="AUD" defaultValue>
-              AUD
-            </option>
-            <option value="BGN">BGN</option>
-            <option value="BRL">BRL</option>
-            <option value="BSD">BSD</option>
-            <option value="CAD">CAD</option>
-            <option value="CHF">CHF</option>
-            <option value="CLP">CLP</option>
-            <option value="CNY">CNY</option>
-            <option value="COP">COP</option>
-            <option value="CZK">CZK</option>
-            <option value="DKK">DKK</option>
-            <option value="DOP">DOP</option>
-            <option value="EGP">EGP</option>
-            <option value="EUR">EUR</option>
-            <option value="FJD">FJD</option>
-            <option value="GBP">GBP</option>
-            <option value="GTQ">GTQ</option>
-            <option value="HKD">HKD</option>
-            <option value="HRK">HRK</option>
-            <option value="HUF">HUF</option>
-            <option value="IDR">IDR</option>
-            <option value="ILS">ILS</option>
-            <option value="INR">INR</option>
-            <option value="ISK">ISK</option>
-            <option value="JPY">JPY</option>
-            <option value="KRW">KRW</option>
-            <option value="KZT">KZT</option>
-            <option value="MXN">MXN</option>
-            <option value="MYR">MYR</option>
-            <option value="NOK">NOK</option>
-            <option value="NZD">NZD</option>
-            <option value="PAB">PAB</option>
-            <option value="PEN">PEN</option>
-            <option value="PHP">PHP</option>
-            <option value="PKR">PKR</option>
-            <option value="PLN">PLN</option>
-            <option value="PYG">PYG</option>
-            <option value="RON">RON</option>
-            <option value="RUB">RUB</option>
-            <option value="SAR">SAR</option>
-            <option value="SEK">SEK</option>
-            <option value="SGD">SGD</option>
-            <option value="THB">THB</option>
-            <option value="TRY">TRY</option>
-            <option value="TWD">TWD</option>
-            <option value="UAH">UAH</option>
-            <option value="USD">USD</option>
-            <option value="UYU">UYU</option>
-            <option value="VND">VND</option>
-            <option value="ZAR">ZAR</option>
-          </select>
-        </form>
-        <input type="number" onChange={handleQuantityValue2} id="amount-one" placeholder="0" ></input>
-      </div>
-
-      <Button />
     </>
   );
 }
 
+function DisplayRate({ exRate, exRate2, currency1, currency2, quantity1 }) {
+  if (exRate === 0) {
+    return <p></p>;
+  } else {
+    return (
+      <>
 
+        <p className="erc-standard">
+          {quantity1} {currency1} = 
+        </p>
+        <p className="erc-exchange-result">{exRate2} {currency2}</p>
+
+      </>
+    );
+  }
+}
