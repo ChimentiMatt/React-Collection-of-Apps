@@ -12,15 +12,17 @@ export default function ERCPage() {
   const [exRate, setExRate] = useState(0);
   const [exRate2, setExRate2] = useState(0);
 
+  function handleQuantityValue1(event) {
+    setQuantity1(event.target.value);
+    Calculate()
+  }
+
   function handleInputValue1(event) {
     SetCurrency1(event.target.value);
+
   }
   function handleInputValue2(event) {
     setCurrency2(event.target.value);
-  }
-  function handleQuantityValue1(event) {
-    setQuantity1(event.target.value);
-
   }
 
   function Button() {
@@ -42,16 +44,17 @@ export default function ERCPage() {
       .then((data) => {
         console.log(data, "USD Log");
 
-        setRate(data.rates[currency2]);
-        // let currency1V = { currency1 };
         let rateV = data.rates[currency2];
         let exRate = `${quantity1} ${currency1} = ${rateV} ${currency2}`;
         let exRate2 = (quantity1 * rateV).toFixed(2);
+        setRate(data.rates[currency2]);
         setExRate(exRate);
         setExRate2(exRate2);
+     
       });
 
   }
+
 
   return (
     <>
