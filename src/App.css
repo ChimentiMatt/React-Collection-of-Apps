@@ -144,7 +144,13 @@ input[type=number]::-webkit-outer-spin-button {
 .erc-container-dispaly-results{
   display: flex;
   justify-content: center;
+  /* visibility: hidden; */
+}
 
+.erc-container-dispaly-results-hidden{
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .erc-dispaly-results{
@@ -153,7 +159,7 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: center;
   text-align: start;
   width: 785px;
-
+  /* visibility: hidden; */
 }
 
 .erc-hidden p{
