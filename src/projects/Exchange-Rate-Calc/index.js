@@ -1,25 +1,18 @@
 import React, { useState, useEffect } from "react";
-import Crypto from "./ERC-Crypto/ERC-Crypto.js";
 
 //https://www.exchangerate-api.com/
 
 export default function ERCPage() {
   const [currency1, SetCurrency1] = useState("");
 
-  useEffect(() => {
-    Calculate();
-  }, [currency1]);
-
+  useEffect(() => {Calculate()}, [currency1]);
   const [quantity1, setQuantity1] = useState(0);
 
-  useEffect(() => {
-    Calculate();
-  }, [quantity1]);
+  useEffect(() => {Calculate()}, [quantity1]);
   const [currency2, setCurrency2] = useState("");
 
-  useEffect(() => {
-    Calculate();
-  }, [currency2]);
+  useEffect(() => {Calculate()}, [currency2]);
+
 
   const [mathText, setMathText] = useState(false);
 
@@ -30,7 +23,7 @@ export default function ERCPage() {
 
   function handleQuantityValue1(event) {
     setQuantity1(event.target.value);
-    console.log(mathText)
+    console.log(mathText);
   }
 
   function handleInputValue1(event) {
@@ -54,7 +47,7 @@ export default function ERCPage() {
 
   function FirstRun() {
     setMathText(true);
-    console.log(mathText)
+    console.log(mathText);
   }
 
   function Calculate(rate) {
@@ -222,10 +215,10 @@ export default function ERCPage() {
             </div>
           </div>
 
-          {mathText ? 
+          {mathText ? (
             <div className="erc-container-dispaly-results">
               <div className="erc-dispaly-results">
-              <DisplayRate
+                <DisplayRate
                   exRate={exRate}
                   exRate2={exRate2}
                   currency1={currency1}
@@ -234,13 +227,11 @@ export default function ERCPage() {
                 />
               </div>
             </div>
-           : 
+          ) : (
             <div className="erc-container-dispaly-results">
-              <div className="erc-dispaly-results">
-
-              </div>
+              <div className="erc-dispaly-results"></div>
             </div>
-          }
+          )}
 
           <div className="erc-conctainer-btn-row">
             <div className="erc-btn-row">
@@ -248,6 +239,8 @@ export default function ERCPage() {
             </div>
           </div>
         </div>
+        <br></br>
+
       </div>
     </>
   );

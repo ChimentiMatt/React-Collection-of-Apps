@@ -1,39 +1,41 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
 /* Removes gross firebox input="number" up down bars */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 /* Remove controls from Safari and Chrome */
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; /* Removes leftover margin */
 }
 
 .cer-body {
- display: flex;
+  display: flex;
   padding-top: 100px;
- flex-direction: column;
- /* text-align: center; */
- align-items: center;
- /* border:  10px solid slateblue; */
+
+  flex-direction: column;
+  /* text-align: center; */
+  align-items: center;
+  /* border:  10px solid slateblue; */
   background-color: #4682b4;
   height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .cer-body h1 {
   margin: 15px;
   color: white;
   font-size: 45px;
-
+  margin-bottom: 25px;
 }
 
-.cer-container-form{
+.cer-container-form {
   border: 1px solid black;
   background-color: rgb(245, 245, 245);
   border-radius: 7px;
@@ -41,25 +43,21 @@ input[type=number]::-webkit-outer-spin-button {
   padding-bottom: 25px;
 }
 
-.cer-amount{
+.cer-amount {
   text-align: start;
-
-
 }
 
-.cer-from{
+.cer-from {
   text-align: start;
   margin-left: 15px;
-
 }
 
-.cer-to{
+.cer-to {
   text-align: start;
   margin-left: 15px;
-
 }
 
-.cer-main-row{
+.cer-main-row {
   /* border: 1px solid rgba(0, 255, 128, 0.267); */
   width: 900px;
   margin-top: 50px;
@@ -69,14 +67,13 @@ input[type=number]::-webkit-outer-spin-button {
   box-sizing: border-box;
 }
 
-.cer-container-amount{
+.cer-container-amount {
   display: flex;
   justify-content: center;
   font-size: 25px;
-
 }
 
-.amount-one{
+.amount-one {
   box-sizing: border-box;
   height: 30px;
   width: 250px;
@@ -84,26 +81,24 @@ input[type=number]::-webkit-outer-spin-button {
   /* border-color:rgba(211, 211, 211, 0.301) ; */
   border-radius: 7px;
   border-width: thin;
-  border-color: black ;
-
+  border-color: black;
 }
 
-.currency-one{
+.currency-one {
   height: 30px;
   box-sizing: border-box;
   width: 250px;
-  border-color: black ;
+  border-color: black;
   border-radius: 7px;
   border-width: thin;
 }
 
-.cer-half-row2{
+.cer-half-row2 {
   display: flex;
   justify-content: center;
-
 }
 
-.currency-two{
+.currency-two {
   height: 30px;
   box-sizing: border-box;
   width: 250px;
@@ -111,49 +106,47 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 7px;
   border-width: thin;
 }
-.erc-btn-row{
+.erc-btn-row {
   display: flex;
   justify-content: flex-end;
   /* border: 1px solid blue; */
   width: 785px;
-
 }
 
-.erc-conctainer-btn-row{
+.erc-conctainer-btn-row {
   display: flex;
   justify-content: center;
 }
 
-
-#erc-btn{
+#erc-btn {
   width: 80px;
   padding: 10px;
-  background-color:steelblue;
+  background-color: steelblue;
   color: white;
-  border-radius: 7px ;
-  border-width:  3px;
+  border-radius: 7px;
+  border-width: 3px;
 
   border: none;
 }
 
-#erc-btn:hover{
+#erc-btn:hover {
   color: white;
   background-color: #b47946;
 }
 
-.erc-container-dispaly-results{
+.erc-container-dispaly-results {
   display: flex;
   justify-content: center;
   /* visibility: hidden; */
 }
 
-.erc-container-dispaly-results-hidden{
+.erc-container-dispaly-results-hidden {
   visibility: hidden;
   display: flex;
   justify-content: center;
 }
 
-.erc-dispaly-results{
+.erc-dispaly-results {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -162,25 +155,23 @@ input[type=number]::-webkit-outer-spin-button {
   /* visibility: hidden; */
 }
 
-.erc-hidden p{
-
+.erc-hidden p {
 }
 
-.erc-standard{
-
+.erc-standard {
 }
 
-.erc-exchange-result{
+.erc-exchange-result {
   font-size: 40px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
-.erc-exchange-back{
+.erc-exchange-back {
   color: rgba(0, 0, 0, 0.308);
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 500px) {
   /* For mobile phones: */
   .cer-body h1 {
     text-align: center;
@@ -193,29 +184,27 @@ input[type=number]::-webkit-outer-spin-button {
     border-radius: 0px;
     box-shadow: 5px 5px 5px 5px;
   }
-  .cer-main-row{
+  .cer-main-row {
     width: 100vw;
     flex-direction: column;
   }
-  .cer-amount{
+  .cer-amount {
     margin-left: 15px;
     text-align: center;
   }
-  .cer-from{
+  .cer-from {
     margin-top: 15px;
     text-align: center;
   }
-  .cer-to{
+  .cer-to {
     margin-top: 15px;
     text-align: center;
   }
-  .erc-dispaly-results{
+  .erc-dispaly-results {
     text-align: center;
     margin-bottom: 15px;
   }
-  .erc-btn-row{
+  .erc-btn-row {
     justify-content: center;
-
-
   }
 }
