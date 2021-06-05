@@ -24,6 +24,11 @@
   margin-top: 50px;
 }
 
+.container-dates-events {
+  display: flex;
+  justify-content: center;
+}
+
 .datesUl {
   margin-top: 20px;
   text-align: center;
@@ -42,6 +47,11 @@
   border-bottom: 1px solid black;
 }
 
+
+
+
+
+
 #draggable-list {
   margin-top: 20px;
   text-align: center;
@@ -57,18 +67,51 @@
 
 #draggable-list p:hover {
   color: white;
+
   background-color: rgba(38, 97, 129, 0.767);
 }
 
 #draggable-list p {
   padding: 5px;
+  height: 23px;
   border-bottom: 1px solid black;
 }
 
-.container-dates-events {
-  display: flex;
+
+
+
+.markedUl {
+  margin-top: 20px;
+  text-align: center;
+  color: ;
+  background-color: white;
+  width: 40px;
   justify-content: center;
+  list-style-type: none;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  border-right: 2px solid rgba(0, 0, 0, 0.719);
+  font-size: 17px;
 }
+.markedUl p {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+#TAH-marker-list{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  list-style-type: none;
+}
+
+#TAH-marker-list-btn{
+
+}
+
+
+
+
+
 
 li {
   text-decoration: none;
@@ -84,7 +127,7 @@ li {
 
 .check-btn {
   border-radius: 0 15px 15px 0;
-border: 2px solid rgba(0, 0, 0, 0.719);
+  border: 2px solid rgba(0, 0, 0, 0.719);
   position: fixed;
   top: 227px;
   padding-bottom: 4px;

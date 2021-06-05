@@ -30,7 +30,7 @@ function App() {
 
       <br></br>
 
-        <NavLink onClick={ () => setHome(false)} to="/2">SecondApp</NavLink>
+        <NavLink onClick={ () => setHome(false)} to="/timelinegame">Timeline Game</NavLink>
       </Router>
       </div>
       ) : ( 
@@ -40,7 +40,7 @@ function App() {
           <Route exact path="/erc">
             <ERCPage />
           </Route>
-          <Route exact path="/2">
+          <Route exact path="/timelinegame">
             <App2 />
           </Route>
         </Switch>

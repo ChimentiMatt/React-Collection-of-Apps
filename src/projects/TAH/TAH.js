@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
+// src="https://kit.fontawesome.com/3da1a747b2.js"
+
 import sky from "./grand7.jpeg";
 export default function App2() {
-  const [button, setButton] = useState("blue");
+
 
   function handleClick() {
     // document.getElementById("testID").style.backgroundColor = "red";
@@ -10,10 +15,16 @@ export default function App2() {
   }
   window.onload = createList;
 
-
   function handleClick2() {
     checkOrder();
   }
+
+  // function checkedfunc() {
+  //   document.getElementById("TAH-marker-list-btn").style.backgroundColor =
+  //     "rgba(38, 97, 129, 0.767)";
+  //     document.getElementById("TAH-marker-list-btn").style.color =
+  //     "white";
+  // }
 
   function Dates() {
     const dates = [
@@ -41,6 +52,7 @@ export default function App2() {
       "1620",
       "1606",
     ];
+
     return (
       <>
         <ul className="datesUl">
@@ -52,8 +64,69 @@ export default function App2() {
     );
   }
 
+  function Markers() {
+    const [flagColor, setFlagColor] = useState('white')
+    const [flagBackColor, setBackColor] = useState('rgba(38, 97, 129, 0.767)')
+    let counter = 0
+    const markers = [
+      {id: "1"},
+      {id: "2"},
+      {id: "3"},
+      {id: "4"},
+      {id: "5"},
+      {id: "6"},
+      {id: "7"},
+      {id: "8"},
+      {id: "9"},
+      {id: "10"},
+      {id: "11"},
+      {id: "12"},
+      {id: "13"},
+      {id: "14"},
+      {id: "15"},
+      {id: "16"},
+      {id: "17"},
+      {id: "18"},
+      {id: "19"},
+      {id: "20"},
+      {id: "21"},
+      {id: "22"},
+      {id: "23"},
+    ];
+    return (
+      <>
+        <ul className="markedUl">
+          {markers.map((num, index) => (
+           
+          
+            <p
+              id={num.id}
+              // id="TAH-marker-list-btn"
+              onClick={() => {
+                if (counter %2 ){
+                  document.getElementById(num.id).style.backgroundColor =
+                  flagBackColor
+                  document.getElementById(num.id).style.color =
+                  flagColor
+                  counter += 1
+                } else { 
+                document.getElementById(num.id).style.backgroundColor =
+                'white'
+                document.getElementById(num.id).style.color =
+                'black'
+                counter += 1
+                }
+              }}
+            >
+              x
+            </p>
+          ))}
+        </ul>
+      </>
+    );
+  }
   const histEvents = [
-    "First Web-Page",
+    "First Web Page",
     "Nixon Resigns",
     "Roe v. Wade",
     "Bay of Pigs",
@@ -83,9 +156,7 @@ export default function App2() {
 
   let dragStartIndex;
 
-
-
-  React.useEffect(() => createList(), [])
+  React.useEffect(() => createList(), []);
 
   function createList() {
     [...histEvents]
@@ -192,16 +263,15 @@ export default function App2() {
         <p id="p2-desc">Drag and drop events to match their dates</p>
         <div className="container-dates-events">
           <Dates />
+          <Markers />
           <ul className="draggable-list" id="draggable-list"></ul>
         </div>
-
 
         <button
           className="check-btn"
           id="check"
           onClick={() => handleClick2({})}
         >
-          
           <p>Check Answers</p>
         </button>
       </div>
