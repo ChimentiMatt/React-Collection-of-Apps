@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Tangerine&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+.TAH-app {
+  font-family: "Noto Serif", serif;
+}
+.TAH-background {
+  height: 155%;
+  background-position: center;
+
+  background-size: cover;
+  z-index: -1;
+  position: absolute;
+}
+
+#p2-title {
+  text-align: center;
+  padding-top: 50px;
+  letter-spacing: 5px;
+  font-size: 60px;
+}
+
+#p2-desc {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.datesUl {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px 0 0 10px;
+  background-color: white;
+  width: 80px;
+  justify-content: center;
+  list-style-type: none;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  border-right: 2px solid rgba(0, 0, 0, 0.719);
+  font-size: 17px;
+}
+
+.datesUl p {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+#draggable-list {
+  margin-top: 20px;
+  text-align: center;
+  /* background-color: #dba17b; */
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+  width: 340px;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  justify-content: center;
+  list-style-type: none;
+  font-size: 17px;
+}
+
+#draggable-list p:hover {
+  color: white;
+  background-color: rgba(38, 97, 129, 0.767);
+}
+
+#draggable-list p {
+  padding: 5px;
+  border-bottom: 1px solid black;
+}
+
+.container-dates-events {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  text-decoration: none;
+}
+
+.draggable-list li.wrong .event-name {
+  color: #ff3838;
+}
+
+.draggable-list li.right .event-name {
+  color: #3ae374;
+}
+
+.check-btn {
+  border-radius: 0 15px 15px 0;
+border: 2px solid rgba(0, 0, 0, 0.719);
+  position: fixed;
+  top: 227px;
+  padding-bottom: 4px;
+  background-color: rgb(38, 97, 129);
+  color: white;
+  font-weight: bold;
+  height: 130px;
+  width: 75px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -5px;
+}
+
+.check-btn p {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.check-btn:hover {
+  background-color: rgb(91, 168, 231);
+  border: 1px solid rgb(91, 168, 231);
+    color: white;
+  text-decoration: none;
+}

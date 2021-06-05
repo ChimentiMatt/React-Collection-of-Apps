@@ -5,8 +5,8 @@ import { NavLink } from "react-router-dom";
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
 
-import App2 from  "./projects/p2/p2.js"
-import "./projects/p2/p2.css"
+import App2 from  "./projects/TAH/TAH.js"
+import "./projects/TAH/TAH.css"
 
 import {
   BrowserRouter as Router,
