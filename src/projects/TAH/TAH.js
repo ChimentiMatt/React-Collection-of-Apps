@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
 // src="https://kit.fontawesome.com/3da1a747b2.js"
 
 import sky from "./grand7.jpeg";
@@ -259,8 +256,10 @@ export default function App2() {
     <>
       <div className="TAH-app">
         <img className="TAH-background" src={sky}></img>
-        <h1 id="p2-title">Timeline of American History</h1>
-        <p id="p2-desc">Drag and drop events to match their dates</p>
+        <h1 id="p2-title">Timeline Game</h1>
+        <h1 id="p2-title">American History</h1>
+
+        <p id="p2-desc">Drag and drop events to their matching dates</p>
         <div className="container-dates-events">
           <Dates />
           <Markers />

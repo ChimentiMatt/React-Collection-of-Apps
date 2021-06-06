@@ -5,8 +5,12 @@ import { NavLink } from "react-router-dom";
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
 
-import App2 from  "./projects/TAH/TAH.js"
+import TimelineGame from  "./projects/TAH/TAH.js"
 import "./projects/TAH/TAH.css"
+
+import TextApp from "./projects/TEXTAPP/textapp.js"
+import "./projects/TEXTAPP/textapp.css"
+
 
 import {
   BrowserRouter as Router,
@@ -31,18 +35,30 @@ function App() {
       <br></br>
 
         <NavLink onClick={ () => setHome(false)} to="/timelinegame">Timeline Game</NavLink>
+      
+        <br></br>
+        <NavLink onClick={ () => setHome(false)} to="/text">Text</NavLink>
+
       </Router>
       </div>
       ) : ( 
         <div>
       <Router>
         <Switch>
+
           <Route exact path="/erc">
             <ERCPage />
           </Route>
+
           <Route exact path="/timelinegame">
-            <App2 />
+            <TimelineGame />
           </Route>
+
+          <Route exact path="/text">
+            <TextApp />
+            {/* <div id="container"></div> */}
+          </Route> 
+          
         </Switch>
       </Router>
       </div>
