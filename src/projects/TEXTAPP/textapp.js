@@ -19,6 +19,7 @@ export default function TextApp() {
     let show = document.getElementsByClassName("textapp-melt");
     show[0].style.visibility = "visible";
   }
+  
   function ElegantShadow() {
     let backColor = document.getElementsByClassName("textapp-body");
     backColor[0].style.backgroundColor = "rgb(231, 229, 228)";
