@@ -63,6 +63,7 @@
   justify-content: center;
   list-style-type: none;
   font-size: 17px;
+  
 }
 
 #draggable-list p:hover {
@@ -83,7 +84,7 @@
 .markedUl {
   margin-top: 20px;
   text-align: center;
-  color: ;
+
   background-color: white;
   width: 40px;
   justify-content: center;
@@ -123,7 +124,18 @@ li {
 
 .draggable-list li.right .event-name {
   color: #3ae374;
+  z-index: -10;
 }
+
+/* disables game to stop incorrect right and wrong values on further drags */
+#TAH-z-index-trick{
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  background-color: rgba(192, 192, 192, 0);
+}
+
 
 .check-btn {
   border-radius: 0 15px 15px 0;

@@ -52,7 +52,7 @@ export default function TextApp() {
           <button
             onClick={() => {
               setAnimation("textapp-reflection");
-              setText("REFLECTION EFFECT");
+              setText("REFLECTION");
               setAnimation2("textapp-reflection");
               setText2("");
               disableActive();
@@ -144,9 +144,9 @@ export default function TextApp() {
 
 // Glow
 // https://codepen.io/qpi65/pen/LYNOXJO
-//Codepen
-//https://codepen.io/cbanlawi/pen/MWbemYP
-//Elegant Shadow / Deep Shadow
+// Melt
+// https://codepen.io/cbanlawi/pen/MWbemYP
+// Elegant Shadow / Deep Shadow
 // https://codepen.io/juanbrujo/pen/yGpAK
 // ROSES
 // https://codepen.io/TajShireen/pen/abzmoRE

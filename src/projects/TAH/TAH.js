@@ -14,6 +14,8 @@ export default function App2() {
 
   function handleClick2() {
     checkOrder();
+    // let classDrag = document.getElementsByClassName('draggable')
+    // classDrag.
   }
 
   // function checkedfunc() {
@@ -156,6 +158,7 @@ export default function App2() {
   React.useEffect(() => createList(), []);
 
   function createList() {
+
     [...histEvents]
 
       //randomizes the list on load. Sort continues to randomize
@@ -171,7 +174,7 @@ export default function App2() {
 
         listItem.innerHTML = `
            
-            <div class="draggable" draggable="true">
+            <div class="draggable" draggable="true" >
               <p class="event-name">${event}</p>
 
             </div>
@@ -223,13 +226,16 @@ export default function App2() {
 
   function checkOrder() {
     listItems.forEach((listItem, index) => {
-      const personName = listItem.querySelector(".draggable").innerText.trim();
-      if (personName !== histEvents[index]) {
+      const tevent = listItem.querySelector(".draggable").innerText.trim();
+      if (tevent !== histEvents[index]) {
         listItem.classList.add("wrong");
       } else {
-        console.log("poop123");
+
         listItem.classList.remove("wrong");
         listItem.classList.add("right");
+        // disables game to stop incorrect right and wrong values on further drags
+        document.getElementById('TAH-z-index-trick').style.zIndex = "0";
+
       }
     });
   }
@@ -255,6 +261,7 @@ export default function App2() {
   return (
     <>
       <div className="TAH-app">
+        <div id="TAH-z-index-trick"></div>
         <img className="TAH-background" src={sky}></img>
         <h1 id="p2-title">Timeline Game</h1>
         <h1 id="p2-title">American History</h1>
@@ -269,7 +276,7 @@ export default function App2() {
         <button
           className="check-btn"
           id="check"
-          onClick={() => handleClick2({})}
+          onClick={() => handleClick2({}) }
         >
           <p>Check Answers</p>
         </button>
