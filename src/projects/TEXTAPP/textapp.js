@@ -4,8 +4,10 @@ import ReactDOM from "react-dom";
 export default function TextApp() {
   const [animation, setAnimation] = useState("default");
   const [animation2, setAnimation2] = useState("default");
-  const [text, setText] = useState("CLICK A BUTTON TO SEE AN EFFECT");
+  const [text, setText] = useState("( CLICK A BUTTON TO SEE AN EFFECT )");
   const [text2, setText2] = useState("");
+
+  const [credit, setCredit] = useState('')
 
   //Some effects require further dom manipulation beyond state like Background color
 
@@ -28,6 +30,11 @@ export default function TextApp() {
   function DeepShadow() {
     let backColor = document.getElementsByClassName("textapp-body");
     backColor[0].style.backgroundColor = "rgb(51, 51, 51)";
+  }
+
+  function Roses() {
+    let backColor = document.getElementsByClassName("textapp-body");
+    backColor[0].style.backgroundColor = "rgb(213, 46, 63)";
   }
 
   function disableActive() {
@@ -58,7 +65,7 @@ export default function TextApp() {
           <button
             onClick={() => {
               setAnimation2("textapp-hover-glow");
-              setText2("Hover: GLOW EFFECT");
+              setText2("HOVER ON ME");
               setAnimation("textapp-glow");
               setText("GLOW EFFECT");
               disableActive();
@@ -97,10 +104,27 @@ export default function TextApp() {
           >
             Deep Shadow
           </button>
+     
+
+
+          {/* Roses  */}
+          <button
+            onClick={() => {
+              setAnimation("textapp-roses");
+              setText("Roses");
+              setAnimation2("textapp-roses");
+              setText2("");
+              disableActive();
+              Roses()
+            }}
+          >
+            Roses
+          </button>
+          <a id="credit">Credits</a>
         </div>
 
-
         <div className="textapp-text">
+
           <h1 id={animation}>{text} </h1>
           <br></br>
           <h1 id={animation2}>{text2} </h1>
@@ -124,3 +148,5 @@ export default function TextApp() {
 //https://codepen.io/cbanlawi/pen/MWbemYP
 //Elegant Shadow / Deep Shadow
 // https://codepen.io/juanbrujo/pen/yGpAK
+// ROSES
+// https://codepen.io/TajShireen/pen/abzmoRE

@@ -1,3 +1,6 @@
+/* font for Roses */
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 .textapp-body {
   display: flex;
   min-height: 100vh;
@@ -15,7 +18,23 @@
   background-color: rgb(15, 20, 36);
   padding-left: 1vw;
   padding-right: 1vw;
-  border-radius: 0 7px 7px 0;
+
+}
+
+#credit{
+  color: white;
+  font-family: 'Niconne';
+  text-align: center;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#credit:hover {
+  border-top: 1px solid #00aee6;
+  border-bottom: 1px solid #00aee6;
+  color: #00aee6;
 }
 
 .textapp-buttons-container button {
@@ -28,18 +47,18 @@
 
 .textapp-buttons-container button:hover {
     background-color: silver;
-  }
+}
 
 .textapp-text {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 98vw;
-  font-size: 20px;
+  font-size: 10px;
   font-weight: 700;
   align-items: center;
   color: #00aee6;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   text-align: center;
   height: 100vh;
   border: 1px solid white;
@@ -198,4 +217,26 @@
     0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a,
     0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212,
     0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+/* Roses */
+
+#textapp-roses{
+  font-size: 170px;
+  text-align: center;
+  height:90vh;
+  line-height: 90vh;
+  color: #fcedd8;
+
+  font-family: 'Niconne', cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b, 
+              10px 10px 0px #efa032, 
+              15px 15px 0px #46b59b, 
+              20px 20px 0px #017e7f, 
+              25px 25px 0px #052939, 
+              30px 30px 0px #c11a2b, 
+              35px 35px 0px #c11a2b, 
+              40px 40px 0px #c11a2b, 
+              45px 45px 0px #c11a2b;
 }
