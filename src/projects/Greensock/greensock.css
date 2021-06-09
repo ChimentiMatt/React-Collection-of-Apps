@@ -1,12 +1,221 @@
-#gsap-demo{
-    display: flex;
-    background-color: black;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+.gsap-app{
+    font-family: 'Varela Round', sans-serif;
 }
 
-#gsap-demo img {
-    height: 500px;
+.gsap-page1{
+  display: flex;
+  border: 1px solid blue;
+  height: 90vh;
+  background: rgb(135, 206, 235);
+
+  justify-content: center;
+  align-items: center;
+
 }
+
+#gsap-page1-btn{
+  position: absolute;
+  top: 100px;
+  padding: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: #f5cd03;
+  border-radius: 100%;
+}
+
+#gsap-img{
+  position: absolute;
+  height: 150px;
+  left: 0;
+  justify-content: flex-start;
+  /* transform: rotate(20deg); */
+  z-index: 1;
+}
+
+#gsap-cloud1{
+  position:absolute;
+  height: 150px;
+  top: 300px;
+  left: 200px;
+  z-index: -1;
+}
+#gsap-cloud2{
+  position:absolute;
+  height: 150px;
+  top: 100px;
+  left: 500px;
+  z-index: -1;
+}
+
+
+
+.gsap-page2{
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background:  #77dd77;
+    /* background:  #ffdac1; */
+}
+
+.gsap-page3{
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background:  #ff9aa2;
+
+}
+
+
+
+
+
+
+
+
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+      'Lucida Sans', Arial, sans-serif;
+  } */
+  
+  /* section {
+    height: 100vh;
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .one {
+    background: #0c0d0d;
+  }
+  
+  .two {
+    background: #9ade6e;
+  }
+  
+  .three {
+    background: #fa7968;
+  }
+  
+  .four {
+    background: #2cbde4;
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 95vh;
+    padding: 3rem calc((100vw - 1300px) / 2);
+  }
+  
+  .column-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #000;
+    padding: 0rem 2rem;
+  }
+  
+  .column-left h1 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-style: italic;
+  }
+  
+  .column-left p {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    line-height: 1.1;
+  }
+  
+  button {
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    border: none;
+    background: #f5cd03;
+    color: #0c0d0d;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  
+  .column-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem;
+  }
+  
+  .image {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height: 700px;
+  }
+  
+  .text {
+    color: #fff;
+  }
+   */
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
+
+
+
+/* CSS from notes */
+/* #gsap-demo{
+    display: flex;
+    background-color: rgb(244, 207, 62);
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+} */
+
+
+/* #gsap-demo img {
+    height: 500px;
+    margin-right: 50px;
+}
+
+.gsap-images{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+}
+.gsap-circle{
+    background-color: red;
+    border: 1px solid red;
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+#gsap-demo button {
+    padding: 5px;
+} */

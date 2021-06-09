@@ -4,13 +4,12 @@ import React, { useState, useEffect } from "react";
 
 export default function ERCPage() {
   const [currency1, SetCurrency1] = useState("");
-
   useEffect(() => {Calculate()}, [currency1]);
+
   const [quantity1, setQuantity1] = useState(0);
-
   useEffect(() => {Calculate()}, [quantity1]);
-  const [currency2, setCurrency2] = useState("");
 
+  const [currency2, setCurrency2] = useState("");
   useEffect(() => {Calculate()}, [currency2]);
 
 

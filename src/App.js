@@ -14,6 +14,8 @@ import "./projects/TEXTAPP/textapp.css";
 import Greensock from  "./projects/Greensock/greensock.js";
 import "./projects/Greensock/greensock.css";
 
+import { gsap } from "gsap";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -25,6 +27,7 @@ import {
 
 function App() {
   const [home, setHome] = useState(true);
+  
   return (
     <>
       <div className="App">
