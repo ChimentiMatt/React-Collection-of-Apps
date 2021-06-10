@@ -86,8 +86,11 @@ export default function Screen2() {
 
         // delayed animations
     
-        gsap.to('#gsap-mtm-cloud1', {delay: 13, duration: 10, y: 1000, ease: 'none'})
-        gsap.to('#gsap-mtm-cloud2', {delay: 13, duration: 10, y: 1000, ease: 'none'})
+        gsap.to('#gsap-mtm-cloud1 , #gsap-mtm-earth-1, #gsap-mtm-earth-2, #gsap-mtm-earth-3', {delay: 13, duration: 10, y: 1000, ease: 'none'})
+        gsap.to('#gsap-mtm-cloud2', {delay: 13, duration: 10, y: 1100, ease: 'none'})
+        
+     
+
 
         gsap.to('#gsap-mtm-cloud3', { delay: 21, opacity: 1,zIndex:1, ease: 'none'})
         gsap.to('#gsap-mtm-cloud3', {delay: 21, duration: 9,  y: 1400, ease: 'none'})
@@ -143,8 +146,10 @@ export default function Screen2() {
             <img src={Cloud3} id="gsap-mtm-cloud3"></img>
             <img src={Cloud} id="gsap-mtm-cloud4"></img>
             <button onClick={() => MissionToMars()} id="gsap-p2-btn">Liftoff</button>
-            <div id="gsap-liftoff-container"> 
-            </div>
+            <div id="gsap-liftoff-container"> </div>
+            <div id="gsap-mtm-earth-1"> </div>
+            <div id="gsap-mtm-earth-2"> </div>
+            <div id="gsap-mtm-earth-3"> </div>
     </div>  
         </>
     )
