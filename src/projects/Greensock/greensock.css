@@ -8,8 +8,8 @@
 
 .gsap-page1{
   display: flex;
-  border: 1px solid blue;
-  height: 90vh;
+
+  height: 100vh;
   background: rgb(135, 206, 235);
 
   justify-content: center;
@@ -29,40 +29,159 @@
 
 #gsap-img{
   position: absolute;
-  height: 150px;
+  height: 100px;
   left: 0;
   justify-content: flex-start;
-  /* transform: rotate(20deg); */
+  transform: rotate(45deg);
+
   z-index: 1;
+}
+
+
+#gsap-green-text{
+  opacity: 0;
+
+  font-size: 80px;
+}
+
+#gsap-green-p{
+  opacity: 0;
+  margin-top: 50px;
+  font-size: 40px;
+  text-align: center;
 }
 
 #gsap-cloud1{
   position:absolute;
   height: 150px;
-  top: 300px;
-  left: 200px;
+  top: 450px;
+  left: 100px;
   z-index: -1;
 }
 #gsap-cloud2{
   position:absolute;
-  height: 150px;
+  height: 100px;
   top: 100px;
-  left: 500px;
+  left: 1200px;
   z-index: -1;
 }
+#gsap-cloud3{
+  position:absolute;
+  height: 200px;
+  top: 500px;
+  left: 1500px;
+  z-index: 2;
+}
 
-
-
+/* Page 2 */
 .gsap-page2{
-    height: 100vh;
-
+    height: 110vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    background:  #77dd77;
+    /* background:  #77dd77; */
     /* background:  #ffdac1; */
+    background: rgb(173, 216, 230);
 }
+
+.gsap-page2-container{
+  
+}
+
+
+
+#gsap-ship{
+  height: 200px;
+  position: absolute;
+  left: 500px;
+  bottom: 200px;
+  z-index: 1;
+}
+
+#gsap-flame{
+  height: 200px;
+  position: absolute;
+  left: 461px;
+  bottom: 100px;
+  transform: rotate(180deg);
+  z-index: -1;
+  opacity: 0;
+}
+
+#gsap-p2-text1{
+  opacity: 0;
+}
+#gsap-p2-text2{
+  opacity: 0;
+}
+#gsap-p2-text3{
+  opacity: 0;
+}
+#gsap-p2-text4{
+  opacity: 0;
+}
+
+#gsap-liftoff-container{
+  background: white;
+  border-radius: 10px;
+  border: 5px solid rgb(0, 0, 0);
+  height: 105px;
+  width: 105px;
+  position: absolute;
+  left: 741px;
+  bottom: 180px;
+  z-index: -2;
+}
+
+
+#gsap-p2-btn{
+  background: red;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  position: absolute;
+  left: 760px;
+  bottom: 200px;
+  z-index: -1;
+}
+
+#gsap-star{
+  position: absolute;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  left: 200px;
+  bottom: 750px;
+  z-index: 1;  
+  opacity: 0;
+}
+
+#gsap-star-2{
+  position: absolute;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  left: 100px;
+  bottom: 650px;
+  z-index: 1;  
+  opacity: 0;
+  transform: rotate(65deg);
+}
+
+#gsap-star-3{
+  position: absolute;
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  left: 400px;
+  bottom: 300px;
+  z-index: 1;  
+  opacity: 0;
+  transform: rotate(85deg);
+}
+
 
 .gsap-page3{
     height: 100vh;
@@ -75,7 +194,18 @@
 
 }
 
+#gsap-mars{
+  position: absolute;
+  border-radius: 50%;
+  height: 1px;
+  width: 1px;
+  left: 1500px;
+  top: 100px;
+  z-index: 900;  
 
+
+  background: red;
+}
 
 
 
