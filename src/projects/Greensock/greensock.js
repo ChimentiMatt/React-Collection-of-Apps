@@ -10,14 +10,19 @@ import Cloud1 from "./cloud4.png"
 
 
 export default function Greensock() {
-  let tl = new TimelineLite({ delay: .8});
-  useEffect(() => {
-    Greensock();
+  // let tl = new TimelineLite({ delay: .8});
+
+  function StartAnimation () {
+    ScrollGreensock();
     Clouds()
     Plane()
+  }
+
+  useEffect(() => {
+     ScrollGreensock();
   }, []);
 
-  function Greensock() {
+  function ScrollGreensock() {
     //animation for scroll effect
     gsap.registerPlugin(ScrollTrigger);
     // gsap.registerPlugin(TextPlugin)
@@ -41,6 +46,10 @@ export default function Greensock() {
 
   function Plane() {
     var tl = gsap.timeline({})
+
+    // remove Animate text
+    tl.to('#gsap-page1-btn', {opacity: 0})
+
     // little bumps
     tl.to('#gsap-img', {duration: .8, x: 200, y: 100, rotation: 60, ease:  'none'})
     tl.to('#gsap-img', {duration: .8, x: 400, y: 200, rotation: 50, ease:  'none'})
@@ -54,10 +63,10 @@ export default function Greensock() {
     tl.to('#gsap-img', {duration: .8, x: 2000, y: 350, rotation: 65, ease:  'none'})
 
   // Off screen
-  tl.to('#gsap-img', {duration: .5, x: 2000, y: -250, rotation: 180, ease:  'none'})
+  tl.to('#gsap-img', {duration: .5, opacity: 0, x: 2000, y: -250, rotation: 180, ease:  'none'})
   tl.to('#gsap-img', {duration: .5, x: 1800, y: -150, rotation: 200, ease:  'none'})
 
-  tl.to('#gsap-img', {duration: .5, x: 1600, y: -100, rotation: 180, ease:  'none'})
+  tl.to('#gsap-img', {duration: .5, x: 1600, opacity: 1, y: -100, rotation: 180, ease:  'none'})
   tl.to('#gsap-img', {duration: .5, x: 1400, y: -50, rotation: 170, ease:  'none'})
 
   tl.to('#gsap-img', {duration: .5, x: 1300, y: 0, rotation: 150, ease:  'none'})
@@ -73,9 +82,9 @@ export default function Greensock() {
 
   // Off screen 2
 
- tl.to('#gsap-img', {duration: .1, x: 2000, y: -2000, rotation: 100, ease:  'none'})
+ tl.to('#gsap-img', {duration: .1, x: 2000, opacity: 0, y: -2000, rotation: 100, ease:  'none'})
  tl.to('#gsap-img', {duration: .1, x: 100, y: -2000, rotation: 90, ease:  'none'})
- tl.to('#gsap-img', {duration: .5, x: 0, y: -700, rotation: 80, ease:  'none'})
+ tl.to('#gsap-img', {duration: .5, x: 0, opacity: 1, y: -700, rotation: 80, ease:  'none'})
  tl.to('#gsap-img', {duration: .5, x: 100, y: -500, rotation: 90, ease:  'none'})
  tl.to('#gsap-img', {duration: .8, x: 200, y: -200, rotation: 80, ease:  'none'})
  tl.to('#gsap-img', {duration: .8, x: 300, y: 0, rotation: 60, ease:  'none'})
@@ -83,11 +92,15 @@ export default function Greensock() {
  tl.to('#gsap-img', {duration: .5, x: 700, y: -100, rotation: 0, ease:  'none'}) 
  tl.to('#gsap-img', {duration: .5, x: 900, y: -50, rotation: 20, ease:  'none'}) 
  tl.to('#gsap-img', {duration: .5, x: 1100, y: -20, rotation: 25, ease:  'none'}) 
-//  tl.to('#gsap-img', {duration: .8, x: 1200, y: 100, rotation: 60, ease:  'none'})
-tl.to('#gsap-img', {duration: .5, x: 1300, y: 0, rotation: 30, ease:  'none'})
-tl.to('#gsap-img', {duration: .5, x: 1400, y: 10, rotation: 30, ease:  'none'})
-tl.to('#gsap-green-text', {duration: 2, opacity: .8})
-  tl.to('#gsap-green-p', {duration: 2, opacity: .6, })  
+  //  tl.to('#gsap-img', {duration: .8, x: 1200, y: 100, rotation: 60, ease:  'none'})
+  tl.to('#gsap-img', {duration: .3, x: 1200, y: -15, rotation: 30, ease:  'none'})
+  tl.to('#gsap-img', {duration: .3, x: 1300, y: -10, rotation: 30, ease:  'none'})
+  tl.to('#gsap-img', {duration: .3, x: 1400, y: -5, rotation: 30, ease:  'none'})
+  tl.to('#gsap-img', {duration: .3, x: 1500, y: 0, rotation: 30, ease:  'none'})
+  tl.to('#gsap-img', {duration: .3, x: 1600, y: 0, rotation: 30, ease:  'none'})
+
+  tl.to('#gsap-green-text', {duration: 2, opacity: .8})
+    tl.to('#gsap-green-p', {duration: 2, opacity: .6, })  
   }
   
 
@@ -96,13 +109,15 @@ tl.to('#gsap-green-text', {duration: 2, opacity: .8})
       <div className="gsap-app">
         <div className="gsap-page1 gsap-section">
         <div>
-          {/* <button id="gsap-page1-btn" onClick={() => Something()}>Animate</button> */}
+          <div id="gsap-page1-btn-container">
+            <button id="gsap-page1-btn" onClick={() => StartAnimation()}>Animate</button>
+          </div>
           <img src={Paperplane} id="gsap-img"></img>
           <img src={Cloud1} id="gsap-cloud1"></img>
           <img src={Cloud1} id="gsap-cloud2"></img>
           <img src={Cloud1} id="gsap-cloud3"></img>
-          <h1 id='gsap-green-text'>GreenSock Animations</h1>
-          <p id='gsap-green-p'>Scrool Page To Continue</p>
+          <h1 id='gsap-green-text'>GreenSock Powered Animations</h1>
+          <p id='gsap-green-p'>Scroll Down To Continue</p>
           </div>
         </div>
 
