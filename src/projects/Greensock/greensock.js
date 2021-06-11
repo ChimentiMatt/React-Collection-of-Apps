@@ -196,3 +196,64 @@ export default function Greensock() {
 
 //Set transform origin
 // gsap.to(".gsap-logo", {transform: "50% 50%"})
+
+
+//Notes from guides
+
+// export default function Greensock() {
+//     // make it so animations hapeen in a  timeline, essentially, it knows not to trigger
+//     // until previous animation is over
+//     // if you want a delay betweem, add ,"+=1" at the end, after } closes before )
+//     // example      ...ease: "back"},"+=1" )
+
+//     //to make it repeat infinitly use -1
+//     // yoyo makes the second repeat go backwards
+
+
+//     var tl = gsap.timeline({repeat: 2, yoyo: true})
+
+//     function Animate() {
+//         tl.from(".gsap-logo", {duration: 1.5, opacity: 0, scale:0.3, ease: "back", rotation: 360})
+//         tl.from(".gsap-circle", {duration: 1, opacity: 0, y: "random(-200, 200)",
+//         stagger: 0.25})
+//     }
+
+
+
+//     return(
+//         <>
+//         <div id="gsap-demo">
+//             <button onClick={() => Animate()}>Animate</button>
+//             <div className="gsap-images">
+//                 <img className="gsap-logo" src={img} ></img>
+//                 <div className="gsap-circle"></div>
+//                 <div className="gsap-circle"></div>
+//                 <div clclassNameass="gsap-circle"></div>
+//                 <div className="gsap-circle"></div>
+//                 <div className="gsap-circle"></div>
+//             </div>
+//         </div>
+
+//         </>
+//     )
+// }
+
+// multiple class of gsap-circle go out in a staggered fashion
+// gsap.from(".gsap-circle", {duration: 1, opacity: 0, y: 150, stagger: 0.25})
+
+// multiple class of gsap-circle go out in a staggered fashion WITH RANDOM function
+// gsap.from(".gsap-circle", {duration: 1, opacity: 0, y: "random(-200, 200)",
+// stagger: 0.25})
+
+//Small to big
+// gsap.from(".gsap-logo", {duration: 1.5, opacity: 0, scale:0.3, ease: "back"})
+
+//Move right with border
+// gsap.to(".gsap-logo", {duration: 2, x: 300, backgroundColor: "rgb(86, 5, 99)",
+// borderRadius: '20%', border: '5px solid white', ease: "elastic" })
+
+//Do a 360
+// gsap.to(".gsap-logo", {duration: 2, rotation 360})
+
+//Set transform origin
+// gsap.to(".gsap-logo", {transform: "50% 50%"})

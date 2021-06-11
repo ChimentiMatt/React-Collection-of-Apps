@@ -8,7 +8,7 @@
 
 .gsap-page1{
   display: flex;
-  font-size: 700px;
+
   height: 100vh;
   background: rgb(135, 206, 235);
 
@@ -20,24 +20,27 @@
 #gsap-page1-btn-container{
   position: absolute;
   font-family: 'Varela Round', sans-serif;
-  font-size: 700px;
   top: 220px;
-  left: 800px;
+  left: 660px;
   padding: 20px;
   border-radius: 3px;
-  border: none;
-  background: rgb(135, 206, 235);
+  /* border: 1px solid red; */
+  width: 800px;
+  height: 260px;
+  font-size: 90px;  background: rgb(135, 206, 235);
 }
-
+#gsap-page1-btn-container p {
+  font-size: 70px;
+}
 
 
 #gsap-page1-btn{
   position: absolute;
   font-family: 'Varela Round', sans-serif;
-  font-size: 50px;
+  font-size: 120px;
   border-radius: 3px;
   border: none;
-
+  
   background: rgb(135, 206, 235);
 }
 #gsap-page1-btn:hover{
@@ -72,7 +75,7 @@
 #gsap-cloud1{
   position:absolute;
   height: 150px;
-  top: 450px;
+  top: 550px;
   left: 100px;
   z-index: -1;
 }
@@ -85,8 +88,8 @@
 }
 #gsap-cloud3{
   position:absolute;
-  height: 200px;
-  top: 500px;
+  height: 260px;
+  top: 650px;
   left: 1500px;
   z-index: 2;
 }
@@ -129,8 +132,9 @@
 
 .gsap-p2-text{
   position: absolute;
-  bottom: 600px;
-  left: 900px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  bottom: 650px;
+  left: 930px;
   color: black;
   font-size: 100px;
 }
@@ -147,6 +151,7 @@
 .gsap-p2-text4{
   opacity: 0;
   left: 800px;
+  color: crimson;
 }
 
 
@@ -168,7 +173,7 @@
 
 
 #gsap-p2-btn{
-  background: red;
+  background: crimson;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
   height: 75px;
@@ -177,6 +182,11 @@
   left: 1300px;
   bottom: 200px;
   z-index: -1;
+  font-weight: 900;
+}
+
+#gsap-p2-btn:hover{
+  background-color: aqua;
 }
 
 #gsap-star{
@@ -186,7 +196,7 @@
   width: 75px;
   left: 200px;
   bottom: 750px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
 }
 
@@ -197,7 +207,7 @@
   width: 75px;
   left: 100px;
   bottom: 650px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
   transform: rotate(65deg);
 }
@@ -209,7 +219,7 @@
   width: 75px;
   left: 400px;
   bottom: 300px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
   transform: rotate(85deg);
 }
@@ -222,7 +232,7 @@
   width: 20px;
   top: 100px;
   right: 100px;
-  z-index: 1;  
+  z-index: -100;   
   opacity: 0;
 }
 
@@ -233,7 +243,7 @@
   width: 20px;
   right: 300px;
   bottom: 700px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
 }
 
@@ -244,7 +254,7 @@
   width: 12px;
   top: 70px;
   right: 70px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
 }
 
@@ -255,7 +265,7 @@
   width: 19;
   top: 500px;
   right: 500px;
-  z-index: 1;  
+  z-index: -100;  
   opacity: 0;
 }
 
@@ -280,6 +290,31 @@
   opacity: 0;
 }
 
+
+#gsap-mtm-shooting-star{
+  position: absolute;
+  height: 55px;
+  top: 10px;
+  left: 1700px;
+  opacity: 0;
+  z-index: 0;
+}
+
+#gsap-mtm-shooting-star-2{
+  position: absolute;
+  height: 55px;
+  top: 500px;
+  left: 1850px;
+  opacity: 0;
+  z-index: 0;
+}
+
+
+
+
+
+
+
 .gsap-page3{
     height: 100vh;
 
@@ -291,6 +326,23 @@
 
 }
 
+
+
+#gsap-mtm-title{
+  position: absolute;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: black;
+  font-size: 100px;
+  top: 200px;
+  left: 530px;
+  z-index: 100;
+}
+#mtm-red{
+  color: crimson;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
 #gsap-mtm-earth-1{
   position: absolute;
   left: 200px;
@@ -299,7 +351,7 @@
   width: 750px;
 z-index: -1;
   border-radius: 50%;
-
+  border-top: 2px solid black;
   background-color: green;
 }
 #gsap-mtm-earth-2{
@@ -311,19 +363,21 @@ z-index: -1;
   z-index: -1;
   background-color: rgb(10, 161, 10);
   border-radius: 50%;
+  border-top: 3px solid black;
+  
 
 }
 #gsap-mtm-earth-3{
   position: absolute;
-  left: 150px;
+  left: 130px;
   bottom: -300px;
   height: 560px;
   width: 1100px;
   background-color: rgb(11, 194, 11);
   border-radius: 50%;
   z-index: -1;
+  border-top: 4px solid black;
 }
-
 
 #gsap-mars{
   position: absolute;
@@ -333,31 +387,55 @@ z-index: -1;
   left: 1500px;
   top: 100px;
   z-index: 900;  
-  background: red;
+  background: crimson;
   opacity: 0;
 }
 
+#gsap-mtm-moon{
+  position: absolute;
+  height: 100px;
+  top: 130px;
+  left: 1500px;
+  /* opacity: .5; */
+  border: 2px solid black;
+  border-radius: 50%;
+  z-index: 12;
+}
+
+#gsap-mtm-astro{
+  position: absolute;
+  top: 321px;
+  left: 1025px;
+  height: 110px;
+  z-index: 900;
+  opacity: 0;
+}
+
+
+
+
+
 #gsap-mtm-cloud1{
   position: absolute;
-  top: 100px;
-  left: 50px;
-  z-index: 1;  
+  top: 189px;
+  left: -10px;
+  z-index: 13;  
   height: 250px;
 }
 
 #gsap-mtm-cloud2{
   position: absolute;
-  top: 300px;
-  left: 1100px;
-  z-index: 1;  
+  top: 80px;
+  left: 1460px;
+  z-index: 13;  
   height: 250px;
   transform: rotate(10deg);
 }
 #gsap-mtm-cloud3{
   position: absolute;
   top: -200px;
-  left: 250px;
-  z-index: -2;  
+  left: 130px;
+  z-index: 13;  
   height: 250px;
   opacity: 0;
 }
@@ -366,7 +444,7 @@ z-index: -1;
   position: absolute;
   top: -750px;
   left: 1050px;
-  z-index: -2;  
+  z-index: 13;  
   height: 250px;
   opacity: 0;
   transform: rotate(5deg);
