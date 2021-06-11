@@ -1,6 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+/* cursive */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 
 .gsap-app{
     font-family: 'Varela Round', sans-serif;
@@ -11,37 +14,83 @@
 
   height: 100vh;
   background: rgb(135, 206, 235);
-
+  
   justify-content: center;
   align-items: center;
 
 }
 
-#gsap-page1-btn-container{
-  position: absolute;
-  font-family: 'Varela Round', sans-serif;
-  top: 220px;
-  left: 660px;
-  padding: 20px;
-  border-radius: 3px;
-  /* border: 1px solid red; */
-  width: 800px;
-  height: 260px;
-  font-size: 90px;  background: rgb(135, 206, 235);
-}
+
 #gsap-page1-btn-container p {
   font-size: 70px;
 }
 
 
+#gsap-a{
+  position: absolute;
+  top: 300px;
+  left: 650px;
+  font-size: 150px;
+}
+
+#gsap-n{
+  position: absolute;
+  top: 300px;
+  left: 760px;
+  font-size: 150px;
+}
+
+#gsap-i{
+  position: absolute;
+  top: 300px;
+  left: 850px;
+  font-size: 150px;
+  z-index: 10;
+}
+
+#gsap-m{
+  position: absolute;
+  top: 300px;
+  left: 890px;
+  font-size: 150px;
+
+}#gsap-a2{
+  position: absolute;
+  top: 300px;
+  left: 1030px;
+  font-size: 150px;
+
+}
+
+#gsap-t{
+  position: absolute;
+  top: 300px;
+  left: 1110px;
+  font-size: 150px;
+}#gsap-e{
+  position: absolute;
+  top: 300px;
+  left: 1170px;
+  font-size: 150px;
+}
+
+
+#gsap-green-click{
+  position: absolute;
+  top: 260px;
+  left: 890px;
+  font-size: 40px;
+  opacity: .2;
+}
+
+
+
 #gsap-page1-btn{
   position: absolute;
-  font-family: 'Varela Round', sans-serif;
-  font-size: 120px;
-  border-radius: 3px;
-  border: none;
-  
-  background: rgb(135, 206, 235);
+  height: 100vh;
+  width: 100vw;
+  opacity: 0;
+  z-index: 900;
 }
 #gsap-page1-btn:hover{
   color: #ff9aa2;
@@ -93,6 +142,14 @@
   left: 1500px;
   z-index: 2;
 }
+
+
+
+
+
+
+
+
 
 /* Page 2 */
 .gsap-page2{
@@ -433,7 +490,7 @@ z-index: -1;
 }
 #gsap-mtm-cloud3{
   position: absolute;
-  top: -200px;
+  top: -1000px;
   left: 130px;
   z-index: 13;  
   height: 250px;
@@ -449,6 +506,18 @@ z-index: -1;
   opacity: 0;
   transform: rotate(5deg);
 }
+
+#gsap-mtm-astroid{
+  position: absolute;
+  top: -100px;
+  left: 1750px;
+  height: 1100px;
+  opacity: 0;
+  z-index: 90  ;
+}
+
+
+
 
 /* * {
     margin: 0;

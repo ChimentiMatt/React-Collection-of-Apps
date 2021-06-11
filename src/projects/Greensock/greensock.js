@@ -14,12 +14,13 @@ export default function Greensock() {
 
   function StartAnimation () {
     ScrollGreensock();
-    Clouds()
     Plane()
   }
 
   useEffect(() => {
      ScrollGreensock();
+     IntroText()
+     Clouds()
   }, []);
 
   function ScrollGreensock() {
@@ -38,17 +39,42 @@ export default function Greensock() {
 
   function Clouds() {
     // var tl = gsap.timeline({repeat: 2, yoyo: true})
-    gsap.to('#gsap-cloud1', {duration: 300, x: 1000, delay: 0, ease:  'none' })
-    gsap.to('#gsap-cloud2', {duration: 400, x: -1000, delay: 0, ease:  'none' })
-    gsap.to('#gsap-cloud3', {duration: 200, x: -200, delay: 0, ease:  'none' })
+    gsap.to('#gsap-cloud1', {duration: 200, x: 1000, delay: 0, ease:  'none' })
+    gsap.to('#gsap-cloud2', {duration: 300, x: -1000, delay: 0, ease:  'none' })
+    gsap.to('#gsap-cloud3', {duration: 300, x: -1000, delay: 0, ease:  'none' })
       }
+
+  function IntroText () {
+    var tli = gsap.timeline({ repeat: -1 })
+    tli.to("#gsap-a", {delay: .5, duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-a",  {duration: 1, color: 'black'})
+    
+    tli.to("#gsap-n", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-n",  {duration: 1, color: 'black'})
+
+    tli.to("#gsap-i", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-i",  {duration: 1, color: 'black'})
+
+    tli.to("#gsap-m", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-m",  {duration: 1, color: 'black'})
+
+    tli.to("#gsap-a2", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-a2",  {duration: 1, color: 'black'})
+
+    tli.to("#gsap-t", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-t",  {duration: 1, color: 'black'})
+
+    tli.to("#gsap-e", { duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-a",  {duration: 1, color: 'black'})
+  }
 
 
   function Plane() {
     var tl = gsap.timeline({})
 
-    // remove Animate text
-    tl.to('#gsap-page1-btn', {opacity: 0})
+    // Remove Animate text
+    tl.to('#gsap-a, #gsap-n, #gsap-i, #gsap-m, #gsap-a2, #gsap-t, #gsap-e, #gsap-green-click', {opacity: 0})
+    
 
     // little bumps
     tl.to('#gsap-img', {duration: .8, x: 200, y: 100, rotation: 60, ease:  'none'})
@@ -107,11 +133,11 @@ export default function Greensock() {
   return (
     <>
       <div className="gsap-app">
+            <button id="gsap-page1-btn" onClick={() => StartAnimation()}>xxxxxxxx</button>
         <div className="gsap-page1 gsap-section">
         <div>
-          <div id="gsap-page1-btn-container">
-            <button id="gsap-page1-btn" onClick={() => StartAnimation()}>Animate</button>
-          </div>
+          {/* <div id="gsap-page1-btn-container"> */}
+          {/* </div> */}
           <img src={Paperplane} id="gsap-img"></img>
           <img src={Cloud1} id="gsap-cloud1"></img>
           <img src={Cloud1} id="gsap-cloud2"></img>
@@ -120,6 +146,19 @@ export default function Greensock() {
           <p id='gsap-green-p'>Scroll Down To Continue</p>
           </div>
         </div>
+        <div>
+            <p id='gsap-green-click'>click to</p>
+          </div>
+        <div className="gsap-intro-animation">
+          <p id="gsap-a">A</p>
+          <p id="gsap-n">n</p>
+          <p id="gsap-i">i</p>
+          <p id="gsap-m">m</p>
+          <p id="gsap-a2">a</p>
+          <p id="gsap-t">t</p>
+          <p id="gsap-e">e</p>
+        </div>
+
 
         <div className="gsap-page2 gsap-section">
 
