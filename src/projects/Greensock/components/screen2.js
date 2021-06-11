@@ -69,11 +69,8 @@ export default function Screen2() {
         tl.to('#gsap-ship', {duration: .2, rotate: 3})
         tl.to('#gsap-ship', {duration: .2, rotate: -3})
         tl.to('#gsap-ship', {duration: 1, rotate: 0})
- 
-        tl.to('.gsap-page2', { duration: 3, background: 'black', ease: 'none'})
-        tl.to('#gsap-flame', {opacity: 0})
-        tl.to('#gsap-ship', {delay: 1})
-        tl.to('#gsap-ship', {duration: 16, x: -150, y: -350, rotation: 75})
+
+        tl.to('#gsap-ship', {duration: 12, x: -150, y: -350})
 
         // tl.to('#gsap-ship', { duration: .2, rotation: 45})
 
@@ -98,10 +95,12 @@ export default function Screen2() {
 
 
         gsap.to('#gsap-mtm-cloud3', { delay: 23, opacity: 1, ease: 'none'})
-        gsap.to('#gsap-mtm-cloud3', {delay: 23, duration: 9,  y: 2000, ease: 'none'})
+        gsap.to('#gsap-mtm-cloud3', {delay: 22, duration: 8,  y: 2000, ease: 'none'})
 
         gsap.to('#gsap-mtm-cloud4', {delay: 16, opacity: 1, ease: 'none'})
         gsap.to('#gsap-mtm-cloud4', {delay: 16, duration: 15, y: 2300, ease: 'none'})
+
+        gsap.to('.gsap-page2', { delay: 23, duration: 3, background: 'black', ease: 'none'})
 
         gsap.to('#gsap-mtm-moon', {delay: 30 , duration: 5, opacity: .7, ease: 'none'})
    
@@ -119,6 +118,8 @@ export default function Screen2() {
         gsap.to('#gsap-star-7, #gsap-star-8, #gsap-star-9', { delay: 31, duration:  600, x: -1900})
         
 
+
+
         gsap.to('#gsap-mtm-shooting-star', {delay: 90,  duration: 60, opacity: .9, ease: 'none'})
         gsap.to('#gsap-mtm-shooting-star', {delay: 91, duration: 60, x: -2200, y: 1900, ease: 'none'})
         
@@ -126,25 +127,26 @@ export default function Screen2() {
         gsap.to('#gsap-mtm-shooting-star-2', {delay: 86 , duration: 15, x: -2200, y: 1000, ease: 'none'})
 
 
-        gsap.to('#gsap-mtm-moon', {delay: 32 , duration: 15, opacity: 1,  ease: 'none'})
-        gsap.to('#gsap-mtm-moon', {delay: 28 , duration: 10, height: 200, x: -300, y: 200, ease: 'none'})
-        gsap.to('#gsap-mtm-moon', {delay: 36 , duration: 10, height: 500,x: -500, ease: 'none'})
-        gsap.to('#gsap-mtm-moon', {delay: 41 , duration: 10, ease: 'none'})
-        gsap.to('#gsap-ship', {delay: 37, duration: 14, rotation: 90})
+        gsap.to('#gsap-ship', {delay: 27, duration: 3, rotation: 90})
 
-        gsap.to('#gsap-mtm-moon', {delay: 51 , duration: 36, x: -2050, ease: 'none'})
-        gsap.to('#gsap-mtm-moon', {delay: 69 , duration: 20, height: 200, ease: 'none'})
+        gsap.to('#gsap-mtm-moon', {delay: 30 , duration: 15, opacity: 1,  ease: 'none'})
+        gsap.to('#gsap-mtm-moon', {delay: 26 , duration: 4, height: 200, x: -100, y: 120, ease: 'none'})
+        gsap.to('#gsap-mtm-moon', {delay: 30 , duration: 8, height: 500,x: -200, ease: 'none'})
+        gsap.to('#gsap-flame', {delay: 25, opacity: 0})
+
+        gsap.to('#gsap-mtm-moon', {delay: 35 , duration: 15, x: -2050, ease: 'none'})
+        // gsap.to('#gsap-mtm-moon', {delay: 69 , duration: 20, height: 200, ease: 'none'})
 
 
-
-        gsap.to('#gsap-ship', {delay: 50, duration: 12, x: 500, height: 10})
-        gsap.to('#gsap-ship', {delay: 62, duration: 19, height: 200, x: 350 })
+        gsap.to('#gsap-ship', {delay: 32, duration: 3, x: 0,})
+        gsap.to('#gsap-ship', {delay: 35, duration: 7, x: 300, height: 10})
+        gsap.to('#gsap-ship', {delay: 42, duration: 7, height: 200, x: 350 })
         
         
-        gsap.to('#gsap-ship', {delay: 79, duration: 10, y:50, x: 200, height: 1100})
+        gsap.to('#gsap-ship', {delay: 47, duration: 5, y:50, x: 200, height: 1100})
         
-        gsap.to('#gsap-mtm-astro', {delay: 89, duration: 10, opacity: 1})
-        gsap.to('#gsap-mtm-astro', {delay: 104, duration: 10, opacity: 0})
+        gsap.to('#gsap-mtm-astro', {delay: 53, duration: 7, opacity: 1})
+        gsap.to('#gsap-mtm-astro', {delay: 63, duration:7, opacity: 0})
 
         // gsap.to('#gsap-ship', {delay: 75, duration: 30, x: -150})
     }
