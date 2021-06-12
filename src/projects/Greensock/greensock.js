@@ -46,26 +46,26 @@ export default function Greensock() {
 
   function IntroText () {
     var tli = gsap.timeline({ repeat: -1 })
-    tli.to("#gsap-a", {delay: .5, duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-a",  {duration: 1, color: 'black'})
+    tli.to("#gsap-a", {duration: 1, color: '#ff9aa2'})
+    tli.to("#gsap-a",  {duration: .8, color: 'black'})
     
-    tli.to("#gsap-n", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-n",  {duration: 1, color: 'black'})
+    tli.to("#gsap-n", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-n",  {duration: .8, color: 'black'})
 
-    tli.to("#gsap-i", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-i",  {duration: 1, color: 'black'})
+    tli.to("#gsap-i", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-i",  {duration: .8, color: 'black'})
 
-    tli.to("#gsap-m", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-m",  {duration: 1, color: 'black'})
+    tli.to("#gsap-m", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-m",  {duration: .8, color: 'black'})
 
-    tli.to("#gsap-a2", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-a2",  {duration: 1, color: 'black'})
+    tli.to("#gsap-a2", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-a2",  {duration: .8, color: 'black'})
 
-    tli.to("#gsap-t", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-t",  {duration: 1, color: 'black'})
+    tli.to("#gsap-t", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-t",  {duration: .8, color: 'black'})
 
-    tli.to("#gsap-e", { duration: 1, color: '#ff9aa2'})
-    tli.to("#gsap-a",  {duration: 1, color: 'black'})
+    tli.to("#gsap-e", { duration: .8, color: '#ff9aa2'})
+    tli.to("#gsap-e",  {duration: .8, color: 'black'})
   }
 
 
@@ -165,9 +165,9 @@ export default function Greensock() {
           <Screen2 />
         </div>
 
-        <div className="gsap-page3 gsap-section">
+        {/* <div className="gsap-page3 gsap-section">
           <p>Page 3</p>
-        </div>
+        </div> */}
       </div>
 
     </>

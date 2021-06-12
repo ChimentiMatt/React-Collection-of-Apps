@@ -151,7 +151,7 @@
 
 
 
-/* Page 2 */
+/* Page 2 -----------------------------------------*/
 .gsap-page2{
     height: 110vh;
     display: flex;
@@ -238,7 +238,7 @@
   position: absolute;
   left: 1300px;
   bottom: 200px;
-  z-index: -1;
+  z-index: 1000;
   font-weight: 900;
 }
 
@@ -406,7 +406,7 @@
   bottom: -250px;
   height: 600px;
   width: 750px;
-z-index: -1;
+  z-index: -1;
   border-radius: 50%;
   border-top: 2px solid black;
   background-color: green;
@@ -515,6 +515,112 @@ z-index: -1;
   opacity: 0;
   z-index: 90  ;
 }
+
+#gsap-mtm-flare{
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 1400px;
+  opacity: 0;
+}
+#gsap-mtm-flare2{
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 1350px;
+  opacity: 0;
+}
+#gsap-mtm-flare3{
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 1500px;
+  opacity: 0;
+}
+
+
+#gsap-mtm-flare4{
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 1400px;
+  opacity: 0;
+}
+#gsap-mtm-flare5{
+  height: 100px;
+  position: absolute;
+  top: 0px;
+  left: 1350px;
+  opacity: 0;
+}
+#gsap-mtm-flare6{
+  height: 100px;
+  position: absolute;
+  top: 190px;
+  left: 1300px;
+  opacity: 0;
+}
+
+#gsap-mtm-flare7{
+  height: 100px;
+  position: absolute;
+  top: 150px;
+  left: 1500px;
+  opacity: 0;
+}
+#gsap-mtm-flare8{
+  height: 100px;
+  position: absolute;
+  top: 110px;
+  left: 1150px;
+  opacity: 0;
+}
+
+
+#gsap-mtm-meteor {
+  height: 20px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  left: 1860px;
+  z-index: -100;
+  opacity: 0;
+}
+
+#gsap-mrm-flash{
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+
+  background-color: rgb(255, 250, 177);
+  color: rgb(255, 250, 177);
+}
+
+#gsap-mrm-redgrowth{
+  position: absolute;
+  z-index: 998;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  background-color: red;
+  height: 1055px;
+  color: red;
+  opacity: 0;
+}
+
+#gsap-mtm-back{
+  position: absolute;
+  height: 500px;
+  right: -100px;
+  bottom: -100px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
 
 
 
