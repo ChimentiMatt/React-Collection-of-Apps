@@ -7,7 +7,7 @@ import Screen2 from "./components/screen2.js"
 import {TimelineLite ,TweenMax, Power3} from 'gsap';
 import Paperplane from "./plane9.png";
 import Cloud1 from "./cloud4.png"
-
+import Leaves from './leaf1.png'
 
 export default function Greensock() {
   // let tl = new TimelineLite({ delay: .8});
@@ -159,6 +159,7 @@ export default function Greensock() {
           <p id="gsap-e">e</p>
         </div>
 
+        {/* <img id="gsap-leaves" src={Leaves}></img> */}
 
         <div className="gsap-page2 gsap-section">
 

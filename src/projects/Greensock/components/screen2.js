@@ -13,7 +13,7 @@ import Astroid from '../astroid.png'
 import Flare from '../flare.png'
 import Meteor from '../meteor.png'
 import RedBtn from '../red-button.png'
-
+import Mars from '../mars.png'
 
 import Ocean from '../ocean-long.jpg'
 import EFlames from '../earth-flames-trans.png'
@@ -31,6 +31,9 @@ export default function Screen2() {
         var tlo = gsap.timeline({ repeat: -1})
         tlo.to('#gsap-mtm-ocean', { delay: 0, duration: 30, x: 550, ease: 'none'})
 
+        var tll = gsap.timeline({ repeat: -1})
+        tll.to('#gsap-leaves', { delay: 0, duration: 5, x: 1350, y: 400,rotation: 60, ease: 'none'})
+        tll.to('#gsap-leaves', { delay: 0, duration: 5, x: 2050, y: -200, rotation: 20, ease: 'none'})
         }
 
 
@@ -155,13 +158,13 @@ export default function Screen2() {
    
 
 
-        gsap.to('#gsap-star', {delay: 34, height: 25, width: 25,duration: 0, opacity: .4})
-        gsap.to('#gsap-star-2', {delay: 35, height: 35, width: 35, duration: .2, opacity: .8})
+        gsap.to('#gsap-star', {delay: 21,duration: .4, opacity: .4})
+        gsap.to('#gsap-star-2', {delay: 21, duration: .2, opacity: .5})
         
-        gsap.to('#gsap-star-3', {delay: 31 , height: 10, width: 10, duration: .2, opacity: .5})
-        gsap.to('#gsap-star-4, #gsap-star-5, #gsap-star-6', {delay: 32 , duration: .2, opacity: .5})
+        gsap.to('#gsap-star-3', {delay: 22, duration: .2, opacity: .5})
+        gsap.to('#gsap-star-4, #gsap-star-5, #gsap-star-6', {delay: 23 , duration: .2, opacity: .5})
 
-        gsap.to('#gsap-star-7, #gsap-star-8, #gsap-star-9', {delay: 31 , duration: .2, opacity: .5})
+        gsap.to('#gsap-star-7, #gsap-star-8, #gsap-star-9', {delay: 24 , duration: .2, opacity: .5})
 
         gsap.to('#gsap-star-1, #gsap-star-2, #gsap-star-3, #gsap-star-4, #gsap-star-5, #gsap-star-6', {delay: 31, duration:  300, x: -1900})
         gsap.to('#gsap-star-7, #gsap-star-8, #gsap-star-9', { delay: 31, duration:  600, x: -1900})
@@ -181,6 +184,10 @@ export default function Screen2() {
         gsap.to('#gsap-mtm-moon', {delay: 30 , duration: 15, opacity: 1,  ease: 'none'})
         gsap.to('#gsap-mtm-moon', {delay: 27 , duration: 4, height: 200, x: -100, y: 120, ease: 'none'})
         gsap.to('#gsap-mtm-moon', {delay: 29 , duration: 8, height: 500,x: -200, ease: 'none'})
+
+
+        gsap.to('#gsap-mtm-moon', {delay: 25,  duration: 5, opacity: 1,  ease: 'none'})
+
         gsap.to('#gsap-flame', {delay: 26.5, opacity: 0})
 
         gsap.to('#gsap-mtm-moon', {delay: 35 , duration: 15, x: -2050, ease: 'none'})
@@ -188,39 +195,49 @@ export default function Screen2() {
 
 
         // gsap.to('#gsap-ship', {delay: 32, duration: 3, y: -300})
-        gsap.to('#gsap-ship', {delay: 36, duration: 6, x: 300, height: 10})
-        gsap.to('#gsap-ship', {delay: 43, duration: 5.5, height: 200, x: 350 })
+        gsap.to('#gsap-ship', {delay: 37, duration: 5, height: 10})
+        gsap.to('#gsap-ship', {delay: 45, duration: 6, height: 200 })
         
         
-        gsap.to('#gsap-ship', {delay: 49, duration: 5, y:50, x: 200, height: 1100})
-        
-        gsap.to('#gsap-mtm-astro', {delay: 54.5, duration: 1, opacity: 1})
+        gsap.to('#gsap-ship', {delay: 54, duration: 5, y: 165, height: 1100})
         
         
-
-        gsap.to('#gsap-mtm-astroid2', {delay: 54, opacity: 1})
-        gsap.to('#gsap-mtm-astroid2', {delay: 55, duration: 16, x: -3100, y: 800,rotation: 180})
-
-
-        gsap.to('#gsap-mtm-astroid', {delay: 57, opacity: 1})
-        gsap.to('#gsap-mtm-astroid', {delay: 58, duration: 16, x: -3100,rotation: 100})
         
-
-
-
-        gsap.to('#gsap-mtm-astro', {delay: 68, duration: 1, opacity: 0})
-        gsap.to('#gsap-ship', {delay: 70, duration: 6, y:-350, x: 200, height: 200})
+        
+        gsap.to('#gsap-mtm-astroid2', {delay: 59, opacity: 1})
+        gsap.to('#gsap-mtm-astroid2', {delay: 60, duration: 16, x: -2600, y: 500,rotation: 180})
+        
+        
+        gsap.to('#gsap-mtm-astroid', {delay: 62, opacity: 1})
+        gsap.to('#gsap-mtm-astroid', {delay: 63, duration: 16, x: -3100,rotation: 100})
+        
+        
+        gsap.to('#gsap-ship', {delay: 75, duration: 6, y: -350, x:-100, height: 200})
+        
+        
+        gsap.to('#gsap-mtm-astro', {delay: 60, duration: 1, opacity: 1})
+        gsap.to('#gsap-mtm-astro', {delay: 73, duration: 1, opacity: 0})
 
         // gsap.to('#gsap-ship', {delay: 65, duration: 4, height:50})
         // gsap.to('#gsap-ship', {delay: 71, duration: 3, height:200})
         // gsap.to('#gsap-ship', {delay: 75, duration: 30, x: -150})
 
 
-        gsap.to('#gsap-mtm-moon', {delay: 25,  duration: 5, opacity: 1,  ease: 'none'})
 
 
 
-        
+        gsap.to('#gsap-mtm-mars', {delay: 49, opacity: 1,  ease: 'none'})
+        gsap.to('#gsap-mtm-mars', {delay: 50, duration:23, opacity: 1, x: -100, scale: 5,  ease: 'slow'})
+        gsap.to('#gsap-mtm-mars', {delay: 73, duration: 10, opacity: 1, x: -300, scale: 20,  ease: 'slow'})    
+
+
+        gsap.to('#gsap-mtm-mars', {delay: 80, duration: 10, opacity: 1, x: -400, scale: 80,  ease: 'slow'})    
+
+
+        gsap.to('#gsap-ship', {delay: 90, duration: 20, height: 1, x: 700})
+
+
+        gsap.to('#gsap-mtm-ending', {delay: 100, duration: 2, opacity: 1})
 
     }
 
@@ -268,8 +285,8 @@ export default function Screen2() {
             <div id="gsap-mtm-earth-3"> </div>
 
             <img src={Moon} id="gsap-mtm-moon"></img>
-            <img src={Star} id="gsap-mtm-shooting-star"></img>
-            <img src={Star} id="gsap-mtm-shooting-star-2"></img>
+            {/* <img src={Star} id="gsap-mtm-shooting-star"></img>
+            <img src={Star} id="gsap-mtm-shooting-star-2"></img> */}
 
             <img src={Astro} id="gsap-mtm-astro"></img>
 
@@ -297,6 +314,14 @@ export default function Screen2() {
             <img id="gsap-mtm-eflames" src={EFlames}></img>
             {/* <img id="gsap-mtm-eflames2" src={EFlames}></img> */}
 
+
+            <img id="gsap-mtm-mars" src={Mars}></img>
+ 
+            <div id='gsap-mtm-ending'>
+                <h1>MISSION to <span id="mtm-red">MARS</span></h1>
+                <p>Made with React and GSAP</p>
+                <p>Thank you for Watching</p>
+            </div>
             <h1 id="gsap-mtm-title">MISSION TO <span id='mtm-red'>MARS</span></h1>
     </div>  
         </>
