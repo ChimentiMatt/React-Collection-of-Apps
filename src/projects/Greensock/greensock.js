@@ -296,3 +296,10 @@ export default function Greensock() {
 
 //Set transform origin
 // gsap.to(".gsap-logo", {transform: "50% 50%"})
+
+
+
+// tricks
+// rotationY:180
+
+// scale: 0

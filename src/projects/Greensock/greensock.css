@@ -211,7 +211,11 @@
   color: crimson;
 }
 
-
+#gsap-mtm-redbtn{
+  position: absolute;
+  bottom: -150px ;
+  right: 100px;
+}
 
 
 
@@ -220,12 +224,13 @@
   background: white;
   border-radius: 10px;
   border: 5px solid rgb(0, 0, 0);
-  height: 105px;
-  width: 105px;
+  height: 220px;
+  width: 230px;
   position: absolute;
-  left: 1280px;
-  bottom: 180px;
+  left: 1415px;
+  bottom: 345px;
   z-index: -2;
+
 }
 
 
@@ -233,17 +238,18 @@
   background: crimson;
   border: 3px solid rgb(0, 0, 0);
   border-radius: 50%;
-  height: 75px;
-  width: 75px;
+  height: 200px;
+  width: 200px;
   position: absolute;
-  left: 1300px;
-  bottom: 200px;
+  left: 1434px;
+  bottom: 360px;
   z-index: 1000;
+  font-size: 40px;
   font-weight: 900;
 }
 
 #gsap-p2-btn:hover{
-  background-color: aqua;
+  background: rgb(146, 10, 37);
 }
 
 #gsap-star{
@@ -354,7 +360,7 @@
   top: 10px;
   left: 1700px;
   opacity: 0;
-  z-index: 0;
+  z-index: z;
 }
 
 #gsap-mtm-shooting-star-2{
@@ -457,6 +463,7 @@
   border: 2px solid black;
   border-radius: 50%;
   z-index: 12;
+  opacity: .5;
 }
 
 #gsap-mtm-astro{
@@ -513,8 +520,20 @@
   left: 1750px;
   height: 1100px;
   opacity: 0;
-  z-index: 90  ;
+  z-index: 1000  ;
 }
+#gsap-mtm-astroid2{
+  position: absolute;
+  top:  -20px;
+  left: 1890px;
+  height: 500px;
+  transform: rotate(35deg);
+  z-index: 90  ;
+  opacity: 0;
+  z-index: -100;
+}
+
+
 
 #gsap-mtm-flare{
   height: 100px;
@@ -556,23 +575,23 @@
 #gsap-mtm-flare6{
   height: 100px;
   position: absolute;
-  top: 190px;
-  left: 1300px;
-  opacity: 0;
+  top: 90px;
+  left: 900px;
+  opacity:0 ;
 }
 
 #gsap-mtm-flare7{
   height: 100px;
   position: absolute;
-  top: 150px;
-  left: 1500px;
+  top: 50px;
+  left: 1100px;
   opacity: 0;
 }
 #gsap-mtm-flare8{
   height: 100px;
   position: absolute;
-  top: 110px;
-  left: 1150px;
+  top: 10px;
+  left: 1000px;
   opacity: 0;
 }
 
@@ -582,7 +601,7 @@
   transform: rotate(45deg);
   position: absolute;
   top: 0;
-  left: 1860px;
+  left: 1660px;
   z-index: -100;
   opacity: 0;
 }
@@ -612,16 +631,57 @@
   opacity: 0;
 }
 
-#gsap-mtm-back{
+#gsap-mtm-ocean{
   position: absolute;
-  height: 500px;
-  right: -100px;
-  bottom: -100px;
+  bottom: 4px;
+  right: 0;
+  z-index: -100;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
+#gsap-mtm-eflames {
+position: absolute;
+height: 400px;
+bottom: -490px;
+left: 0px;
+opacity: .8;
+z-index: 90;
+}
 
+/* position: absolute;
+height: 400px;
+bottom: -490px;
+left: 0px;
+opacity: .8;
+z-index: 90; */
+
+
+
+
+
+/* #gsap-mtm-bird-up{
+  position: absolute;
+  height: 50px;
+  bottom: 250px;
+  left: 900px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+#gsap-mtm-bird-down{
+  position: absolute;
+  height: 50px;
+  bottom: 260px;
+  left: 950px;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+ */
+
+
+#gsap-mtm-bird{
+  height: 30px;
+}
 
 
 
