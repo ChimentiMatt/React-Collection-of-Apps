@@ -14,6 +14,11 @@ import "./projects/TEXTAPP/textapp.css";
 import Greensock from  "./projects/Greensock/greensock.js";
 import "./projects/Greensock/greensock.css";
 
+import Matching from "./projects/Matching-Game/matching.js"
+import "./projects/Matching-Game/matching.css"
+
+
+
 import { gsap } from "gsap";
 
 import {
@@ -54,7 +59,11 @@ function App() {
               <NavLink onClick={() => setHome(false)} to="/gsap">
                 GreenSock
               </NavLink>
+              <br></br>
 
+              <NavLink onClick={() => setHome(false)} to="/matching">
+                Matching Memes
+              </NavLink>
 
             </Router>
           </div>
@@ -76,6 +85,10 @@ function App() {
 
                 <Route exact path="/gsap">
                   <Greensock />
+                </Route>
+
+                <Route exact path="/matching">
+                  <Matching />
                 </Route>
 
               </Switch>
