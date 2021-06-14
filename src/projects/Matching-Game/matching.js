@@ -8,100 +8,100 @@ import Sp from "./img/sp.jpg";
 import Spidy from "./img/spidy.jpg";
 import Wyac from "./img/wyac.jpg";
 import Kermit from "./img/kermit.jpg";
+import BackOC from "./img/boc.png"
 
 export default function Gameboard() {
-    const [card1, setCard1] = useState('N')
-    const [card2, setCard2] = useState('')
-    const [counter, setCoutner] = useState(1)
+  const [card1, setCard1] = useState("N");
+  const [card2, setCard2] = useState("");
 
-    function Matching(cardName) {
-        // console.log(cardName, 'Set Card Name')
-        setCoutner(counter +1)
-        console.log(counter, 'counter')
+  const [selected, setSelected] = useState()
 
-        if (counter % 2 === 0 ){
-            const promise1 = Promise((resolve, reject) => {
-                resolve(setCard2(cardName))
-            });
-            promise1.then(() => {
-            if (card1 === card2){
-                console.log('match')
+  let twoCards = []
+
+
+    function CheckCard(card, cardName, CardId, CardImg) {
+
+        cards.image = 'fred'
+        
+        // CardImg = "./img/boc.png"
+        console.log(cards.name)
+        twoCards.push(cardName)
+        // console.log(twoCards)
+        if (twoCards.length === 2){
+            // console.log('===2')
+
+            if (twoCards[0] === twoCards[1]){
                 alert('match')
-            }
-        })}
-        else if (counter % 2 !== 0 ){
-            const promise1 = Promise((resolve, reject) => {
-                resolve(setCard2(cardName))
-            });   
-            promise1.then(() => {
-            if (card1 === card2){
-                console.log('match')
-                alert('match')
-            }
-        })}
+                
+                twoCards = []
 
+            } else {
+                twoCards = []
+            }
+        }
     }
 
-  const cards = [
+
+  let cards = [
+    {
+      id: 0,
+      image: Doge,
+      name: "doge",
+    },
     {
       id: 1,
       image: Doge,
-      name: 'doge'
+      name: "doge",
     },
     {
       id: 2,
-      image: Doge,
-      name: 'doge'
+      image: Sb,
+      name: "sb",
     },
     {
       id: 3,
       image: Sb,
-      name: 'sb'
+      name: "sb",
     },
     {
       id: 4,
-      image: Sb,
-      name: 'sb'
+      image: Sp,
+      name: "sp",
     },
     {
       id: 5,
       image: Sp,
-      name: 'sp'
+      name: "sp",
     },
     {
       id: 6,
-      image: Sp,
-      name: 'sp'
+      image: Spidy,
+      name: "spidy",
     },
     {
       id: 7,
       image: Spidy,
-      name: 'spidy',
+      name: "spidy",
     },
     {
       id: 8,
-      image: Spidy,
-      name: 'spidy',    
+      image: Wyac,
+      name: "wyac",
     },
     {
       id: 9,
       image: Wyac,
-      name: 'wyac',   
+      name: "wyac",
     },
     {
       id: 10,
-      image: Wyac,
-      name: 'wyac',  
+      image: Kermit,
+      name: "kermit",
     },
     {
       id: 11,
       image: Kermit,
-      name: 'kermit'
-    },
-    {
-      id: 12,
-      image: Kermit,
-      name: 'kermit'
+      name: "kermit",
     },
   ];
   return (
@@ -114,24 +114,45 @@ export default function Gameboard() {
         <div class="grid-container">
 
           {cards.map((card) => (
-
-
-
-            <img
+            <img 
               onClick={() => {
-                //   console.log("card", card.id, "clicked"); 
-                //   setCardName(card.name) 
-                    Matching(card.name)
-                }}
+                CheckCard(card, card.name, card.id, card.image)
+              }}
+              style={{backgroundColor: selected}} 
               className="grid-item"
               id="mg-front"
               key={card.id}
               src={card.image}
-              />
-
+            />
           ))}
         </div>
       </div>
     </>
   );
 }
+
+
+
+// useEffect(() => {
+//     if (card1 === card2) {
+//       alert("match on odd");
+//     }
+//   }, [card1]);
+
+//   useEffect(() => {
+//     if (card1 === card2) {
+//       alert("match on even");
+//     }
+//   }, [card2]);
+
+//   function CardMatch(cardName, cardId) {
+//     if (cardId % 2 === 0) {
+//       //even
+
+//       setCard1(cardName);
+//       console.log(card1, "card 1", "card id:", cardId);
+//     } else {
+//       setCard2(cardName, cardId);
+//       console.log(card2, "card 2", "card id:", cardId);
+//     }
+//   }
