@@ -159,6 +159,7 @@ export default function Screen2() {
 
 
         gsap.to('#gsap-star', {delay: 21,duration: .4, opacity: .4})
+        gsap.to('#gsap-star', {delay: 21,duration: 200, x: -300})
         gsap.to('#gsap-star-2', {delay: 21, duration: .2, opacity: .5})
         
         gsap.to('#gsap-star-3', {delay: 22, duration: .2, opacity: .5})
@@ -168,9 +169,12 @@ export default function Screen2() {
 
         gsap.to('#gsap-star-1, #gsap-star-2, #gsap-star-3, #gsap-star-4, #gsap-star-5, #gsap-star-6', {delay: 31, duration:  300, x: -1900})
         gsap.to('#gsap-star-7, #gsap-star-8, #gsap-star-9', { delay: 31, duration:  600, x: -1900})
-        
 
+        gsap.to('#gsap-star-10,#gsap-star-11,#gsap-star-11', {delay: 22,duration: .4, opacity: .4})  
+        gsap.to('#gsap-star-10,#gsap-star-11,#gsap-star-11', {delay: 22,duration: 200, x:-300})  
 
+        gsap.to('#gsap-star-14,#gsap-star-15,#gsap-star-13, #gsap-star-17, #gsap-star-18, #gsap-star-16', {delay: 90 ,duration: 5, opacity: .8})  
+        gsap.to('#gsap-star-14,#gsap-star-15,#gsap-star-13, #gsap-star-16, #gsap-star-17, #gsap-star-18', {delay: 90 ,duration: 200, x:-300})  
 
         gsap.to('#gsap-mtm-shooting-star', {delay: 90,  duration: 60, opacity: .9, ease: 'none'})
         gsap.to('#gsap-mtm-shooting-star', {delay: 91, duration: 60, x: -2200, y: 1900, ease: 'none'})
@@ -179,7 +183,7 @@ export default function Screen2() {
         gsap.to('#gsap-mtm-shooting-star-2', {delay: 86 , duration: 15, x: -2200, y: 1000, ease: 'none'})
 
 
-        gsap.to('#gsap-ship', {delay: 27, duration: 3, rotation: 90})
+        gsap.to('#gsap-ship', {delay: 27, duration: 6, rotation: 90})
 
         gsap.to('#gsap-mtm-moon', {delay: 30 , duration: 15, opacity: 1,  ease: 'none'})
         gsap.to('#gsap-mtm-moon', {delay: 27 , duration: 4, height: 200, x: -100, y: 120, ease: 'none'})
@@ -263,6 +267,17 @@ export default function Screen2() {
             <img src={Star} id="gsap-star-8"></img>
             <img src={Star} id="gsap-star-9"></img>
 
+            <img src={Star} id="gsap-star-10"></img>
+            <img src={Star} id="gsap-star-11"></img>
+            <img src={Star} id="gsap-star-12"></img>
+
+            <img src={Star} id="gsap-star-13"></img>
+            <img src={Star} id="gsap-star-14"></img>
+            <img src={Star} id="gsap-star-15"></img>
+
+            <img src={Star} id="gsap-star-16"></img>
+            <img src={Star} id="gsap-star-17"></img>
+            <img src={Star} id="gsap-star-18"></img>
 
 
             <div id="gsap-mars"></div>

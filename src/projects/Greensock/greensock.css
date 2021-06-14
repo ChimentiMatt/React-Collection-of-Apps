@@ -317,7 +317,7 @@
   height: 20px;
   width: 20px;
   right: 300px;
-  bottom: 700px;
+  bottom: 400px;
   z-index: -100;  
   opacity: 0;
 }
@@ -338,7 +338,7 @@
   border-radius: 50%;
   height: 19px;
   width: 19px;
-  top: 500px;
+  top: 250px;
   right: 500px;
   z-index: -100;  
   opacity: 0;
@@ -359,11 +359,111 @@
   border-radius: 50%;
   height: 10px;
   width: 10px;
-  bottom: 110px;
+  bottom: 210px;
   left: 400px;
   z-index: 1;  
   opacity: 0;
 }
+#gsap-star-10{
+  position: absolute;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  bottom: 210px;
+  left: 200px;
+  z-index: 1;  
+  opacity: 0;
+}
+
+#gsap-star-11{
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  bottom: 210px;
+  left: 1400px;
+  z-index: 1;  
+  opacity: 0;
+}
+#gsap-star-12{
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  bottom: 310px;
+  left: 900px;
+  z-index: 1;   
+  opacity: 0;
+}
+
+
+#gsap-star-13{
+  position: absolute;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  bottom: 290px;
+  left: 2000px;
+  z-index: -900;  
+  opacity: 0;
+}
+
+#gsap-star-14{
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  bottom: 190px;
+  left: 1430px;
+  z-index: -900;  
+  opacity: 0;
+}
+#gsap-star-15{
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  bottom: 310px;
+  left: 1100px;
+  z-index: -900;  
+  opacity: 0;
+}
+
+
+#gsap-star-16{
+  position: absolute;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  bottom: 510px;
+  left: 980px;
+  z-index: -900;  
+  opacity: 0;
+}
+
+#gsap-star-17{
+  position: absolute;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  bottom: 130px;
+  left: 900px;
+  z-index: -900;  
+  opacity: 0;
+}
+#gsap-star-18{
+  position: absolute;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  bottom: 1010px;
+  left: 960px;
+  z-index: -900;  
+  opacity: 0;
+}
+
+
+
 
 
 #gsap-mtm-shooting-star{
@@ -532,7 +632,7 @@
   transform: rotate(35deg);
   z-index: 90  ;
   opacity: 0;
-  z-index: -100;
+  z-index: -20;
 }
 
 
@@ -658,7 +758,7 @@ z-index: 90;
   left: 1800px;
   top: 440px;
   opacity: 0;
-  z-index: 1;
+  z-index: -51;
 }
 
 

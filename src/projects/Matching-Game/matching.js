@@ -8,41 +8,16 @@ import Sp from "./img/sp.jpg";
 import Spidy from "./img/spidy.jpg";
 import Wyac from "./img/wyac.jpg";
 import Kermit from "./img/kermit.jpg";
-import BackOC from "./img/boc.png"
+import BackOC from "./img/boc.png";
 
 export default function Gameboard() {
   const [card1, setCard1] = useState("N");
   const [card2, setCard2] = useState("");
+  const [selected, setSelected] = useState();
 
-  const [selected, setSelected] = useState()
+  let twoCards = [];
 
-  let twoCards = []
-
-
-    function CheckCard(card, cardName, CardId, CardImg) {
-
-        cards.image = 'fred'
-        
-        // CardImg = "./img/boc.png"
-        console.log(cards.name)
-        twoCards.push(cardName)
-        // console.log(twoCards)
-        if (twoCards.length === 2){
-            // console.log('===2')
-
-            if (twoCards[0] === twoCards[1]){
-                alert('match')
-                
-                twoCards = []
-
-            } else {
-                twoCards = []
-            }
-        }
-    }
-
-
-  let cards = [
+  const [cards, setCards] = useState([
     {
       id: 0,
       image: Doge,
@@ -103,7 +78,30 @@ export default function Gameboard() {
       image: Kermit,
       name: "kermit",
     },
-  ];
+  ]);
+
+  function CheckCard(card, cardName, CardId, CardImg) {
+
+    // cards.map((card) => {
+    //     setCards([card].id = 5);
+          
+    // })
+
+    console.log(cards);
+
+
+    if (twoCards.length === 2) {
+      // console.log('===2')
+
+      if (twoCards[0] === twoCards[1]) {
+        alert("match");
+
+        twoCards = [];
+      } else {
+        twoCards = [];
+      }
+    }
+  }
   return (
     <>
       <div>
@@ -112,13 +110,12 @@ export default function Gameboard() {
       </div>
       <div id="mg-board">
         <div class="grid-container">
-
           {cards.map((card) => (
-            <img 
+            <img
               onClick={() => {
-                CheckCard(card, card.name, card.id, card.image)
+                CheckCard(card, card.name, card.id, card.image);
               }}
-              style={{backgroundColor: selected}} 
+              style={{ backgroundColor: selected }}
               className="grid-item"
               id="mg-front"
               key={card.id}
@@ -130,8 +127,6 @@ export default function Gameboard() {
     </>
   );
 }
-
-
 
 // useEffect(() => {
 //     if (card1 === card2) {
