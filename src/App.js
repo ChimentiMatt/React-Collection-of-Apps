@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
@@ -17,15 +17,14 @@ import "./projects/Greensock/greensock.css";
 import Matching from "./projects/Matching-Game/matching.js";
 import "./projects/Matching-Game/matching.css";
 
-import { gsap } from "gsap";
+
+// import { gsap } from "gsap";
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link,
-  useRouteMatch,
-  useParams,
+
 } from "react-router-dom";
 import { render } from "@testing-library/react";
 
@@ -48,7 +47,7 @@ function HideHome() {
       <div className="App">
         {home ? (
         <div id="landing">
-        <h1>React app Collection</h1>
+        <h1>React App Collection</h1>
         <Router>
           <NavLink onClick={() => setHome(false)} to="/">
            Home

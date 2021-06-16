@@ -9,7 +9,7 @@
 
 #mg-board{
     margin: 50px;
-    height: 100vh;
+    background-color: skyblue;
     border: 1px solid black;
     display: flex;
     justify-content: center;
@@ -41,15 +41,14 @@
 
 .grid-container {
     display: grid;
-    margin-top: 200px;
+    margin-top: 50px;
     grid-template-columns: auto auto auto;
-    background-color: #7cbbee;
+    /* background-color: #7cbbee; */
 
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(6, 1fr);
-    width: 1400px;
-    height: 460px;
-    padding: 10px;
+
+
 
 
   }
@@ -59,11 +58,21 @@
     padding: 20px;
     font-size: 30px;s
     text-align: center; */
-    height: 200px;
-    width: 200px;
-    padding: 10px;
+    height: 350px;
+    width: 250px;
+    border-radius: 5px;
+
+  }
+  .grid-container img{
+
   }
 
+
 #mg-front{
+    border-radius: 15px;
+    margin: 10px;
+    /* border: 1px solid red; */
+    object-fit: contain;
+    background-color: white;
 
   }

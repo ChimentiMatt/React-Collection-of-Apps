@@ -25,7 +25,6 @@ export default function Screen2() {
         InherentAni()
     })
 
-
     function InherentAni() { 
         //Inherent animations
         var tlo = gsap.timeline({ repeat: -1})

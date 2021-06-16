@@ -7,7 +7,12 @@ import Screen2 from "./components/screen2.js"
 import {TimelineLite ,TweenMax, Power3} from 'gsap';
 import Paperplane from "./plane9.png";
 import Cloud1 from "./cloud4.png"
+import Cloud2 from "./cloud3-trans.png"
 import Leaves from './leaf1.png'
+
+
+
+
 
 export default function Greensock() {
   // let tl = new TimelineLite({ delay: .8});
