@@ -12,131 +12,156 @@ import CardBack from "./img/boc2-transp.png";
 
 export default function Gameboard() {
   const [card1, setCard1] = useState("");
+  const [card1Id, setCard1Id] = useState(0);
 
-  const [selected, setSelected] = useState();
-  const [cardCount, setCardCount] = useState([])
+  const [card2, setCard2] = useState("");
+  const [card2Id, setCard2Id] = useState(0);
 
-  const [cat, setCat] = useState('meow')
 
-  const [counter, setCounter] = useState(0)
 
-  const [toggleState, setToggleState] = useState(true)
-  const [toggleState2, setToggleState2] = useState(true)
+  const [counter, setCounter] = useState(0);
+
+  const [toggleState, setToggleState] = useState(true);
+  const [toggleState2, setToggleState2] = useState(true);
 
   const [cards, setCards] = useState([
     {
       id: 0,
       image: Doge,
       name: "doge",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 1,
       image: Doge,
       name: "doge",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 2,
       image: Sb,
       name: "sb",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 3,
       image: Sb,
       name: "sb",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 4,
       image: Sp,
       name: "sp",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 5,
       image: Sp,
       name: "sp",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 6,
       image: Spidy,
       name: "spidy",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 7,
       image: Spidy,
       name: "spidy",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 8,
       image: Wyac,
       name: "wyac",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 9,
       image: Wyac,
       name: "wyac",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 10,
       image: Kermit,
       name: "kermit",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
     {
       id: 11,
       image: Kermit,
       name: "kermit",
-      backOc: CardBack
+      backOc: CardBack,
+      matched: false
     },
   ]);
 
 
-// useEffect(() => {
-//     if (card1 === card2) {
-//       alert("match on odd");
-//     }
-//   }, [card2]);
-
-
-// function CheckForMatch() {
-
-//     alert("match on odd");
-//     setCard1('')
-//     setCard2('m')
-//     setCounter(0)
-//     setCat('cat')
-
-// }
 
 
 
+  // function CheckForMatch() {
 
+  //     alert("match on odd");
+  //     setCard1('')
+  //     setCard2('m')
+  //     setCounter(0)
+  //     setCat('cat')
 
+  // }
 
   function CheckCard(card, index) {
-
-    setToggleState(!toggleState)
-    setCounter(counter +1)
-
+    setToggleState(!toggleState);
+    
     cards.forEach((thisCard, thisIndex) => {
-      if (thisIndex === index  ) {
-        thisCard.backOc = thisCard.image
-        setCounter(counter +1)
-        if (counter === 0){
-          console.log('sdfsd')
-          setCard1(thisCard.name)
-        }
-        else{
-          if (card1 === thisCard.name){
-            alert('match')
+
+      if (thisIndex === index) {
+        thisCard.backOc = thisCard.image;
+        
+        if (counter === 0) {
+          setCard1(thisCard.name);
+          setCard1Id(thisIndex);
+          setCounter(counter + 1);
+
+        } 
+        
+        else if (counter === 1) {
+          console.log('cats poop')
+          setCard2(thisCard.name)
+          setCard2Id(thisIndex)
+          
+
+          if (card1 === thisCard.name) {
+            alert("match")
+            setCounter(0)
+            cards[card1Id].matched = true;
+            cards[thisIndex].matched = true;
+            // card1.matched = true
+            // card2.matched = true
+            // setCard2('')
+            // setCard1('')
+          } 
+          else {
+            console.log("Else Statement")
+            cards[card1Id].matched = false;
+            cards[thisIndex].matched = false;
+            setCounter(0)
+            setToggleState(!toggleState);
           }
         }
       }
@@ -150,30 +175,36 @@ export default function Gameboard() {
       </div>
       <div id="mg-board">
         <div class="grid-container">
-        
-            {/* <img className="grid-item" src={cards[Math.floor(Math.random() * cards.length)].image}></img> */}
+          {/* <img className="grid-item" src={cards[Math.floor(Math.random() * cards.length)].image}></img> */}
 
-           {cards.map((card, index) => {
+          {cards.map((card, index) => {
             return (
-            <img
-              onClick={() => CheckCard(card, index)}
+              card.matched ? (
 
-              className="grid-item"
-              id="mg-front"
-              key={card.id}
-              alt={'card'}
-              src={card.backOc}
-            />
-          )})} 
+              <img
+                onClick={() => CheckCard(card, index)}
+                className="grid-item"
+                id="mg-front"
+                key={card.id}
+                alt={"card"}
+                src={card.image}
+              />
+              ) : 
+              <img
+                onClick={() => CheckCard(card, index)}
+                className="grid-item"
+                id="mg-front"
+                key={card.id}
+                alt={"card"}
+                src={card.backOc}
+              />
+            )
+          })}
         </div>
       </div>
     </>
   );
 }
-
-
-
-
 
 // useEffect(() => {
 //     if (card1 === card2) {
