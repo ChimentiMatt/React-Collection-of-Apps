@@ -11,10 +11,12 @@ import Kermit from "./img/kermit.jpg";
 import CardBack from "./img/boc2-transp.png";
 
 export default function Gameboard() {
-  const [card1, setCard1] = useState("n");
-  const [card2, setCard2] = useState("");
+  const [card1, setCard1] = useState("");
+
   const [selected, setSelected] = useState();
   const [cardCount, setCardCount] = useState([])
+
+  const [cat, setCat] = useState('meow')
 
   const [counter, setCounter] = useState(0)
 
@@ -97,40 +99,46 @@ export default function Gameboard() {
   ]);
 
 
-useEffect(() => {
-    if (card1 === card2) {
-      alert("match on odd");
-      setCard1('n')
-      setCard2('')
-    }
-  }, [card2]);
+// useEffect(() => {
+//     if (card1 === card2) {
+//       alert("match on odd");
+//     }
+//   }, [card2]);
+
+
+// function CheckForMatch() {
+
+//     alert("match on odd");
+//     setCard1('')
+//     setCard2('m')
+//     setCounter(0)
+//     setCat('cat')
+
+// }
 
 
 
-  const CheckCard = (card, index) => {
-    // setCards(cards)
+
+
+
+  function CheckCard(card, index) {
+
     setToggleState(!toggleState)
     setCounter(counter +1)
-    // console.log(counter)
 
     cards.forEach((thisCard, thisIndex) => {
-      if (thisIndex === index ) {
+      if (thisIndex === index  ) {
         thisCard.backOc = thisCard.image
-
-        if (counter === 0) {
-         setCard1(thisCard.name)
-         console.log(card1,'card 1 ')
-         console.log('cats')
+        setCounter(counter +1)
+        if (counter === 0){
+          console.log('sdfsd')
+          setCard1(thisCard.name)
         }
-        else if ( counter === 1){
-          setCard2(thisCard.name)
-          // setToggleState2(!toggleState2)    
+        else{
+          if (card1 === thisCard.name){
+            alert('match')
+          }
         }
-        // if (card1 === card2){
-        //   alert('match')
-        //   console.log('match')
-        // }
-        console.log('card1:', card1,'card 2:', card2, 'counter:', counter)
       }
     })
   }
