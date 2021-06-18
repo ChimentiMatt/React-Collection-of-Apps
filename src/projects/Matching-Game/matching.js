@@ -161,7 +161,6 @@ export default function Gameboard() {
             cards[card1Id].matched = false;
             cards[thisIndex].matched = false;
             setCounter(0)
-            setToggleState(!toggleState);
           }
         }
       }

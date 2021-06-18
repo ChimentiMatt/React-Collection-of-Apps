@@ -17,6 +17,9 @@ import "./projects/Greensock/greensock.css";
 import Matching from "./projects/Matching-Game/matching.js";
 import "./projects/Matching-Game/matching.css";
 
+import TypingGame from "./projects/SpeedTyper/speedtyper.js"
+import "./projects/SpeedTyper/speedtyper.css";
+
 
 // import { gsap } from "gsap";
 
@@ -78,6 +81,11 @@ function HideHome() {
             Matching Memes
           </NavLink>
 
+          <br></br>
+
+          <NavLink onClick={() => setHome(false)} to="/typer">
+            Typing Game
+          </NavLink>
           </Router>
           </div>
           ) : (
@@ -108,6 +116,11 @@ function HideHome() {
             <Route exact path="/matching">
               <Matching />
             </Route>
+
+            <Route exact path="/typer">
+              <TypingGame />
+            </Route>
+
           </Switch>
         </Router>
         </div>
