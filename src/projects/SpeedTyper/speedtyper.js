@@ -2,9 +2,9 @@ import React, { useState, useRef, useEffect} from 'react'
 
 export default function SpeedTyperPage() {
 
-    const [num, setNum] = useState(10);
-    const [start, setStart] = useState(false);
     let intervalRef = useRef();
+    const [num, setNum] = useState(60);
+    const [start, setStart] = useState(false);
     const [randomWord, setRandomWord] = useState()
     const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * (100 - 0)) + 1)
     const [text, setText] = useState('')
@@ -17,31 +17,34 @@ export default function SpeedTyperPage() {
     const [ displayWord, setDisplayWord] = useState('')
     const decreaseNum = () => setNum((prev) => prev - 1);
   
-    // useEffect(() => {
-    //     if (num === 0){
-    //         setDisplayWord('')
-    //         clearInterval(intervalRef.current);
-    //         // document.getElementById('st-text').disabled = true
-    //         document.getElementById('st-ending-text').innerHTML = `${score  /5} words per minute`
-    //         document.getElementById('st-start-btn').style.visibility = 'visible'
-    //     }
-    // });
+    useEffect(() => {
+        if (num === 0){
+            setDisplayWord('')
+            clearInterval(intervalRef.current);
+            // document.getElementById('st-text').disabled = true
+            document.getElementById('st-ending-text').innerHTML = `${score  /5} words per minute`
+            document.getElementById('st-start-btn').style.visibility = 'visible'
+        }
+    });
     
     const Start = () => {
       if (!start) {
           setScore(0)
 
           intervalRef.current = setInterval(decreaseNum, 1000);
-          
-          document.getElementById('st-start-btn').innerHTML = 'New Game'
+      
+
           document.getElementById('st-text').disabled = false
+          document.getElementById('st-start-btn').style.visibility = 'hidden'
+
           setRandomIndex(Math.floor(Math.random() * (100 - 0 )) + 1)
           RandomIndex() 
 
         //   document.getElementById('st-start-btn').style.visibility = 'hidden'
 
         } else {
-        setNum(10)
+        setNum(60)
+        setScore(0)
           clearInterval(intervalRef.current);
           intervalRef.current = setInterval(decreaseNum, 1000);
           setRandomIndex(Math.floor(Math.random() * (100 - 0 )) + 1)
@@ -53,6 +56,7 @@ export default function SpeedTyperPage() {
 
 
     function Submit(evt) {
+   
         evt.preventDefault()
         console.log(text)
         if (text === document.getElementById('st-word').innerText){
@@ -63,10 +67,16 @@ export default function SpeedTyperPage() {
             }
             else {
                 setScore( score + 5)
+                setText('')
                 setRandomIndex(Math.floor(Math.random() * (100 - 0 )) + 1)
                 RandomIndex() 
+                document.getElementById('st-text').style.background = "white"
             }
-        }
+            
+        }    
+        else{
+            document.getElementById('st-text').style.background = "rgb(253, 161, 161)"
+    }
     }
 
     function RandomIndex() {
@@ -79,32 +89,30 @@ export default function SpeedTyperPage() {
     }
 
     return(
-        <>
         <div className="typer-Page">
-            <h1>Speed Test</h1>
-            <p id="st-time">Time Remaining: {num}s</p>
-            <p>Score: {score}</p>
-            <br></br>
-            <p>Type the following</p>
-            <p id="st-word">{displayWord}</p>
-            <form onSubmit={Submit}>
-                <input 
-                id="st-text" 
-                type='text'
-                value={text}
-                disabled
-                onChange={e => setText(e.target.value)}
-                ></input>
-            </form>
-            <p id="st-ending-text"></p>
-
-
-<button id="st-start-btn" onClick={() => Start() }>Start</button>
-<button id="" onClick={() => PlayAgain() }>Play Again?</button>
-
-<br></br>
+            <div className="st-container">
+                <div className="st-box">
+                    <h1 id="st-title">Typing Test</h1>
+                    <p id="st-time">Time Remaining: {num}s</p>
+                    <p id="st-score">Score: {score}</p>
+                    <p id="st-ending-text"></p>
+               
+                    <p id="st-instruction">Type the following</p>
+                    <p id="st-word">{displayWord}</p>
+                    <form onSubmit={Submit}>
+                        <input 
+                        id="st-text" 
+                        type='text'
+                        value={text}
+                        disabled
+                        onChange={e => setText(e.target.value)}
+                        ></input>
+                    </form>
+                    <button id="st-start-btn" onClick={() => Start() }>START</button>
+                    {/* <button id="" onClick={() => PlayAgain() }>Play Again?</button> */}
+                </div>
+            </div>
         </div>
-        </>
     )
 }
 
