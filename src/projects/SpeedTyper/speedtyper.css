@@ -3,3 +3,11 @@
     font-size: 30px;
     margin-top: 30vh;
 }
+
+#st-reset-btn{
+    visibility: hidden;
+}
+
+#st-start-new-game{
+    visibility: hidden
+}
