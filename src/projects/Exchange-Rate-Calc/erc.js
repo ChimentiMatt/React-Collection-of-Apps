@@ -12,11 +12,8 @@ export default function ERCPage() {
   const [currency2, setCurrency2] = useState("");
   useEffect(() => {Calculate()}, [currency2]);
 
-
   const [mathText, setMathText] = useState(false);
-
   const [rate, setRate] = useState(0);
-
   const [exRate, setExRate] = useState(0);
   const [exRate2, setExRate2] = useState(0);
 
@@ -261,3 +258,5 @@ function DisplayRate({ exRate, exRate2, currency1, currency2, quantity1 }) {
     );
   }
 }
+
+//exc
