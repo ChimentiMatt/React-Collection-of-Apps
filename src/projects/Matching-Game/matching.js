@@ -17,8 +17,6 @@ export default function Gameboard() {
   const [card2, setCard2] = useState("");
   const [card2Id, setCard2Id] = useState(0);
 
-
-
   const [counter, setCounter] = useState(0);
 
   const [toggleState, setToggleState] = useState(true);
@@ -30,90 +28,86 @@ export default function Gameboard() {
       image: Doge,
       name: "doge",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 1,
       image: Doge,
       name: "doge",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 2,
       image: Sb,
       name: "sb",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 3,
       image: Sb,
       name: "sb",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 4,
       image: Sp,
       name: "sp",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 5,
       image: Sp,
       name: "sp",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 6,
       image: Spidy,
       name: "spidy",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 7,
       image: Spidy,
       name: "spidy",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 8,
       image: Wyac,
       name: "wyac",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 9,
       image: Wyac,
       name: "wyac",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 10,
       image: Kermit,
       name: "kermit",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
     {
       id: 11,
       image: Kermit,
       name: "kermit",
       backOc: CardBack,
-      matched: false
+      matched: false,
     },
   ]);
-
-
-
-
 
   // function CheckForMatch() {
 
@@ -127,44 +121,38 @@ export default function Gameboard() {
 
   function CheckCard(card, index) {
     setToggleState(!toggleState);
-    
-    cards.forEach((thisCard, thisIndex) => {
 
+    cards.forEach((thisCard, thisIndex) => {
       if (thisIndex === index) {
         thisCard.backOc = thisCard.image;
-        
+
         if (counter === 0) {
           setCard1(thisCard.name);
           setCard1Id(thisIndex);
           setCounter(counter + 1);
-
-        } 
-        
-        else if (counter === 1) {
-          console.log('cats poop')
-          setCard2(thisCard.name)
-          setCard2Id(thisIndex)
-          
+        } else if (counter === 1) {
+          console.log("cats poop");
+          setCard2(thisCard.name);
+          setCard2Id(thisIndex);
 
           if (card1 === thisCard.name) {
-            alert("match")
-            setCounter(0)
+            alert("match");
+            setCounter(0);
             cards[card1Id].matched = true;
             cards[thisIndex].matched = true;
             // card1.matched = true
             // card2.matched = true
             // setCard2('')
             // setCard1('')
-          } 
-          else {
-            console.log("Else Statement")
+          } else {
+            console.log("Else Statement");
             cards[card1Id].matched = false;
             cards[thisIndex].matched = false;
-            setCounter(0)
+            setCounter(0);
           }
         }
       }
-    })
+    });
   }
   return (
     <>
@@ -177,9 +165,7 @@ export default function Gameboard() {
           {/* <img className="grid-item" src={cards[Math.floor(Math.random() * cards.length)].image}></img> */}
 
           {cards.map((card, index) => {
-            return (
-              card.matched ? (
-
+            return card.matched ? (
               <img
                 onClick={() => CheckCard(card, index)}
                 className="grid-item"
@@ -188,7 +174,7 @@ export default function Gameboard() {
                 alt={"card"}
                 src={card.image}
               />
-              ) : 
+            ) : (
               <img
                 onClick={() => CheckCard(card, index)}
                 className="grid-item"
@@ -197,7 +183,7 @@ export default function Gameboard() {
                 alt={"card"}
                 src={card.backOc}
               />
-            )
+            );
           })}
         </div>
       </div>
