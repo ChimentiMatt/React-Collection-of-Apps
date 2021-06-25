@@ -20,9 +20,6 @@ import "./projects/Matching-Game/matching.css";
 import TypingGame from "./projects/SpeedTyper/speedtyper.js"
 import "./projects/SpeedTyper/speedtyper.css";
 
-
-// import { gsap } from "gsap";
-
 import {
   BrowserRouter as Router,
   Switch,

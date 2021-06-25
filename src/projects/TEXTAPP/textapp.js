@@ -7,7 +7,7 @@ export default function TextApp() {
   const [text, setText] = useState("( CLICK A BUTTON TO SEE AN EFFECT )");
   const [text2, setText2] = useState("");
 
-  const [credit, setCredit] = useState('')
+  const [credit, setCredit] = useState("");
 
   //Some effects require further dom manipulation beyond state like Background color
 
@@ -21,7 +21,7 @@ export default function TextApp() {
     let show = document.getElementsByClassName("textapp-melt");
     show[0].style.visibility = "visible";
   }
-  
+
   function ElegantShadow() {
     let backColor = document.getElementsByClassName("textapp-body");
     backColor[0].style.backgroundColor = "rgb(231, 229, 228)";
@@ -104,8 +104,6 @@ export default function TextApp() {
           >
             Deep Shadow
           </button>
-     
-
 
           {/* Roses  */}
           <button
@@ -115,7 +113,7 @@ export default function TextApp() {
               setAnimation2("textapp-roses");
               setText2("");
               disableActive();
-              Roses()
+              Roses();
             }}
           >
             Roses
@@ -124,7 +122,6 @@ export default function TextApp() {
         </div>
 
         <div className="textapp-text">
-
           <h1 id={animation}>{text} </h1>
           <br></br>
           <h1 id={animation2}>{text2} </h1>
