@@ -17,111 +17,114 @@ import "./projects/Greensock/greensock.css";
 import Matching from "./projects/Matching-Game/matching.js";
 import "./projects/Matching-Game/matching.css";
 
-import TypingGame from "./projects/SpeedTyper/speedtyper.js"
+import TypingGame from "./projects/SpeedTyper/speedtyper.js";
 import "./projects/SpeedTyper/speedtyper.css";
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { render } from "@testing-library/react";
+
+import RPS from "./projects/RPS/rps.js"
+
 
 function App() {
   const [home, setHome] = useState(true);
 
-function HideHome() {
-  document.getElementById('landing').stayle.visibility = 'hidden'
-}
-
+  function HideHome() {
+    document.getElementById("landing").stayle.visibility = "hidden";
+  }
 
   function Home() {
-    return( 
-    <p>cat</p>
-    )
+    return <p>cat</p>;
   }
 
   return (
     <>
       <div className="App">
         {home ? (
-        <div id="landing">
-        <h1>React App Collection</h1>
-        <Router>
-          <NavLink onClick={() => setHome(false)} to="/">
-           Home
-          </NavLink>
-          <br></br>
-          <NavLink onClick={() => setHome(false)} to="/erc">
-            Exchange Rate Converter
-          </NavLink>
+          <div id="landing">
+            <h1>React App Collection</h1>
+            <Router>
+              <NavLink onClick={() => setHome(false)} to="/">
+                Home
+              </NavLink>
+              <br></br>
+              <NavLink onClick={() => setHome(false)} to="/erc">
+                Exchange Rate Converter
+              </NavLink>
 
-          <br></br>
+              <br></br>
 
-          <NavLink onClick={() => setHome(false)} to="/timelinegame">
-            Timeline Game
-          </NavLink>
+              <NavLink onClick={() => setHome(false)} to="/timelinegame">
+                Timeline Game
+              </NavLink>
 
-          <br></br>
-          <NavLink onClick={() => setHome(false)} to="/text">
-            Text
-          </NavLink>
+              <br></br>
+              <NavLink onClick={() => setHome(false)} to="/text">
+                Text
+              </NavLink>
 
-          <br></br>
-          <NavLink onClick={() => setHome(false)} to="/gsap">
-            GreenSock
-          </NavLink>
-          <br></br>
+              <br></br>
+              <NavLink onClick={() => setHome(false)} to="/gsap">
+                GreenSock
+              </NavLink>
+              <br></br>
 
-          <NavLink onClick={() => setHome(false)} to="/matching">
-            Matching Memes
-          </NavLink>
+              <NavLink onClick={() => setHome(false)} to="/matching">
+                Matching Memes
+              </NavLink>
 
-          <br></br>
+              <br></br>
 
-          <NavLink onClick={() => setHome(false)} to="/typer">
-            Typing Game
-          </NavLink>
-          </Router>
+              <NavLink onClick={() => setHome(false)} to="/typer">
+                Typing Game
+              </NavLink>
+
+             <br></br>
+             
+              <NavLink onClick={() => setHome(false)} to="/rps">
+                Rock Paper Scissors
+              </NavLink>
+            </Router>
           </div>
-          ) : (
+        ) : (
           <div>
-          <Router>
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
+            <Router>
+              <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
 
+                <Route exact path="/erc">
+                  <ERCPage />
+                </Route>
 
-            <Route exact path="/erc">
-              <ERCPage />
-            </Route>
+                <Route exact path="/timelinegame">
+                  <TimelineGame />
+                </Route>
 
-            <Route exact path="/timelinegame">
-              <TimelineGame />
-            </Route>
+                <Route exact path="/text">
+                  <TextApp />
+                </Route>
 
-            <Route exact path="/text">
-              <TextApp />
-            </Route>
+                <Route exact path="/gsap">
+                  <Greensock />
+                </Route>
 
-            <Route exact path="/gsap">
-              <Greensock />
-            </Route>
+                <Route exact path="/matching">
+                  <Matching />
+                </Route>
 
-            <Route exact path="/matching">
-              <Matching />
-            </Route>
+                <Route exact path="/typer">
+                  <TypingGame />
+                </Route>
 
-            <Route exact path="/typer">
-              <TypingGame />
-            </Route>
-
-          </Switch>
-        </Router>
-        </div>
-        )} 
+                <Route exact path="/rps">
+                  <RPS />
+                </Route>
+              </Switch>
+            </Router>
+          </div>
+        )}
       </div>
     </>
   );
