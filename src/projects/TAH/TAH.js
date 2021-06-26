@@ -280,6 +280,10 @@ export default function App2() {
         >
           <p>Check Answers</p>
         </button>
+        <p id="TAH-mobile-notice">This program was designed as a Drag and Drop demo, which isnt mobile friendly.
+        <br></br>
+        Please view it on a computer :)
+        </p>
       </div>
     </>
   );

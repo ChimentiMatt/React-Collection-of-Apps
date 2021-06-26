@@ -169,7 +169,9 @@ li {
   text-decoration: none;
 }
 
-
+#TAH-mobile-notice{
+  visibility: hidden;
+}
 
 
 
@@ -249,11 +251,6 @@ li {
   border-bottom: 1px solid black;
 }
 
-
-
-
-
-
 #draggable-list {
   margin-top: 20px;
   text-align: center;
@@ -313,10 +310,6 @@ li {
 }
 
 
-
-
-
-
 li {
   text-decoration: none;
 }
@@ -370,3 +363,37 @@ li {
     color: white;
   text-decoration: none;
 } */
+
+
+@media (max-width: 800px) {
+  .TAH-background{
+    width: 100vw;
+  }
+  .TAH-background{
+
+  }
+  #p2-title{
+    font-size: 25px;
+  }
+  #p2-desc{
+    font-size: 15px;
+  }
+  .check-btn{
+    bottom: 0;
+    width: 40px;
+    height: 80px;
+    font-size: 10px;
+  }
+  #TAH-mobile-notice{
+    position: absolute;
+    position: fixed;
+    visibility: visible;
+    top: 330px;
+    font-size: 30px;
+    left: 0;
+    height: 250px;
+    text-align: center;
+    background-color: rgb(255, 68, 68);
+    z-index: 100;
+  }
+}

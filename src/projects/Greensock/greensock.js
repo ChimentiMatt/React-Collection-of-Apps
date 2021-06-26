@@ -398,11 +398,15 @@ export default function Greensock() {
           <p id="gsap-e">e</p>
         </div>
 
-        {/* <img id="gsap-leaves" src={Leaves}></img> */}
-
         <div className="gsap-page2 gsap-section">
           <Screen2 />
         </div>
+
+        <p id="gsap-mobile-notice">
+          Due to these two animations being movie-like, mobile is not available. I have spent a lot of time making them and I would greatly appreciate it if you please watch them on a computer.
+
+
+        <br></br><br></br> Thank you :) </p>
 
         {/* <div className="gsap-page3 gsap-section">
           <p>Page 3</p>
