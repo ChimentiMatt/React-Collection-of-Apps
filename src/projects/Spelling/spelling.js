@@ -1,17 +1,18 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useSpeechSynthesis } from 'react-speech-kit';
 
 export default function Spelling() {
+  const [value, setValue] = useState('');
+  const { speak } = useSpeechSynthesis();
+
   let intervalRef = useRef();
   const [num, setNum] = useState(60);
   const [start, setStart] = useState(false);
   const [randomWord, setRandomWord] = useState();
-  const [randomIndex, setRandomIndex] = useState(
-    Math.floor(Math.random() * (100 - 0)) + 1
-  );
+  const [randomIndex, setRandomIndex] = useState(Math.floor(Math.random() * (100 - 0)) + 1);
   const [text, setText] = useState("");
   const [score, setScore] = useState(0);
   // const [seconds, setSeconds] = useState(60)
-
   const [spellingList, setSpellingList] = useState([
     {
       typo: '',
@@ -124,36 +125,16 @@ export default function Spelling() {
   const [displayWord, setDisplayWord] = useState("");
   const decreaseNum = () => setNum((prev) => prev - 1);
 
-  useEffect(() => {
-    if (num === 0) {
-      setDisplayWord("");
-      clearInterval(intervalRef.current);
-      // document.getElementById('st-text').disabled = true
-      document.getElementById("st-ending-text").innerHTML = `${
-        score / 5
-      } words per minute`;
-      document.getElementById("st-start-btn").style.visibility = "visible";
-    }
-  });
-
   const Start = () => {
     if (!start) {
-      setScore(0);
-
-      intervalRef.current = setInterval(decreaseNum, 1000);
-
-      document.getElementById("st-text").disabled = false;
-      document.getElementById("st-start-btn").style.visibility = "hidden";
-
       setRandomIndex(Math.floor(Math.random() * (100 - 0)) + 1);
       RandomIndex();
 
-      //   document.getElementById('st-start-btn').style.visibility = 'hidden'
+      
+      document.getElementById("sp-text").disabled = false;
     } else {
-      setNum(60);
-      setScore(0);
-      clearInterval(intervalRef.current);
-      intervalRef.current = setInterval(decreaseNum, 1000);
+
+
       setRandomIndex(Math.floor(Math.random() * (100 - 0)) + 1);
       RandomIndex();
     }
@@ -163,7 +144,7 @@ export default function Spelling() {
   function Submit(evt) {
     evt.preventDefault();
     console.log(text);
-    if (text === document.getElementById("st-word").innerText) {
+    if (text === document.getElementById("sp-word").innerText) {
       setText("");
       setRandomIndex(Math.floor(Math.random() * (100 - 0)) + 1);
       if (num === 0) {
@@ -172,10 +153,10 @@ export default function Spelling() {
         setText("");
         setRandomIndex(Math.floor(Math.random() * (100 - 0)) + 1);
         RandomIndex();
-        document.getElementById("st-text").style.background = "white";
+        document.getElementById("sp-text").style.background = "white";
       }
     } else {
-      document.getElementById("st-text").style.background =
+      document.getElementById("sp-text").style.background =
         "rgb(253, 161, 161)";
         console.log("this one 1")
 
@@ -194,35 +175,44 @@ export default function Spelling() {
   function RandomIndex() {
     return setDisplayWord(words[randomIndex]);
   }
-  function PlayAgain() {
-    setDisplayWord(words[randomIndex]);
-  }
+
 
   return (
-    <div className="typer-Page">
-      <div className="st-container">
-        <div className="st-box">
-          <h1 id="st-title">Typing Test</h1>
-          <p id="st-time">Time Remaining: {num}s</p>
-          <p id="st-score">Score: {score}</p>
-          <p id="st-ending-text"></p>
+    <div className="spelling-page">
+      <div className="sp-container">
+        <div className="sp-box">
+          <h1 id="sp-title">Spelling Blaster</h1>
 
-          <p id="st-instruction">Type the following</p>
-          <p id="st-word">{displayWord}</p>
+          <p id="sp-score">Score: {score}</p>
+          <p id="sp-ending-text"></p>
+
+          <p id="sp-instruction">Type the following</p>
+          <p id="sp-word">{displayWord}</p>
+
+
+          
           <form onSubmit={Submit}>
             <input
-              id="st-text"
+              id="sp-text"
               type="text"
               value={text}
               disabled
               onChange={(e) => setText(e.target.value)}
             ></input>
           </form>
-          <button id="st-start-btn" onClick={() => Start()}>
+          
+          <button id="sp-start-btn" onClick={() => Start()}>
             START
           </button>
           {/* <button id="" onClick={() => PlayAgain() }>Play Again?</button> */}
-          <p>{spellingList[1].typo}</p>
+          <p>{spellingList[0].typo}</p>
+          <div>
+            {/* <textarea
+              value={value}
+              onChange={(event) => setValue(event.target.value)}
+            /> */}
+            <button onClick={() => speak({ text: displayWord })}>Speak</button>
+          </div>
         </div>
       </div>
     </div>

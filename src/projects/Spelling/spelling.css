@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nunito+Sans:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nunito+Sans:wght@300;700&display=swap');
-.typer-Page{
+.spelling-page{
     margin: 0;
     padding: 0;
     text-align: center;
@@ -11,42 +11,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Nunito Sans', sans-serif;}
+    font-family: 'Nunito Sans', sans-serif;
+}
 
-.st-container{
+.sp-container{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 362px;
 
+
 }
 
-.st-box{
+.sp-box{
     border: 1px solid black;
     border-radius: 13px;
     background-color: #cfe0e8;
 
 }
 
-#st-reset-btn{
+#sp-reset-btn{
     visibility: hidden;
 }
 
-#st-start-new-game{
+#sp-start-new-game{
     visibility: hidden
 }
 
 
-#st-title{
+#sp-title{
     color: #000;
     padding-bottom: 10px;
     padding-top: 10px;
     background-color: #87bdd8;
     border-radius: 13px 13px 0px 0px;
     color: white;
+    padding: 20px;
 }
 
-#st-time {
+#sp-time {
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     width: 500px;
@@ -60,17 +63,18 @@
     margin-bottom: 20px;
 }
 
-#st-instruction{
+#sp-instruction{
     margin-bottom: 20px;
     font-size: small;
 }
 
-#st-start-btn{
+#sp-start-btn{
     margin-top: 20px;
     margin-bottom: 20px;
+
 }
 
-#st-text{
+#sp-text{
     margin-top: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -80,21 +84,22 @@
 
 }
 
-#st-word {
+#sp-word {
     font-weight: bolder;
+    position: relative;
+    z-index: -999;
+    height: 0;
 }
 
 @media (max-width: 800px) {
-    .typer-Page{
-       
-    }
-    .st-box{
+
+    .sp-box{
         width: 300px;
     }
-    #st-time{
+    /* #st-time{
         width: 300px;
-    }
-    #st-title{
+    } */
+    #sp-title{
         font-size: 45px;
     }
 }
