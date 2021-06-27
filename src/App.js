@@ -25,6 +25,8 @@ import { render } from "@testing-library/react";
 
 import RPS from "./projects/RPS/rps.js"
 
+import Spelling from "./projects/Spelling/spelling.js"
+import "./projects/Spelling/spelling.css";
 
 function App() {
   const [home, setHome] = useState(true);
@@ -84,6 +86,13 @@ function App() {
               <NavLink onClick={() => setHome(false)} to="/rps">
                 Rock Paper Scissors
               </NavLink>
+
+              <br></br>
+
+              <NavLink onClick={() => setHome(false)} to="/spelling">
+                Spelling
+              </NavLink>
+
             </Router>
           </div>
         ) : (
@@ -120,6 +129,10 @@ function App() {
 
                 <Route exact path="/rps">
                   <RPS />
+                </Route>
+
+                <Route exact path="/spelling">
+                  <Spelling />
                 </Route>
               </Switch>
             </Router>

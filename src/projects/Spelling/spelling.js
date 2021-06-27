@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-export default function SpeedTyper() {
+export default function Spelling() {
   let intervalRef = useRef();
   const [num, setNum] = useState(60);
   const [start, setStart] = useState(false);
@@ -12,8 +12,11 @@ export default function SpeedTyper() {
   const [score, setScore] = useState(0);
   // const [seconds, setSeconds] = useState(60)
 
-  const [wrongWord, setWrongWord] = useState([
-
+  const [spellingList, setSpellingList] = useState([
+    {
+      typo: '',
+      word: '',
+    }
   ])
 
   const [words, setWords] = useState([
@@ -176,15 +179,14 @@ export default function SpeedTyper() {
         "rgb(253, 161, 161)";
         console.log("this one 1")
 
-        // const handleWord = (index, text) => {
-        //     const newWord = [...wrongWord]
-        //     newWord.push(text)
-        //     setWrongWord(newWord)
-        // }
-        // handleWord()
-        // console.log(wrongWord)
-        setWrongWord(wrongWord => [...wrongWord, text])
-        console.log(wrongWord)
+        setSpellingList([
+          ...spellingList, 
+          {
+            typo: text,
+            word: displayWord,
+          }
+        ])
+        console.log(spellingList)
         
     }
   }
@@ -220,6 +222,7 @@ export default function SpeedTyper() {
             START
           </button>
           {/* <button id="" onClick={() => PlayAgain() }>Play Again?</button> */}
+          <p>{spellingList[1].typo}</p>
         </div>
       </div>
     </div>
