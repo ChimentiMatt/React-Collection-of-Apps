@@ -2,6 +2,8 @@ import "./App.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
+import Landing from './landing.js'
+
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
 
@@ -35,72 +37,15 @@ function App() {
     document.getElementById("landing").stayle.visibility = "hidden";
   }
 
-  function Home() {
-    return <p>cat</p>;
-  }
 
   return (
-    <>
+
       <div className="App">
-        {home ? (
-          <div id="landing">
-            <h1>React App Collection</h1>
-            <Router>
-              <NavLink onClick={() => setHome(false)} to="/">
-                Home
-              </NavLink>
-              <br></br>
-              <NavLink onClick={() => setHome(false)} to="/erc">
-                Exchange Rate Converter
-              </NavLink>
 
-              <br></br>
-
-              <NavLink onClick={() => setHome(false)} to="/timelinegame">
-                Timeline Game
-              </NavLink>
-
-              <br></br>
-              <NavLink onClick={() => setHome(false)} to="/text">
-                Text
-              </NavLink>
-
-              <br></br>
-              <NavLink onClick={() => setHome(false)} to="/gsap">
-                GreenSock
-              </NavLink>
-              <br></br>
-
-              <NavLink onClick={() => setHome(false)} to="/matching">
-                Matching Memes
-              </NavLink>
-
-              <br></br>
-
-              <NavLink onClick={() => setHome(false)} to="/typer">
-                Typing Game
-              </NavLink>
-
-             <br></br>
-             
-              <NavLink onClick={() => setHome(false)} to="/rps">
-                Rock Paper Scissors
-              </NavLink>
-
-              <br></br>
-
-              <NavLink onClick={() => setHome(false)} to="/spelling">
-                Spelling
-              </NavLink>
-
-            </Router>
-          </div>
-        ) : (
-          <div>
             <Router>
               <Switch>
                 <Route exact path="/">
-                  <Home />
+                  <Landing />
                 </Route>
 
                 <Route exact path="/erc">
@@ -136,10 +81,9 @@ function App() {
                 </Route>
               </Switch>
             </Router>
-          </div>
-        )}
+
       </div>
-    </>
+
   );
 }
 

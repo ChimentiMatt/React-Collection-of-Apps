@@ -14,16 +14,8 @@ export default function App2() {
 
   function handleClick2() {
     checkOrder();
-    // let classDrag = document.getElementsByClassName('draggable')
-    // classDrag.
-  }
 
-  // function checkedfunc() {
-  //   document.getElementById("TAH-marker-list-btn").style.backgroundColor =
-  //     "rgba(38, 97, 129, 0.767)";
-  //     document.getElementById("TAH-marker-list-btn").style.color =
-  //     "white";
-  // }
+  }
 
   function Dates() {
     const dates = [
@@ -130,7 +122,7 @@ export default function App2() {
     "Roe v. Wade",
     "Bay of Pigs",
     "Kennedy Shot",
-    "Fist Televised Presidential Debate",
+    "First Televised Presidential Debate",
     "Brown V. Board of Education",
     "Pear Harbor",
     "World War II",
@@ -153,9 +145,10 @@ export default function App2() {
   // Store listitems
   const listItems = [];
 
+  let counter = 0
+
   let dragStartIndex;
 
-  React.useEffect(() => createList(), []);
 
   function createList() {
 
@@ -169,6 +162,10 @@ export default function App2() {
       //------
 
       .forEach((event, index) => {
+        if (counter <= histEvents.length){
+          counter += 1
+          console.log(histEvents.length, 'len')
+          console.log(counter, 'counter')
         const listItem = document.createElement("li");
         listItem.setAttribute("data-index", index);
 
@@ -183,6 +180,10 @@ export default function App2() {
         listItems.push(listItem);
         const draggable_list = document.getElementById("draggable-list");
         draggable_list.appendChild(listItem);
+        }
+        else {
+
+        }
       });
 
     addEventListeners();
