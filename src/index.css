@@ -1,8 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
   }
   
-#landing{
-  
+.landing{
+  background-color: #E0E4E5;
+  height: 500vh;
+  font-family: 'Kalam', cursive;
 }
+
+/* .gsap-landing2{
+  position: relative;
+  height: 100vh;
+  background-color: red;
+} */
+
+#landing-h1{
+  position: relative;
+  z-index: 1000;
+  font-size: 100px;
+  color: #00aff2;
+}
+
