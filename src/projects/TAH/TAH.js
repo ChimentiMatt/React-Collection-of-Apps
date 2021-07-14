@@ -6,11 +6,12 @@ import sky from "./grand7.jpeg";
 export default function App2() {
 
 
-  function handleClick() {
-    // document.getElementById("testID").style.backgroundColor = "red";
-    createList();
-  }
-  window.onload = createList;
+  // function handleClick() {
+  //   // document.getElementById("testID").style.backgroundColor = "red";
+  //   createList();
+  // }
+
+
 
   function handleClick2() {
     checkOrder();
@@ -149,6 +150,7 @@ export default function App2() {
 
   let dragStartIndex;
 
+  React.useEffect(() => createList(), []);
 
   function createList() {
 
@@ -226,6 +228,7 @@ export default function App2() {
   // Check the order of list items
 
   function checkOrder() {
+
     listItems.forEach((listItem, index) => {
       const tevent = listItem.querySelector(".draggable").innerText.trim();
       if (tevent !== histEvents[index]) {
@@ -264,7 +267,7 @@ export default function App2() {
       <div className="TAH-app">
         <div id="TAH-z-index-trick"></div>
         <img className="TAH-background" src={sky}></img>
-        <h1 id="p2-title">Timeline Game</h1>
+        <h1 id="p2-title">Timeline</h1>
         <h1 id="p2-title">American History</h1>
 
         <p id="p2-desc">Drag and drop events to their matching dates</p>
