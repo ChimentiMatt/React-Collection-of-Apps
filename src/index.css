@@ -108,13 +108,14 @@
   display: flex;
   justify-content: center;
   /* border: 1px solid black; */
-  height: 120px;
+  height: 100px;
   overflow: hidden;
 }
 
 #GS-MTM-Card-h1{
+  color: #00aff2;
   font-size: 55px;
-  margin-top: 50px;
+  margin-top: 20px;
   position: relative;
   top: 110px;
 } 
@@ -125,24 +126,38 @@
   line-height: 1.6;
   text-align: center;
   /* border: 1px solid black; */
-  height: 200px;
+  height: 240px;
   overflow: hidden;
 }
 
 #GS-MTM-Des{
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   position: relative;
   right: 1000px;
 }
 
+#GS-MTM-Link{
+  opacity: 0;
+  font-size: 30px;
+  text-decoration: none;
+  /* color: #00aff2; */
+  color: black;
+}
+
+#GS-MTM-Link:hover{
+  color: #00aff2;
+}
+
 #GS-MTM-Mars-Image-Container{
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 
 #GS-MTM-Mars-Image{
   opacity: 0;
-  height: 500px;
+  height: 450px;
 }
 
 #GS-MTM-Ship-Image{

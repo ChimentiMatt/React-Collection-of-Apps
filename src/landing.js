@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -38,6 +37,7 @@ import "./projects/Spelling/spelling.css";
 import gsapCore from "gsap/gsap-core";
 
 export default function Landing() {
+  const [mtmSelected, setMtmSelected] = useState(false)
   useEffect(() => {
     ScrollGreensock();
   }, []);
@@ -77,6 +77,11 @@ export default function Landing() {
   //   y: -400});
 
   function MtmFunc() {
+    //state stops duplication of animations
+    if (mtmSelected == true){
+    }
+    else {
+      setMtmSelected(true)
     document.getElementById('GS-MTM-Btn').style.color = '#FF0000'
     document.getElementById('GS-MTM-Card').style.visibility = 'visible'
     
@@ -84,19 +89,18 @@ export default function Landing() {
     var tl = gsap.timeline({})
     tl.to('#GS-MTM-Card-h1', {delay: .2, duration: 1, y: -100})
     tl.to('#GS-MTM-Des', { duration: 2, x: 1000})
+    tl.to('#GS-MTM-Link', {opacity: 1})
     tl.to('#GS-MTM-Mars-Image', {duration: 1, opacity: 1})
     tl.to('#GS-MTM-Ship-Image', {duration: 20, ease: 'none', motionPath:{ 
-      path:'M327.589,212.51599 C331.093,203.01699 502.13,-105.295 683.606,-146.171 851.107,-183.899 1090.962,-54.328 1248.229,54.041 1455.925,197.163 1587.421,370.131 1911.347,363.854 2225.206,357.772 2059.554,-79.119 1854.739,-28.263 1586.114,38.438 1626.468,189.669 1462.236,324.402 1327.863,434.636 1145.005,483.839 889.236,477.242 583.053,469.344 180.082,245.499 180.565,245.751 ',
+      path:'M330.589,213.51599 C334.093,204.01699 488.13,-63.297 669.606,-104.171 837.107,-141.901 1080.962,-19.328 1238.229,89.041 1445.925,232.163 1590.421,371.131 1914.347,364.854 2228.206,358.772 2062.554,-78.119 1857.739,-27.263 1589.114,39.438 1429.464,103.669 1245.234,226.402 1100.588,322.763 926.005,308.839 670.236,302.242 364.053,294.344 183.082,246.499 183.565,246.751 ',
       autoRotate: true,
       }
     })
-
-    // gsap.set('#GS-MTM-Ship-Image', {xPercent:-50, yPercent:-50})
+    // Uncomment for Plugin, Works in Browser    
     // MotionPathHelper.create('#GS-MTM-Ship-Image');
-
-
-      }
-
+    }
+    gsap.to('#GS-MTM-Mars-Image', {delay: 12, opacity: 1, zIndex: 10})
+  }
 
   return (
     <>
@@ -127,8 +131,11 @@ export default function Landing() {
             </div>
 
             <div id="GS-MTM-Container-Des">
-              <p id="GS-MTM-Des">After a brief intro animation, sit back and watch the short animation Mission to Mars. It uses GreenSock, also know as gsap for animations. This page was a great project for me to learn more about the technology and animations. Gsap is a powerful library that I highly recommend to anyone doing javascript. The main animation is a little over an about minute long. Have fun!</p>
+              <p id="GS-MTM-Des">After a brief intro animation, sit back and watch the animation "Mission to Mars". It uses GreenSock, also know as gsap for animations. This page was a great project for me to learn more about the technology and animations. It allowed me to grow in my understanding of animations and since their creations, I now use much-improved tools and techniques. Gsap is a powerful library that I highly recommend to anyone doing javascript. The main animation is a little over an about minute long. Have fun!</p>
+              <NavLink id="GS-MTM-Link" to="/gsap">Visit Page</NavLink>
             </div>
+
+
             <div id="GS-MTM-Mars-Image-Container">
               <img id ="GS-MTM-Mars-Image" src={Mars}></img>
               <img id="GS-MTM-Ship-Image" src={Ship}></img>
