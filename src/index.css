@@ -175,11 +175,15 @@
 
 /* Timeline "card" or page */
 #Timeline-Card{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
   top: 125px;
   visibility: hidden;
   height: 90vh;
   width: 100vw;
+  border: 1px solid black;
 }
 #Timeline-Container-h1{
   display: flex;
@@ -211,5 +215,88 @@
   margin-top: 20px;
   margin-bottom: 20px;
   position: relative;
-  /* right: 1000px; */
+  right: 1000px;
+}
+
+#Timeline-Link{
+  opacity: 0;
+  font-size: 30px;
+  text-decoration: none;
+  /* color: #00aff2; */
+  color: black;
+}
+#Timeline-Link:hover{
+  color: #00aff2;
+}
+
+
+#Timeline-Animation-Container{
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  border-radius: 15px;
+  height: 300px;
+  width: 600px;
+}
+
+#Timeline-Animation-Date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bolder;
+  border: 1px solid black;
+  border-radius:  15px 0 0 15px ;
+  height: 40px;
+  width: 180px;
+}
+
+
+#Timeline-Animation-Answers{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 63px;
+  height: 40px;
+  font-weight: bolder;
+}
+
+#Nixon{
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 0 15px 0 0;
+  text-align: center;
+  width: 416px;
+  font-weight: bolder;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+#Roe{
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+  text-align: center;
+  width: 416px;
+}
+
+#WW2{
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+  text-align: center;
+  width: 416px;
+}
+#FirstWebPage{
+  position: relative;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 0 0 15px 0;
+  text-align: center;
+  width: 416px;
 }
