@@ -100,6 +100,7 @@ export default function Landing() {
       tl.to('#GS-MTM-Des', { duration: 2, x: 1000})
       tl.to('#GS-MTM-Link', {opacity: 1})
       tl.to('#GS-MTM-Mars-Image', {duration: 1, opacity: 1})
+      gsap.to('#GS-MTM-Mars-Image', {duration: 400, rotate: 90})
       tl2.to('#GS-MTM-Ship-Image', {delay: 3, duration: 17, ease: 'none', motionPath:{ 
         path:'M330.589,213.51599 C334.093,204.01699 488.13,-63.297 669.606,-104.171 837.107,-141.901 1080.962,-19.328 1238.229,89.041 1445.925,232.163 1590.421,371.131 1914.347,364.854 2228.206,358.772 2062.554,-78.119 1857.739,-27.263 1589.114,39.438 1429.464,103.669 1245.234,226.402 1100.588,322.763 926.005,308.839 670.236,302.242 364.053,294.344 183.082,246.499 183.565,246.751 ',
         autoRotate: true,
@@ -132,12 +133,15 @@ export default function Landing() {
       var tl2 = gsap.timeline({ repeat: -1})
       tl.to('#Timeline-h1', {delay: .2, duration: 1, y: -100})
       tl.to('#Timeline-Des', { duration: 1, x: 1000})
-      // tl.to('#Timeline-Animation-Answers', { delay: 3})
+      // tl.to('#Timeline-Anmation-Answers', { delay: 3})
+      tl.to('#Timeline-Animation-Container', {duration: 0, opacity: 1})
       .add(Animation2)
       gsap.to('#Timeline-Link', { delay: 3.5 , duration: 1, opacity: 1})
 
+
       function Animation2() { 
-        tl2.to('#Timeline-Animation-Container', {delay: 2.2, duration: 1, opacity: 1})
+        tl2.to('#Timeline-Animation-Container', {opacity: 1})
+        tl2.to('#Timeline-Animation-Container', {delay: 2.2, duration: 1})
         tl2.to('#Timeline-Animation-Answers', { y: -42})
         tl2.to('#Roe', {backgroundColor: 'rgba(255, 0, 0, 0.5)' })
         tl2.to('#Nixon', {backgroundColor: 'white' })
@@ -148,6 +152,7 @@ export default function Landing() {
         tl2.to('#FirstWebPage', {backgroundColor: 'rgba(123, 239, 178, 1)' })
         tl2.to('#WW2', {backgroundColor: 'white' })
         tl2.to('#WW2', {delay: 2})
+        tl2.to('#Timeline-Animation-Container', {duration: 1, opacity: 0})
     }
 
 
