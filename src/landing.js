@@ -94,11 +94,13 @@ export default function Landing() {
       // Greensock Animations
       gsap.registerPlugin(MotionPathPlugin, MotionPathHelper)
       var tl = gsap.timeline({})
+      var tl2 = gsap.timeline({repeat: -1})
+      var tl3 = gsap.timeline({repeat: -1})
       tl.to('#GS-MTM-Card-h1', {delay: .2, duration: 1, y: -100})
       tl.to('#GS-MTM-Des', { duration: 2, x: 1000})
       tl.to('#GS-MTM-Link', {opacity: 1})
       tl.to('#GS-MTM-Mars-Image', {duration: 1, opacity: 1})
-      tl.to('#GS-MTM-Ship-Image', {duration: 20, ease: 'none', motionPath:{ 
+      tl2.to('#GS-MTM-Ship-Image', {delay: 3, duration: 17, ease: 'none', motionPath:{ 
         path:'M330.589,213.51599 C334.093,204.01699 488.13,-63.297 669.606,-104.171 837.107,-141.901 1080.962,-19.328 1238.229,89.041 1445.925,232.163 1590.421,371.131 1914.347,364.854 2228.206,358.772 2062.554,-78.119 1857.739,-27.263 1589.114,39.438 1429.464,103.669 1245.234,226.402 1100.588,322.763 926.005,308.839 670.236,302.242 364.053,294.344 183.082,246.499 183.565,246.751 ',
         autoRotate: true,
         }
@@ -106,7 +108,9 @@ export default function Landing() {
       // Uncomment for Plugin, Works in Browser    
       // MotionPathHelper.create('#GS-MTM-Ship-Image');
     }
-    gsap.to('#GS-MTM-Mars-Image', {delay: 12, opacity: 1, zIndex: 10})
+    tl3.to('#GS-MTM-Mars-Image', {delay: 10, opacity: 1, zIndex: 3})
+    tl3.to('#GS-MTM-Mars-Image', {delay:8, zIndex: 0})
+    tl3.to('#GS-MTM-Mars-Image', {delay:2, zIndex: 2})
   }
 
   function TimelineFunc() {

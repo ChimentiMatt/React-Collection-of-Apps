@@ -161,12 +161,15 @@
 }
 
 #GS-MTM-Mars-Image{
+  position: relative;
+  z-index: 100;
   opacity: 0;
   height: 450px;
 }
 
 #GS-MTM-Ship-Image{
   position: absolute;
+  z-index: 2;
   left: -475px;
   height: 100px;
   /* opacity: 0; */
@@ -183,7 +186,7 @@
   visibility: hidden;
   height: 90vh;
   width: 100vw;
-  border: 1px solid black;
+
 }
 #Timeline-Container-h1{
   display: flex;
