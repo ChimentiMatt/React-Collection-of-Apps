@@ -5,6 +5,9 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+
+
   }
   
 .landing{
@@ -28,7 +31,7 @@
 }
 
 #landing-heading{
-  height: 10vh;
+  height: 8vh;
   background-color: white;
   /* border: 1px solid black; */
   width: 700px;
@@ -144,10 +147,14 @@
 
 /* Greensock 'card' or page */
 #GS-MTM-Card{
-  height: 90vh;
+
   display: none;
-  font-size: 20px;
-  background-color: red;
+
+}
+
+#GS-MTM-Container{
+  margin-top: 10vh;
+  height: 90vh;
 }
 
 #GS-MTM-Container-h1{
@@ -217,21 +224,19 @@
 
 
 /* Timeline "card" or page */
-#Timeline-Card{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 125px;
+#timeline-Card{
   display: none;
-  height: 90vh;
-  width: 100vw;
-
 }
+
+#timeline-Container{
+  margin-top: 10vh;
+}
+
 #Timeline-Container-h1{
   display: flex;
   justify-content: center;
   height: 100px;
+
   overflow: hidden;
 }
 
@@ -239,7 +244,7 @@
   color: #00aff2;
   font-size: 55px;
   position: relative;
-  margin-top: 20px;
+
   top: 110px;
 } 
 
@@ -288,6 +293,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-weight: bolder;
   border: 1px solid black;
   border-radius:  15px 0 0 15px ;

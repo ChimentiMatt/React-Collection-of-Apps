@@ -94,7 +94,7 @@ export default function Landing() {
       document.getElementById('GS-MTM-Btn').style.color = '#FF0000'
 
       // removes all other active pages
-      document.getElementById('Timeline-Card').style.display = 'none'
+      document.getElementById('timeline-Card').style.display = 'none'
       document.getElementById('Timeline-Btn').style.color = 'black'
       document.getElementById('Home-Container').style.display = 'none'
 
@@ -132,7 +132,7 @@ export default function Landing() {
       setMtmSelected(false)
       // displays current page
       document.getElementById('Timeline-Btn').style.color = '#FF0000'
-      document.getElementById('Timeline-Card').style.display = 'contents'
+      document.getElementById('timeline-Card').style.display = 'contents'
       // removes all other active pages
       document.getElementById('GS-MTM-Btn').style.color = 'black'
       document.getElementById('GS-MTM-Card').style.display = 'none'
@@ -224,49 +224,52 @@ export default function Landing() {
           </div>
 
         <div id="GS-MTM-Card">
-            <div id="GS-MTM-Container-h1">
-              <h1 id="GS-MTM-Card-h1">Mission To Mars</h1>
-            </div>
+          <div id="GS-MTM-Container">
+              <div id="GS-MTM-Container-h1">
+                <h1 id="GS-MTM-Card-h1">Mission To Mars</h1>
+              </div>
 
-            <div id="GS-MTM-Container-Des">
-              <p id="GS-MTM-Des">After a brief intro animation, sit back and watch the animation "Mission to Mars". It uses GreenSock, also know as gsap for animations. This page was a great project for me to learn more about the technology and animations. It allowed me to grow in my understanding of animations and since their creations, I now use much-improved tools and techniques. Gsap is a powerful library that I highly recommend to anyone doing javascript. The main animation is a little over an about minute long. Have fun!</p>
-              <Router forceRefresh>
-                <NavLink id="GS-MTM-Link" to="/gsap">Visit Page</NavLink>
-              </Router>
-            </div>
+              <div id="GS-MTM-Container-Des">
+                <p id="GS-MTM-Des">After a brief intro animation, sit back and watch the animation "Mission to Mars". It uses GreenSock, also know as gsap for animations. This page was a great project for me to learn more about the technology and animations. It allowed me to grow in my understanding of animations and since their creations, I now use much-improved tools and techniques. Gsap is a powerful library that I highly recommend to anyone doing javascript. The main animation is a little over an about minute long. Have fun!</p>
+                <Router forceRefresh>
+                  <NavLink id="GS-MTM-Link" to="/gsap">Visit Page</NavLink>
+                </Router>
+              </div>
 
 
-            <div id="GS-MTM-Mars-Image-Container">
-              <img id ="GS-MTM-Mars-Image" src={Mars}></img>
-              <img id="GS-MTM-Ship-Image" src={Ship}></img>
+              <div id="GS-MTM-Mars-Image-Container">
+                <img id ="GS-MTM-Mars-Image" src={Mars}></img>
+                <img id="GS-MTM-Ship-Image" src={Ship}></img>
+              </div>
             </div>
         </div>
 
-        <div id="Timeline-Card">
-          <div id="Timeline-Container-h1">
-            <h1 id="Timeline-h1">American History Timeline</h1>
-          </div>
-
-          <div id="Timeline-Container-Des">
-            <p id="Timeline-Des">Play a drag and drop game where you match American historical events to their dates. See how many you can get correct, and learn some new facts.</p>
-            <Router forceRefresh>
-              <NavLink id="Timeline-Link" to="/timelinegame">Visit Page</NavLink>
-            </Router>
-          </div>
-
-          <div id="Timeline-Animation-Container">
-            <div id="Timeline-Animation-Date">
-              <p>1991</p>
+        <div id="timeline-Card">
+          <div id="timeline-Container">
+            <div id="Timeline-Container-h1">
+              <h1 id="Timeline-h1">American History Timeline</h1>
             </div>
-            <div id="Timeline-Animation-Answers">
-              <p id="Nixon">Nixon Resigns</p>
-              <p id="Roe">Roe v. Wade</p>
-              <p id="WW2">World War II</p>
-              <p id="FirstWebPage">The First Web Page</p>
-            </div>
-            
-          </div>
 
+            <div id="Timeline-Container-Des">
+              <p id="Timeline-Des">Play a drag and drop game where you match American historical events to their dates. See how many you can get correct, and learn some new facts.</p>
+              <Router forceRefresh>
+                <NavLink id="Timeline-Link" to="/timelinegame">Visit Page</NavLink>
+              </Router>
+            </div>
+
+            <div id="Timeline-Animation-Container">
+              <div id="Timeline-Animation-Date">
+                <p>1991</p>
+              </div>
+              <div id="Timeline-Animation-Answers">
+                <p id="Nixon">Nixon Resigns</p>
+                <p id="Roe">Roe v. Wade</p>
+                <p id="WW2">World War II</p>
+                <p id="FirstWebPage">The First Web Page</p>
+              </div>
+              
+            </div>
+          </div>
         </div>
 
 
