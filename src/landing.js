@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-import {SplitText} from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
@@ -41,6 +42,7 @@ import gsapCore from "gsap/gsap-core";
 export default function Landing() {
   const [mtmSelected, setMtmSelected] = useState(false)
   const [tlSelected, setTlSelected] = useState(false)
+  
   useEffect(() => {
     ScrollGreensock();
   }, []);
@@ -165,13 +167,23 @@ export default function Landing() {
   }
 
   useEffect(() => {
-    var tl = gsap.timeline({})
-    // gsap.registerPlugin(SplitText);
-    // var mySplitText = new SplitText("#Home-h1", {type:"words,chars"})
-    // gsap.staggerFrom("Home-h1", .8, {color: 'red'})
-    tl.to('#span-1, #span-2, #span-3, #span-4, #span-5' , {delay: 1, opacity: 1})
-    tl.to('#span-6', {delay: .5, opacity: 1})
-    tl.to('#span-7', {delay: .5, opacity: 1})
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: "#span-1",
+        start: 'center center',
+        end: 'bottom top',
+        markers: true,
+        scrub: true,
+
+      }
+    })
+    .from('#span-1', { x : 500, y: 400, fontSize: 100})
+  
+
+
+
   })
 
 
