@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+import {SplitText} from "gsap/SplitText";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { DrawSVGPlugin } from "gsap/dist/DrawSVGPlugin";
+
 
 import Mars from './mars.png'
 import Ship from './spaceship.png'
@@ -86,10 +88,15 @@ export default function Landing() {
       setTlSelected(false)
       // displays current page
       document.getElementById('GS-MTM-Btn').style.color = '#FF0000'
-      document.getElementById('GS-MTM-Card').style.visibility = 'visible'
+      document.getElementById('GS-MTM-Card').style.display = 'contents'
+      document.getElementById('GS-MTM-Btn').style.color = '#FF0000'
+
       // removes all other active pages
-      document.getElementById('Timeline-Card').style.visibility = 'hidden'
+      document.getElementById('Timeline-Card').style.display = 'none'
       document.getElementById('Timeline-Btn').style.color = 'black'
+      document.getElementById('Home-Container').style.display = 'none'
+
+
 
       // Greensock Animations
       gsap.registerPlugin(MotionPathPlugin, MotionPathHelper)
@@ -123,10 +130,10 @@ export default function Landing() {
       setMtmSelected(false)
       // displays current page
       document.getElementById('Timeline-Btn').style.color = '#FF0000'
-      document.getElementById('Timeline-Card').style.visibility = 'visible'
+      document.getElementById('Timeline-Card').style.display = 'contents'
       // removes all other active pages
       document.getElementById('GS-MTM-Btn').style.color = 'black'
-      document.getElementById('GS-MTM-Card').style.visibility = 'hidden'
+      document.getElementById('GS-MTM-Card').style.display = 'none'
 
       // Greensock Animations
       var tl = gsap.timeline({})
@@ -153,44 +160,56 @@ export default function Landing() {
         tl2.to('#WW2', {backgroundColor: 'white' })
         tl2.to('#WW2', {delay: 2})
         tl2.to('#Timeline-Animation-Container', {duration: 1, opacity: 0})
-    }
-
-
-
+      }
     }
   }
 
+  useEffect(() => {
+    var tl = gsap.timeline({})
+    // gsap.registerPlugin(SplitText);
+    // var mySplitText = new SplitText("#Home-h1", {type:"words,chars"})
+    // gsap.staggerFrom("Home-h1", .8, {color: 'red'})
+    tl.to('#span-1, #span-2, #span-3, #span-4, #span-5' , {delay: 1, opacity: 1})
+    tl.to('#span-6', {delay: .5, opacity: 1})
+    tl.to('#span-7', {delay: .5, opacity: 1})
+  })
 
 
   return (
     <>
-      <div className="landing gsap-section">
-        <div className="box">
+      <div className="landing">
+        {/* <div className="box">
+        </div> */}
+        <div id="landing-heading">
           <h1 id="landing-h1">React App Collection</h1>
+
+          <div id="card-links">
+            <Router forceRefresh>
+              <NavLink id="Home-Btn" to="/">Home</NavLink>
+            </Router>
+            <button 
+            id="GS-MTM-Btn"
+            onClick={() => MtmFunc()}
+            >Mission to Mars</button>
+
+            <button
+            id="Timeline-Btn"
+            onClick={() => TimelineFunc()}
+            >Timeline Game</button>
+
+            <button
+            id="Speedtyper-btn"
+            >SpeedTyper</button>
+
+            <button
+            id="Spelling-btn"
+            >Spelling</button>
+          </div>
+
         </div>
-
-        <div id="card-links">
-          <Router forceRefresh>
-            <NavLink id="Home-Btn" to="/">Home</NavLink>
-          </Router>
-          <button 
-          id="GS-MTM-Btn"
-          onClick={() => MtmFunc()}
-          >Mission to Mars</button>
-
-          <button
-          id="Timeline-Btn"
-          onClick={() => TimelineFunc()}
-          >Timeline Game</button>
-
-          <button
-          id="Speedtyper-btn"
-          >SpeedTyper</button>
-
-          <button
-          id="Spelling-btn"
-          >Spelling</button>
-        </div>
+          <div id="Home-Container">
+            <h1 id="Home-h1"><span id="span-1">One</span> <span id="span-2">App</span> <span id="span-3">for</span> <span id="span-4">Tech</span> <span id="span-5">Demos,</span> <section id="span-6">Polished Projects,</section> <span id="span-7">and More</span></h1>
+          </div>
 
         <div id="GS-MTM-Card">
             <div id="GS-MTM-Container-h1">
@@ -208,7 +227,6 @@ export default function Landing() {
             <div id="GS-MTM-Mars-Image-Container">
               <img id ="GS-MTM-Mars-Image" src={Mars}></img>
               <img id="GS-MTM-Ship-Image" src={Ship}></img>
-              {/* <path id="path" d="M-199.412,93.515 C-192.405,74.515 -131.887,3.637 -58.861,2.643 16.127,2.643 14.762,53.632 40.762,81.637 73.758,115.637 176.17,147.393 225.17,147.393 312.17,147.393 478.569,98.745 485.569,75.754 "></path> */}
             </div>
         </div>
 
@@ -241,7 +259,7 @@ export default function Landing() {
 
 
 
-        <Router forceRefresh>
+        {/* <Router forceRefresh>
           <NavLink to="/">Home</NavLink>
           <br></br>
           <NavLink to="/erc">Exchange Rate Converter</NavLink>
@@ -270,7 +288,7 @@ export default function Landing() {
           <br></br>
 
           <NavLink to="/spelling">Spelling</NavLink>
-        </Router>
+        </Router> */}
       </div>
 
 
