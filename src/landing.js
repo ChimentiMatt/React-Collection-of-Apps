@@ -42,40 +42,69 @@ export default function Landing() {
   const [tlSelected, setTlSelected] = useState(false);
 
   useEffect(() => {
-    ScrollGreensock();
+    // ScrollGreensock();
+    HomePageScrollGSAP()
   }, []);
 
-  function ScrollGreensock() {}
 
-  //   gsap.registerPlugin(ScrollTrigger);
+  gsap.utils.toArray('.gsap-section').forEach((section) => {
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      pin: true,
+      pinSpacing: false
+    });
+  });
+
+  function HomePageScrollGSAP() {
+    gsap.to('#text1', {delay: 1, duration: 2, opacity: 1})
+    gsap.to('#text2', {delay: 2, duration: 2, opacity: 1 })
+    gsap.registerPlugin(ScrollTrigger)
+  
   //   gsap.timeline({
   //     scrollTrigger: {
-  //       trigger: "#landing-h1",
-  //       start: 'center center',
-  //       end: 'bottom top',
+  //       trigger: '#text1',
+  //       start: '150px 59.5%',
+  //       end: '150px 10%',
+  //       // end: '200px 200px',
+  //       toggleActions: 'play none none none',
   //       markers: true,
-  //       scrub: true,
-
+  //       scrub: true,    
   //     }
   //   })
-  //   .from('#landing-h1', { x : 500, y: 400, fontSize: 100})
+  //   .from('#text1', {  fontSize: 100})
+  //   .from('#text2', {  fontSize: 25})
   // }
 
-  // gsap.utils.toArray('.gsap-section').forEach((section) => {
-  //   ScrollTrigger.create({
-  //     trigger: section,
-  //     start: "top top",
-  //     pin: true,
-  //     pinSpacing: false
-  //   });
-  // });
+  gsap.to('#text1, #text2',{
+    fontSize: 0,
+    scrollTrigger: {
+      trigger: '#text1',
+      start: '150px 59.5%',
+      end: '150px 10%',
+      // end: '200px 200px',
+      toggleActions: 'play none none none',
+      markers: true,
+      scrub: true,    
+    }
+  })
+}
 
-  // gsap.to("#landing-h1", {
-  //   scrollTrigger: "#landing-h1",
-  //   delay: 2,
-  //   duration:3,
-  //   x: -510,
-  //   y: -400});
+// NOTES ScrollTrigger Start
+// First: when top of trigger hits viewport or scroller
+
+// NOTES ScrollTrigger ToggleActions
+// toggleActions: 1st option 
+// play, pause, resume, reverse, restart, reset, complete, none
+
+// toggleActions: 2st option
+// When it goes forward past the end point
+
+// toggleActions: 3rd option
+// when it resumes when coming back into view
+
+// toggleActions: 4th option
+// When we scroll all the way back 
 
   function MtmFunc() {
     //state stops duplication of animations
@@ -132,17 +161,19 @@ export default function Landing() {
       document.getElementById("GS-MTM-Btn").style.color = "black";
       document.getElementById("GS-MTM-Card").style.display = "none";
 
+
       // Greensock Animations
       var tl = gsap.timeline({});
       var tl2 = gsap.timeline({ repeat: -1 });
       tl.to("#Timeline-h1", { delay: 0.2, duration: 1, y: -100 });
       tl.to("#Timeline-Des", { duration: 1, x: 1000 });
-      // tl.to('#Timeline-Anmation-Answers', { delay: 3})
       tl.to("#Timeline-Animation-Container", { duration: 0, opacity: 1 }).add(
         Animation2
       );
       gsap.to("#Timeline-Link", { delay: 3.5, duration: 1, opacity: 1 });
 
+
+      
       function Animation2() {
         tl2.to("#Timeline-Animation-Container", { opacity: 1 });
         tl2.to("#Timeline-Animation-Container", { delay: 2.2, duration: 1 });
@@ -161,21 +192,6 @@ export default function Landing() {
     }
   }
 
-  // useEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: "#span-1",
-  //       start: 'center center',
-  //       end: 'bottom top',
-  //       markers: true,
-  //       scrub: true,
-
-  //     }
-  //   })
-  //   .from('#span-1', { x : 500, y: 400, fontSize: 100})
-  // })
 
   return (
     <>
@@ -206,7 +222,9 @@ export default function Landing() {
         </div>
       </div>
       <div id="Home-Container">
-        <p>hi</p>
+        <p id="text1">React Collection</p>
+        <p id="text2">scroll to continue</p>
+        <p id="test1">Here</p>
         {/* <h1 id="Home-h1"><span id="span-1">One</span> <span id="span-2">App</span> <span id="span-3">for</span> <span id="span-4">Tech</span> <span id="span-5">Demos,</span> <section id="span-6">Polished Projects,</section> <span id="span-7">and More</span></h1> */}
       </div>
 
