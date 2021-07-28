@@ -10,12 +10,10 @@
 
   }
   
-.landing-header-container
-{
+.landing-header-container{
   height: 8vh;
   max-width: 100vw;
   font-family: 'Arimo', sans-serif;
-
 }
 
 
@@ -30,6 +28,7 @@
   padding-bottom: 10px;
   border-bottom: 1px solid black;
 }
+
 
 #landing-h1{
   font-size: 50px;
@@ -101,7 +100,8 @@
 
 
 #Home-Container{
-  padding-top: 100px;
+  display: flex;
+
   height: 192vh;
   text-align: center;
   /* background-color: black; */
@@ -114,10 +114,30 @@
 
 /* Landing Page Scroll  */
 
+#landing-left{
+  position: relative;
+  width: 60vw;
+  justify-content: flex-end;
+  background-color: 00aff2;
+
+  right: 0;
+}
+#landing-right{
+  position: relative;
+  width: 40vw;
+  justify-content: flex-end;
+  background-color: whitesmoke;
+
+  right: 0;
+}
+
+
 #text1{
-  opacity: 0;
-  margin-top: 250px;
-  font-size: 100px;
+  color: black;
+  /* opacity: 0; */
+  margin-top: 375px;
+  font-size: 50px;
+  margin-left: 100px;
 }
 
 #text2{

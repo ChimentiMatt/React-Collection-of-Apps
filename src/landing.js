@@ -8,8 +8,10 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { DrawSVGPlugin } from "gsap/dist/DrawSVGPlugin";
 
+
 import Mars from "./mars.png";
 import Ship from "./spaceship.png";
+
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -57,8 +59,8 @@ export default function Landing() {
   });
 
   function HomePageScrollGSAP() {
-    gsap.to('#text1', {delay: 1, duration: 2, opacity: 1})
-    gsap.to('#text2', {delay: 2, duration: 2, opacity: 1 })
+    // gsap.to('#text1', {delay: 1, duration: 1, opacity: 1})
+    // gsap.to('#text2', {delay: 2, opacity: 1 })
     gsap.registerPlugin(ScrollTrigger)
   
   //   gsap.timeline({
@@ -76,28 +78,63 @@ export default function Landing() {
   //   .from('#text2', {  fontSize: 25})
   // }
 
+  gsap.to('#landing-right',{
+    width: '150vw',
+
+    scrollTrigger: {
+      trigger: '#landing-right',
+      start: '800px 90%',
+      end: '850px 50%',
+      // end: '200px 200px',
+      toggleActions: 'play none none none',
+      // markers: true,
+      scrub: true,    
+    }
+  })
+
   gsap.to('#text1, #text2',{
-    fontSize: 0,
+    // fontSize: 0,
+    x: -400,
     scrollTrigger: {
       trigger: '#text1',
-      start: '150px 59.5%',
-      end: '150px 10%',
+      start: '100px 59.5%',
+      end: '150px -10%',
+      pin: true,
       // end: '200px 200px',
       toggleActions: 'play none none none',
       markers: true,
       scrub: true,    
     }
   })
+
+
+  // gsap.to('#text2',{
+  //   opacity: 0,
+  //   duration: 10,
+  //   scrollTrigger: {
+  //     trigger: '#text1',
+  //     start: '150px 59.5%',
+  //     end: '150px 10%',
+  //     // end: '200px 200px',
+  //     toggleActions: 'play none none restart',
+  //     // markers: true,
+  //     scrub: true,    
+  //   }
+  // })
+
+
+
+
 }
 
 // NOTES ScrollTrigger Start
 // First: when top of trigger hits viewport or scroller
 
 // NOTES ScrollTrigger ToggleActions
-// toggleActions: 1st option 
+// toggleActions: values 
 // play, pause, resume, reverse, restart, reset, complete, none
 
-// toggleActions: 2st option
+// toggleActions: 2dn option
 // When it goes forward past the end point
 
 // toggleActions: 3rd option
@@ -200,6 +237,7 @@ export default function Landing() {
         <div id="landing-heading">
           <div>
             <h1 id="landing-h1">React App Collection</h1>
+
           </div>
           <div id="card-links">
             <Router forceRefresh>
@@ -222,10 +260,13 @@ export default function Landing() {
         </div>
       </div>
       <div id="Home-Container">
-        <p id="text1">React Collection</p>
-        <p id="text2">scroll to continue</p>
-        <p id="test1">Here</p>
-        {/* <h1 id="Home-h1"><span id="span-1">One</span> <span id="span-2">App</span> <span id="span-3">for</span> <span id="span-4">Tech</span> <span id="span-5">Demos,</span> <section id="span-6">Polished Projects,</section> <span id="span-7">and More</span></h1> */}
+        <div id="landing-left">
+            <p>Dummy Text</p>
+          </div>
+        <div id="landing-right">
+          <p id="text1">React Collection</p>
+        </div>
+        {/* <p id="test1">Here</p> */}
       </div>
 
       <div id="GS-MTM-Card">
