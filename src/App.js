@@ -1,8 +1,11 @@
 import "./App.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Landing from './landing.js'
+import MTMLanding from "./landing-moduels/mtm.js";
+
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -22,7 +25,7 @@ import "./projects/Matching-Game/matching.css";
 import TypingGame from "./projects/SpeedTyper/speedtyper.js";
 import "./projects/SpeedTyper/speedtyper.css";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
 import { render } from "@testing-library/react";
 
 import RPS from "./projects/RPS/rps.js"
@@ -62,6 +65,10 @@ function App() {
 
                 <Route exact path="/gsap">
                   <Greensock />
+                </Route>
+
+                <Route exact path="/landing-gsap">
+                  <MTMLanding />
                 </Route>
 
                 <Route exact path="/matching">

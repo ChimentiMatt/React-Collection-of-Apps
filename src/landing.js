@@ -9,9 +9,9 @@ import { NavLink } from "react-router-dom";
 import { DrawSVGPlugin } from "gsap/dist/DrawSVGPlugin";
 
 
-import Mars from "./mars.png";
-import Ship from "./spaceship.png";
 
+
+import Header from "./landing-moduels/header.js"
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -46,6 +46,12 @@ export default function Landing() {
   useEffect(() => {
     // ScrollGreensock();
     HomePageScrollGSAP()
+    document.getElementById('landing-h1').style.opacity = 0
+    document.getElementById('Home-Btn').style.opacity = 0
+    document.getElementById('GS-MTM-Btn').style.opacity = 0
+    document.getElementById('Timeline-Btn').style.opacity = 0
+    document.getElementById('Speedtyper-btn').style.opacity = 0
+    document.getElementById('Spelling-btn').style.opacity = 0
   }, []);
 
 
@@ -62,145 +68,31 @@ export default function Landing() {
     // gsap.to('#text1', {delay: 1, duration: 1, opacity: 1})
     // gsap.to('#text2', {delay: 2, opacity: 1 })
     gsap.registerPlugin(ScrollTrigger)
-  
-  //   gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: '#text1',
-  //       start: '150px 59.5%',
-  //       end: '150px 10%',
-  //       // end: '200px 200px',
-  //       toggleActions: 'play none none none',
-  //       markers: true,
-  //       scrub: true,    
-  //     }
-  //   })
-  //   .from('#text1', {  fontSize: 100})
-  //   .from('#text2', {  fontSize: 25})
-  // }
 
-  // gsap.to('#landing-right',{
-  //   width: '150vw',
-
-  //   scrollTrigger: {
-  //     trigger: '#landing-right',
-  //     start: '800px 90%',
-  //     end: '850px 50%',
-  //     // end: '200px 200px',
-  //     toggleActions: 'play none none none',
-  //     markers: true,
-  //     scrub: true,    
-  //   }
-  // })
-
-  // gsap.to('#text1',{
-  //   // fontSize: 0,
-  //   x: -400,
-  //   scrollTrigger: {
-  //     trigger: '#text1',
-  //     start: '100 000',
-  //     end: '500 700',
-  //     pin: true,
-  //     // end: '200px 200px',
-  //     toggleActions: 'play none none none',
-  //     markers: true,
-  //     scrub: true,    
-  //   }
-  // })
-
-
-  // gsap.to('#text2',{
-  //   opacity: 0,
-  //   duration: 10,
-  //   scrollTrigger: {
-  //     trigger: '#text1',
-  //     start: '150px 59.5%',
-  //     end: '150px 10%',
-  //     // end: '200px 200px',
-  //     toggleActions: 'play none none restart',
-  //     // markers: true,
-  //     scrub: true,    
-  //   }
-  // })
-
-
-
-
-}
-
-// NOTES ScrollTrigger Start
-// First: when top of trigger hits viewport or scroller
-
-// NOTES ScrollTrigger ToggleActions
-// toggleActions: values 
-// play, pause, resume, reverse, restart, reset, complete, none
-
-// toggleActions: 2dn option
-// When it goes forward past the end point
-
-// toggleActions: 3rd option
-// when it resumes when coming back into view
-
-// toggleActions: 4th option
-// When we scroll all the way back 
-
-  function MtmFunc() {
-    //state stops duplication of animations
-    if (mtmSelected == true) {
-    } else {
-      setMtmSelected(true);
-      setTlSelected(false);
-      // displays current page
-      document.getElementById("GS-MTM-Btn").style.color = "#FF0000";
-      document.getElementById("GS-MTM-Card").style.display = "contents";
-      document.getElementById("GS-MTM-Btn").style.color = "#FF0000";
-
-      // removes all other active pages
-      document.getElementById("timeline-Card").style.display = "none";
-      document.getElementById("Timeline-Btn").style.color = "black";
-      document.getElementById("Home-Container").style.display = "none";
-
-      // Greensock Animations
-      gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
-      var tl = gsap.timeline({});
-      var tl2 = gsap.timeline({ repeat: -1 });
-      var tl3 = gsap.timeline({ repeat: -1 });
-      tl.to("#GS-MTM-Card-h1", { delay: 0.2, duration: 1, y: -100 });
-      tl.to("#GS-MTM-Des", { duration: 2, x: 1000 });
-      tl.to("#GS-MTM-Link", { opacity: 1 });
-      tl.to("#GS-MTM-Mars-Image", { duration: 1, opacity: 1 });
-      gsap.to("#GS-MTM-Mars-Image", { duration: 400, rotate: 90 });
-      tl2.to("#GS-MTM-Ship-Image", {
-        delay: 4,
-        duration: 17,
-        ease: "none",
-        motionPath: {
-          path: "M330.589,213.51599 C334.093,204.01699 488.13,-63.297 669.606,-104.171 837.107,-141.901 1080.962,-19.328 1238.229,89.041 1445.925,232.163 1590.421,371.131 1914.347,364.854 2228.206,358.772 2062.554,-78.119 1857.739,-27.263 1589.114,39.438 1429.464,103.669 1245.234,226.402 1100.588,322.763 926.005,308.839 670.236,302.242 364.053,294.344 183.082,246.499 183.565,246.751 ",
-          autoRotate: true,
-        },
-      });
-      // Uncomment for Plugin, Works in Browser
-      // MotionPathHelper.create('#GS-MTM-Ship-Image');
-    }
-    tl3.to("#GS-MTM-Mars-Image", { delay: 10, opacity: 1, zIndex: 3 });
-    tl3.to("#GS-MTM-Mars-Image", { delay: 8, zIndex: 0 });
-    tl3.to("#GS-MTM-Mars-Image", { delay: 2, zIndex: 2 });
   }
 
+
+
   function AnimateRC() {
-    console.log('cats')
-    var tl = gsap.timeline({})
-    tl.to('#text1', {duration: 1,fontSize: 100})
+    const isMobile = window.innerWidth >= 500
+    if (isMobile == true){ 
+      console.log('cats')
+      var tl = gsap.timeline({})
 
-    tl.to('#landing-left-container1', {duration: 1,width: '60vw'})
-    tl.to('#landing-line1', {opacity: 1})
-    tl.to('#landing-line2', {delay: .5, opacity: 1})
-    tl.to('#landing-line3', {delay: .5, opacity: 1})
-    tl.to('#landing-line4', {delay: .5, opacity: 1})
-    tl.to('#landing-line1, #landing-line2, #landing-line3, #landing-line4', { delay: 1,opacity: 0})
-    tl.to('#landing-left', {width: '0vw'})
-    tl.to('#landing-right', {width: '40vw',})
-    tl.to('#Home-Container', {backgroundColor: 'white'})
-
+      tl.to('#landing-h1', {opacity: 0, direction: 0})
+      tl.to('#text1', {duration: 1, fontSize: 100})
+      tl.to('#landing-left-container1', {duration: 1,width: '60vw', display: 'block'})
+      
+      tl.to('#landing-h1, #Home-Btn, #GS-MTM-Btn, #Timeline-Btn, #Speedtyper-btn, #Spelling-btn', {opacity: 1} )
+      tl.to('#landing-line1', {opacity: 1})
+      tl.to('#landing-line2', {delay: .5, opacity: 1})
+      tl.to('#landing-line3', {delay: .5, opacity: 1})
+      tl.to('#landing-line4', {delay: .5, opacity: 1})
+      tl.to('#landing-line1, #landing-line2, #landing-line3, #landing-line4', { delay: 1,opacity: 0})
+      tl.to('#landing-left', {width: '0vw'})
+      tl.to('#landing-right', {width: '40vw',})
+      tl.to('#Home-Container', {backgroundColor: 'white'})
+    }
 
   }
 
@@ -250,33 +142,7 @@ export default function Landing() {
 
   return (
     <>
-      <div className="landing-header-container">
-
-        <div id="landing-heading">
-          <div>
-            <h1 id="landing-h1">React App Collection</h1>
-
-          </div>
-          <div id="card-links">
-            <Router forceRefresh>
-              <NavLink id="Home-Btn" to="/">
-                Home
-              </NavLink>
-            </Router>
-            <button id="GS-MTM-Btn" onClick={() => MtmFunc()}>
-              Mission to Mars
-            </button>
-
-            <button id="Timeline-Btn" onClick={() => TimelineFunc()}>
-              Timeline Game
-            </button>
-
-            <button id="Speedtyper-btn">SpeedTyper</button>
-
-            <button id="Spelling-btn">Spelling</button>
-          </div>
-        </div>
-      </div>
+      <Header />
 
       <div id="Home-Container">
 
@@ -294,7 +160,7 @@ export default function Landing() {
         </div>
         {/* <p id="test1">Here</p> */}
       </div>
-
+{/* 
       <div id="GS-MTM-Card">
         <div id="GS-MTM-Container">
           <div id="GS-MTM-Container-h1">
@@ -357,38 +223,9 @@ export default function Landing() {
             </div>
           </div>
         </div>
+      </div> */}
 
-        {/* <Router forceRefresh>
-          <NavLink to="/">Home</NavLink>
-          <br></br>
-          <NavLink to="/erc">Exchange Rate Converter</NavLink>
 
-          <br></br>
-
-          <NavLink to="/timelinegame">Timeline Game</NavLink>
-
-          <br></br>
-          <NavLink to="/text">Text</NavLink>
-
-          <br></br>
-          <NavLink to="/gsap">GreenSock</NavLink>
-          <br></br>
-
-          <NavLink to="/matching">Matching Memes</NavLink>
-
-          <br></br>
-
-          <NavLink to="/typer">Typing Game</NavLink>
-
-          <br></br>
-
-          <NavLink to="/rps">Rock Paper Scissors</NavLink>
-
-          <br></br>
-
-          <NavLink to="/spelling">Spelling</NavLink>
-        </Router> */}
-      </div>
     </>
   );
 }

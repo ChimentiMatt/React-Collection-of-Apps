@@ -35,8 +35,9 @@
   padding-left: 30px;
   color: #ff2a6a;
   text-shadow: -2px -2px  #05d9e8;
-  width: 900px;
+  width: 500px;
   margin-bottom: 10px;
+
   /* border: 1px solid black; */
 }
 
@@ -67,6 +68,7 @@
   color: #05d9e8;
   background-color: #1d1d1d;
   font-size: 20px;
+  text-decoration: none;
 }
 #GS-MTM-Btn:hover{
 
@@ -122,6 +124,7 @@
 #landing-left{
   /* width: 60vw; */
   background-color: #05d9e8;
+
 }
 
 #landing-left-container1{
@@ -130,7 +133,9 @@
   /* width: 60vw; */
   flex-direction: column;
   justify-content: center;
+  margin-top: 200px;
   color: black;
+  display: none;
   /* border: 1px solid red; */
 }
 
@@ -199,8 +204,8 @@
 
 /* Greensock 'card' or page */
 #GS-MTM-Card{
-  display: none;
   font-family: 'Arimo', sans-serif;
+
 }
 
 #GS-MTM-Container{
@@ -402,4 +407,38 @@
   border-radius: 0 0 15px 0;
   text-align: center;
   width: 416px;
+}
+
+
+
+@media (max-width: 1000px) {
+  #landing-h1{
+    text-align: center;
+    font-size: 35px;
+    padding-left: 0px;
+    width: 100vw;
+  }
+  #text1{
+    font-size: 80px;
+
+  }
+  #card-links{
+    width: 100vw;
+
+  }
+  #Home-Btn{
+    font-size: 16px;
+  }
+  #GS-MTM-Btn{
+    font-size: 16px;
+  }
+  #Speedtyper-btn{
+    font-size: 16px;
+  }
+  #Timeline-Btn{
+    font-size: 16px;
+  }
+  #Spelling-btn{
+    font-size: 16px;
+  }
 }
