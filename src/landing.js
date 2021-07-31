@@ -78,34 +78,34 @@ export default function Landing() {
   //   .from('#text2', {  fontSize: 25})
   // }
 
-  gsap.to('#landing-right',{
-    width: '150vw',
+  // gsap.to('#landing-right',{
+  //   width: '150vw',
 
-    scrollTrigger: {
-      trigger: '#landing-right',
-      start: '800px 90%',
-      end: '850px 50%',
-      // end: '200px 200px',
-      toggleActions: 'play none none none',
-      // markers: true,
-      scrub: true,    
-    }
-  })
+  //   scrollTrigger: {
+  //     trigger: '#landing-right',
+  //     start: '800px 90%',
+  //     end: '850px 50%',
+  //     // end: '200px 200px',
+  //     toggleActions: 'play none none none',
+  //     markers: true,
+  //     scrub: true,    
+  //   }
+  // })
 
-  gsap.to('#text1, #text2',{
-    // fontSize: 0,
-    x: -400,
-    scrollTrigger: {
-      trigger: '#text1',
-      start: '100px 59.5%',
-      end: '150px -10%',
-      pin: true,
-      // end: '200px 200px',
-      toggleActions: 'play none none none',
-      markers: true,
-      scrub: true,    
-    }
-  })
+  // gsap.to('#text1',{
+  //   // fontSize: 0,
+  //   x: -400,
+  //   scrollTrigger: {
+  //     trigger: '#text1',
+  //     start: '100 000',
+  //     end: '500 700',
+  //     pin: true,
+  //     // end: '200px 200px',
+  //     toggleActions: 'play none none none',
+  //     markers: true,
+  //     scrub: true,    
+  //   }
+  // })
 
 
   // gsap.to('#text2',{
@@ -186,6 +186,14 @@ export default function Landing() {
     tl3.to("#GS-MTM-Mars-Image", { delay: 2, zIndex: 2 });
   }
 
+  function AnimateRC() {
+    console.log('cats')
+
+    gsap.to('#landing-left', {duration: 1.2, width: '0vw'})
+    gsap.to('#landing-right', {backgroundColor: 'black'})
+    gsap.to('#Home-Container', {backgroundColor: '#1d1d1d'})
+  }
+
   function TimelineFunc() {
     if (tlSelected == true) {
     } else {
@@ -259,12 +267,18 @@ export default function Landing() {
           </div>
         </div>
       </div>
+
       <div id="Home-Container">
         <div id="landing-left">
-            <p>Dummy Text</p>
+          <div id="landing-left-container1">
+            <p>One App To Display </p>
+            <p>New Technologies as I grow</p>
+            <p>Fun Projects</p>
           </div>
+        </div>
+
         <div id="landing-right">
-          <p id="text1">React Collection</p>
+          <p id="text1" onClick={AnimateRC}>React Collection</p>
         </div>
         {/* <p id="test1">Here</p> */}
       </div>
