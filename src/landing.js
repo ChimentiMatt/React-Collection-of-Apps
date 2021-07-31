@@ -188,10 +188,20 @@ export default function Landing() {
 
   function AnimateRC() {
     console.log('cats')
+    var tl = gsap.timeline({})
+    tl.to('#text1', {duration: 1,fontSize: 100})
 
-    gsap.to('#landing-left', {duration: 1.2, width: '0vw'})
-    gsap.to('#landing-right', {backgroundColor: 'black'})
-    gsap.to('#Home-Container', {backgroundColor: '#1d1d1d'})
+    tl.to('#landing-left-container1', {duration: 1,width: '60vw'})
+    tl.to('#landing-line1', {opacity: 1})
+    tl.to('#landing-line2', {delay: .5, opacity: 1})
+    tl.to('#landing-line3', {delay: .5, opacity: 1})
+    tl.to('#landing-line4', {delay: .5, opacity: 1})
+    tl.to('#landing-line1, #landing-line2, #landing-line3, #landing-line4', { delay: 1,opacity: 0})
+    tl.to('#landing-left', {width: '0vw'})
+    tl.to('#landing-right', {width: '40vw',})
+    tl.to('#Home-Container', {backgroundColor: 'white'})
+
+
   }
 
   function TimelineFunc() {
@@ -269,11 +279,13 @@ export default function Landing() {
       </div>
 
       <div id="Home-Container">
+
         <div id="landing-left">
           <div id="landing-left-container1">
-            <p>One App To Display </p>
-            <p>New Technologies as I grow</p>
-            <p>Fun Projects</p>
+            <p id="landing-line1">One App For </p>
+            <p id="landing-line2">New Technologies</p>
+            <p id="landing-line3">Fun Projects</p>
+            <p id="landing-line4">Super Cool Things</p>
           </div>
         </div>
 
