@@ -52,6 +52,36 @@ export default function Landing() {
     document.getElementById('Timeline-Btn').style.opacity = 0
     document.getElementById('Speedtyper-btn').style.opacity = 0
     document.getElementById('Spelling-btn').style.opacity = 0
+
+    
+    const trigger = [...document.getElementsByClassName("header-link")]
+
+    // const word = document.getElementById("Home-Btn").innerHTML
+    // for (let i = 0; i < word.length; i++) {
+    //   console.log(word[i])
+    // }
+
+
+    const Home = document.getElementById('Home-Btn')
+
+    Home.addEventListener("mouseenter", () => {
+      gsap.to('#homeH', {fontSize: 40})
+    })
+    Home.addEventListener("mouseleave", () => {
+      gsap.to('#homeH', {fontSize: 20})
+    })
+  
+
+
+
+    // "header-link"
+
+
+
+
+
+
+    
   }, []);
 
 
@@ -92,7 +122,7 @@ export default function Landing() {
       tl.to('#landing-left', {width: '0vw'})
       tl.to('#landing-right', {width: '40vw',})
       tl.to('#Home-Container', {backgroundColor: 'white'})
-      .call(gsapCall)
+      // .call(gsapCall)
     }
 
   }

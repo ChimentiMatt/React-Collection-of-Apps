@@ -11,26 +11,26 @@ export default function Header() {
           <h1 id="landing-h1">React App Collection</h1>
 
         </div>
-        <div id="card-links">
+        <div id="card-links" className="header-link">
           <Router forceRefresh>
-            <NavLink id="Home-Btn" to="/">
-              Home
+            <NavLink id="Home-Btn" className="header-link" to="/">
+              <span id="homeH">H</span>ome
             </NavLink>
           </Router>
 
           <Router forceRefresh>
-            <NavLink id="GS-MTM-Btn" to="/landing-gsap">
+            <NavLink id="GS-MTM-Btn" className="header-link" to="/landing-gsap">
               Mission to Mars
             </NavLink>
           </Router>
 
-          <button id="Timeline-Btn">
+          <button id="Timeline-Btn" className="header-link">
             Timeline Game
           </button>
 
-          <button id="Speedtyper-btn">SpeedTyper</button>
+          <button id="Speedtyper-btn" className="header-link">SpeedTyper</button>
 
-          <button id="Spelling-btn">Spelling</button>
+          <button id="Spelling-btn" className="header-link">Spelling</button>
         </div>
       </div>
     </div>
