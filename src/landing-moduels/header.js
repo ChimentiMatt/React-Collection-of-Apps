@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 export default function Header() {
     return(
-    <div className="landing-header-container">
+    <div id="landing-header-container">
         <div id="landing-heading">
         <div>
           <h1 id="landing-h1">React App Collection</h1>

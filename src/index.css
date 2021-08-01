@@ -10,8 +10,9 @@
 
   }
   
-.landing-header-container{
+#landing-header-container{
   height: 10vh;
+  background-color: #1d1d1d;
   max-width: 100vw;
   font-family: 'Arimo', sans-serif;
 }
@@ -20,7 +21,7 @@
 #landing-heading{
   display: flex;
   flex-direction: column;
-  background-color: #1d1d1d;
+  /* background-color: #1d1d1d; */
   /* border: 1px solid black; */
   width: 100vw;
   position:fixed;
@@ -128,12 +129,13 @@
 }
 
 #landing-left-container1{
+  padding: 0px;
   display: flex;
   height: 90vh;
   /* width: 60vw; */
   flex-direction: column;
   justify-content: center;
-  margin-top: 200px;
+
   color: black;
   display: none;
   /* border: 1px solid red; */
@@ -144,6 +146,7 @@
 }
 #landing-line1{
   margin-left: 20%;
+  margin-top: 20%;
   width: 0;
   color: #ff2a6d;
   opacity: 0;
@@ -186,7 +189,8 @@
   text-shadow: -7px -3px  #05d9e8;
   /* opacity: 0; */
   font-size: 200px;
-
+  position: relative;
+  top: -50px;
 }
 
 #text2{
@@ -205,16 +209,17 @@
 /* Greensock 'card' or page */
 #GS-MTM-Card{
   font-family: 'Arimo', sans-serif;
+  background-color: #1d1d1d;
 
+  height: 90vh;
 }
 
 #GS-MTM-Container{
 
-
 }
 
 #GS-MTM-Container-h1{
-  margin-top: 10px;
+
   display: flex;
   justify-content: center;
   height: 110px;
@@ -222,11 +227,13 @@
 }
 
 #GS-MTM-Card-h1{
-  color: #00aff2;
+  /* color: #00aff2; */
+  color: #ff2a6a;
+  text-shadow: -2px -2px  #05d9e8;
   font-size: 55px;
-  /* margin-top: 20px; */
+  margin-top: 20px;
   position: relative;
-  top: 150px;
+  top: 100px;
 } 
 
 #GS-MTM-Container-Des{
@@ -235,12 +242,14 @@
   line-height: 1.6;
   text-align: center;
   /* border: 1px solid black; */
-  height: 240px;
+  height: 260px;
   overflow: hidden;
 }
 
 #GS-MTM-Des{
-  margin-top: 20px;
+  color: white;
+  /* margin-top: 20px; */
+  font-size: 25px;
   margin-bottom: 20px;
   position: relative;
   right: 1000px;
@@ -251,7 +260,7 @@
   font-size: 30px;
   text-decoration: none;
   /* color: #00aff2; */
-  color: black;
+  color: #00aff2;
 }
 
 #GS-MTM-Link:hover{
@@ -266,9 +275,10 @@
 
 #GS-MTM-Mars-Image{
   position: relative;
+
   z-index: 100;
   opacity: 0;
-  height: 450px;
+  height: 400px;
 }
 
 #GS-MTM-Ship-Image{
@@ -413,12 +423,15 @@
 
 @media (max-width: 1000px) {
   #landing-h1{
+    margin-top: 10px;
     text-align: center;
     font-size: 35px;
     padding-left: 0px;
     width: 100vw;
   }
   #text1{
+    position: relative;
+    top: -50px;
     font-size: 80px;
 
   }
