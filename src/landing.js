@@ -92,9 +92,14 @@ export default function Landing() {
       tl.to('#landing-left', {width: '0vw'})
       tl.to('#landing-right', {width: '40vw',})
       tl.to('#Home-Container', {backgroundColor: 'white'})
+      .call(gsapCall)
     }
 
   }
+  function gsapCall() {
+    document.getElementById('text1').innerHTML = "FUN TIMES"
+  }
+
 
   function TimelineFunc() {
     if (tlSelected == true) {
