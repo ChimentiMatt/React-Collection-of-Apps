@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Landing from './landing.js'
 import MTMLanding from "./landing-moduels/mtm.js";
-
+import TimelineLanding from "./landing-moduels/timeline.js"
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -69,6 +69,10 @@ function App() {
 
                 <Route exact path="/landing-gsap">
                   <MTMLanding />
+                </Route>
+
+                <Route exact path="/landing-timeline">
+                  <TimelineLanding />
                 </Route>
 
                 <Route exact path="/matching">

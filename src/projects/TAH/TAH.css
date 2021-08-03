@@ -48,10 +48,6 @@
 }
 
 
-
-
-
-
 #draggable-list {
   margin-top: 20px;
   text-align: center;
@@ -63,18 +59,17 @@
   justify-content: center;
   list-style-type: none;
   font-size: 17px;
-  
+
 }
 
 #draggable-list p:hover {
   color: white;
-
   background-color: rgba(38, 97, 129, 0.767);
 }
 
 #draggable-list p {
   padding: 5px;
-  height: 23px;
+  height: 2em;
   border-bottom: 1px solid black;
 }
 

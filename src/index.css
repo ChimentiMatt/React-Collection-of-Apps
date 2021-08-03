@@ -39,10 +39,12 @@
   text-shadow: -2px -2px  #05d9e8;
   width: 100vw;
   background-color: #1d1d1d;
-
   /* border: 1px solid black; */
 }
-
+#landing-h1:hover{
+  color: #05d9e8;
+  text-shadow: -2px -2px  #ff2a6a;
+}
 
 
 #card-links{
@@ -56,6 +58,7 @@
 
 .header-link{
   margin-right: 20px;
+  text-decoration: none;
 }
 
 #containerCardLinks{
@@ -330,18 +333,15 @@
 
 /* Timeline "card" or page */
 #timeline-Card{
-  display: none;
-}
-
-#timeline-Container{
-  margin-top: 10vh;
+  background-color: rgba(128, 128, 128, 0.164)  ;
+  height: 90vh;
 }
 
 #Timeline-Container-h1{
   display: flex;
   justify-content: center;
   height: 100px;
-
+  padding-top: 20px;
   overflow: hidden;
 }
 
