@@ -47,11 +47,17 @@
 
 #card-links{
   display: flex;
-  justify-content: space-evenly;
+  padding-left: 30px;
+  /* justify-content: space-evenly; */
   width: 100vw;
   background-color: #1d1d1d;
   /* border: 1px solid black; */
 }
+
+.header-link{
+  margin-right: 20px;
+}
+
 #containerCardLinks{
   display: flex;
   width: 50vw;
@@ -66,54 +72,60 @@
   text-decoration: none;
   color: black;
   font-size: 20px;
-  color: #05d9e8;
+  color: gray;
 }
 
 #Home-Btn:hover{
-  color: red;
+  color: white;
+  cursor: pointer;
 }
 
 #GS-MTM-Btn{
   border: none;
-  color: #05d9e8;
+  color: gray;
   background-color: #1d1d1d;
   font-size: 20px;
   text-decoration: none;
 }
 #GS-MTM-Btn:hover{
-
+  color: white;
+  cursor: pointer;
 }
 
 #Timeline-Btn{
   border: none;
   background-color: #1d1d1d;
-  color: #05d9e8;
+  color: gray;
+  /* text-shadow: -1px -1px  #ff2a6d; */
   font-size: 20px;
 }
 #Timeline-Btn:hover{
-  color: red;
+  color: white;
+  cursor: pointer;
 }
 
 
 #Speedtyper-btn{
   border: none;
   background-color: #1d1d1d;
-  color: #05d9e8;
+  color: gray;
   font-size: 20px;
 }
 
 #Speedtyper-btn:hover{
-  color: red;
+  color: white;
+  cursor: pointer;
 }
 
 #Spelling-btn{
   border: none;
-  color: #05d9e8;
+  color: gray;
   background-color: #1d1d1d;
   font-size: 20px;
 }
 #Spelling-btn:hover{
-  color: red;
+  color: white;
+  cursor: pointer;
 }
 
 

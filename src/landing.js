@@ -60,15 +60,10 @@ export default function Landing() {
     // }
 
 
-    const Home = document.getElementById('Home-Btn')
+    // Home.addEventListener("mouseleave", () => {
+    //   gsap.to('#gsaplink1', {rotation: 0})
+    // })
 
-    Home.addEventListener("mouseenter", () => {
-      gsap.to('#homeH', {fontSize: 40, x: 1000})
-    })
-    Home.addEventListener("mouseleave", () => {
-      gsap.to('#homeH', {fontSize: 20})
-    })
-    // "header-link"
   }, []);
 
   gsap.utils.toArray('.gsap-section').forEach((section) => {
@@ -88,8 +83,8 @@ export default function Landing() {
 
   function animateGreetingText() {
     let tl = gsap.timeline({ repeat: -1})
-    tl.to('#greetingText', {duration: 2, opacity: .5})
-    tl.to('#greetingText', {duration: 2, opacity: 1})
+    // tl.to('#greetingText', {duration: 2, opacity: .5})
+    // tl.to('#greetingText', {duration: 2, opacity: 1})
     
 
     let letter1 = document.getElementById('greetingTextL1')
