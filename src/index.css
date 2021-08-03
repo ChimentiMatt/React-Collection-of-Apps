@@ -32,12 +32,13 @@
 
 
 #landing-h1{
+  margin-top: 5px;
   font-size: 50px;
   padding-left: 30px;
   color: #ff2a6a;
   text-shadow: -2px -2px  #05d9e8;
-  width: 500px;
-  margin-bottom: 10px;
+  width: 100vw;
+  background-color: #1d1d1d;
 
   /* border: 1px solid black; */
 }
@@ -47,10 +48,18 @@
 #card-links{
   display: flex;
   justify-content: space-evenly;
-  width: 700px;
+  width: 100vw;
+  background-color: #1d1d1d;
   /* border: 1px solid black; */
 }
-
+#containerCardLinks{
+  display: flex;
+  width: 50vw;
+  flex-direction: column;
+}
+#card-links-deadspace{
+  width: 50vw;
+}
 /* Nav buttons */
 
 #Home-Btn{
@@ -109,12 +118,14 @@
 
 
 #Home-Container{
+
   display: flex;
   height: 90vh;
   text-align: center;
   /* background-color: black; */
   color: white;
-  background-color: #05d9e8;
+  /* background-color: #05d9e8; */
+  background-color: (5, 217, 232);
   font-family: 'Arimo', sans-serif;
   /* border: 1px solid black; */
 }
@@ -123,30 +134,28 @@
 /* Landing Page Scroll  */
 
 #landing-left{
-  /* width: 60vw; */
-  background-color: #05d9e8;
-
-}
-
-#landing-left-container1{
+  position: absolute;
+  z-index: 1;
   padding: 0px;
   display: flex;
   height: 90vh;
+  background-color:#05d9e8;
   /* width: 60vw; */
   flex-direction: column;
   justify-content: center;
-
   color: black;
-  display: none;
-  /* border: 1px solid red; */
+  width: 60vw;
+  font-family: 'Arimo', sans-serif
 }
+
+
 
 #landing-left p{
   font-size: 100px;
 }
 #landing-line1{
   margin-left: 20%;
-  margin-top: 15%;
+  padding-top: 15%;
   width: 0;
   color: #ff2a6d;
   opacity: 0;
@@ -173,17 +182,25 @@
   width: 0;
   white-space: nowrap
 }
+
+
 #landing-right{
+  position: absolute;
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 90vh;
   width: 100vw;
   /* border: 1px solid red; */
   background-color: #1d1d1d;
+  font-family: 'Arimo', sans-serif
 }
 
 
-#text1{
+#greetingText{
+  display: flex;
+  
   position: absolute;
   color: #ff2a6a;
   text-shadow: -7px -3px  #05d9e8;
@@ -192,6 +209,15 @@
   position: relative;
   top: -50px;
 }
+#greetingText:hover{
+  cursor: pointer;
+}
+
+#greetingTextL1{
+  position: relative;
+}
+
+
 
 #text2{
   opacity: 0;
