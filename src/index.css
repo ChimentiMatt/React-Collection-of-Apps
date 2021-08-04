@@ -361,6 +361,7 @@
   /* border: 1px solid black; */
   height: 240px;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 
 
@@ -369,6 +370,8 @@
   margin-bottom: 20px;
   position: relative;
   right: 1000px;
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
 #Timeline-Link{
@@ -382,10 +385,15 @@
   color: #00aff2;
 }
 
+#timelineLandingInst{
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Arimo', sans-serif
+}
 
 #Timeline-Animation-Container{
   display: flex;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 30%;
   margin-right: 30%;
   opacity: 0;
@@ -398,11 +406,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-weight: bolder;
-  border: 1px solid black;
+  border: .1em solid black;
   border-radius:  15px 0 0 15px ;
-  height: 40px;
+  padding-top: 1em;
+  padding-bottom: 1em;
   width: 180px;
 }
 
@@ -413,51 +421,72 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 63px;
+  top: 5.5em;
   height: 40px;
   font-weight: bolder;
 }
 
 #Nixon{
   position: relative;
-  padding-top: 9px;
-  padding-bottom: 8px;
-  border: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: .1em solid black;
   border-radius: 0 15px 0 0;
   text-align: center;
   width: 416px;
   font-weight: bolder;
   background-color: rgba(255, 0, 0, 0.5);
+
 }
 
 #Roe{
   position: relative;
-  padding-top: 9px;
-  padding-bottom: 8px;
-  border: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: .1em solid black;
   text-align: center;
   width: 416px;
 }
 
 #WW2{
   position: relative;
-  padding-top: 9px;
-  padding-bottom: 8px;
-  border: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: .1em solid black;
   text-align: center;
   width: 416px;
 }
 #FirstWebPage{
   position: relative;
-  padding-top: 9px;
-  padding-bottom: 8px;
-  border: 1px solid black;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: .1em solid black;
   border-radius: 0 0 15px 0;
   text-align: center;
   width: 416px;
 }
+#containerTlLandingBtn{
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
 
-
+.landing-check-btn{
+  font-family: 'Arimo', sans-serif;
+  font-size: 25px;
+  border: .1em solid black;
+  border-radius: 15px ;
+  color: white;
+  background-color: #00aff2;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom:  10px;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+.landing-check-btn:hover{
+  background-color: cadetblue;
+}
 
 @media (max-width: 1000px) {
   #landing-h1{
