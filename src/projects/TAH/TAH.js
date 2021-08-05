@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 // src="https://kit.fontawesome.com/3da1a747b2.js"
 
 import sky from "./grand7.jpeg";
+
+import { IoIosFlag } from "react-icons/io";
+
 export default function App2() {
 
 
@@ -59,7 +62,7 @@ export default function App2() {
   function Markers() {
     const [flagColor, setFlagColor] = useState('white')
     const [flagBackColor, setBackColor] = useState('rgba(38, 97, 129, 0.767)')
-    let counter = 0
+    let counter = 1
     const markers = [
       {id: "1"},
       {id: "2"},
@@ -110,7 +113,7 @@ export default function App2() {
                 }
               }}
             >
-              x
+              <IoIosFlag />
             </p>
           ))}
         </ul>

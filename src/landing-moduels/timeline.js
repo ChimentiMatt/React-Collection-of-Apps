@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import { gsap } from "gsap";
 import { NavLink } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { faHome } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import { IconContext } from "react-icons";
+import { FaInstagram } from "react-icons/fa";
+
+import { IoIosFlag } from "react-icons/io";
 import Header from "./header.js";
 
 export default function TimelineLanding() {
@@ -161,22 +167,37 @@ export default function TimelineLanding() {
                 id={num.id}
                 // id="TAH-marker-list-btn"
                 onClick={() => {
-                  if (counter %2 ){
-                    document.getElementById(num.id).style.backgroundColor =
-                    flagBackColor
-                    document.getElementById(num.id).style.color =
-                    flagColor
+                  let BR = document.getElementById(num.id).style.backgroundColor 
+
+                  if (counter % 2  ){
+                    document.getElementById(num.id).style.backgroundColor = 'white'
+                    console.log('test1')
                     counter += 1
-                  } else { 
-                  document.getElementById(num.id).style.backgroundColor =
-                  'white'
-                  document.getElementById(num.id).style.color =
-                  'black'
-                  counter += 1
                   }
-                }}
+                  else {
+                    document.getElementById(num.id).style.backgroundColor = flagBackColor          
+                    console.log('test2')
+                    counter += 1
+                      }
+
+                  // if (document.getElementById(num.id).style.backgroundColor ==
+                  // 'white'){
+                  //   document.getElementById(num.id).style.backgroundColor =
+                  //   flagBackColor
+                  //   document.getElementById(num.id).style.color =
+                  //   'flagColor'
+                  //   counter += 1
+                  // } else { 
+                  // document.getElementById(num.id).style.backgroundColor =
+                  // 'white'
+                  // document.getElementById(num.id).style.color =
+                  // 'black'
+                  // counter += 1
+                  // }
+                }
+              }
               >
-                x
+                        <IoIosFlag />
               </p>
             ))}
           </ul>
@@ -215,7 +236,7 @@ export default function TimelineLanding() {
         tl.to("#Timeline-Animation-Container", { duration: 0, opacity: 1 }).add(
         Animation2
         );
-        gsap.to("#Timeline-Link", { delay: 3.5, duration: 1, opacity: 1 });
+        gsap.to("#Timeline-Link", { delay: 2.5, duration: 1, opacity: 1 });
 
         function Animation2() {
         tl2.to("#Timeline-Animation-Container", { opacity: 1 });
@@ -242,27 +263,33 @@ export default function TimelineLanding() {
           <div id="Timeline-Container-h1">
             <h1 id="Timeline-h1">American History Timeline</h1>
           </div>
-
+  
           <div id="Timeline-Container-Des">
             <p id="Timeline-Des">
-              Play a drag and drop game where you match American historical
-              events to their dates. See how many you can get correct, and learn
+              A drag and drop game where you match American historical
+              events to their dates. </p>
+            <p id="Timeline-Des">
+              See how many you can get correct, and learn
               some new facts.
             </p>
-            <Router forceRefresh>
+            <p id="Timeline-Des">
+              Learn historical facts.
+            </p>
+ 
+          </div>
+          <div id="container-timeline-link">
+          <Router forceRefresh>
               <NavLink id="Timeline-Link" to="/timelinegame">
                 Visit Game
               </NavLink>
-            </Router>
+          </Router>
           </div>
-
-
         <div className="TAH-app">
 
 
-
+{/* 
           <p id="timelineLandingInst">DRAG AND DROP EVENTS TO THEIR DATES</p>
-          <p id="timelineLandingInst">click the x to flag your progress</p>
+          <p id="timelineLandingInst">click the x to flag your progress</p> */}
           <div className="container-dates-events">
             <Dates />
             <Markers />
