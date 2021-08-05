@@ -116,11 +116,11 @@ li {
 }
 
 .draggable-list li.wrong .event-name {
-  color: #ff3838;
+  color: #ff184c;
 }
 
 .draggable-list li.right .event-name {
-  color: #149240;
+  color: #65dc98;
   z-index: -10;
 }
 

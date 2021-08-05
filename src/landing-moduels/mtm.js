@@ -32,8 +32,8 @@ export default function MTMLanding() {
         var tl3 = gsap.timeline({ repeat: -1 });
 
         tl.to("#GS-MTM-Card-h1", { delay: 0.2, duration: 1, y: -100 });
-        tl.to("#GS-MTM-Des", { duration: 2, opacity: 1});
-        tl.to("#GS-MTM-Link", { opacity: 1 });
+        tl.to("#GS-MTM-Des", { duration: .7, opacity: 1});
+        tl.to("#GS-MTM-Link", {duration: 0, opacity: 1 });
         tl.to("#GS-MTM-Mars-Image", { duration: 1, opacity: 1 });
         gsap.to("#GS-MTM-Mars-Image", { duration: 400, rotate: 90 });
         tl2.to("#GS-MTM-Ship-Image", {
