@@ -37,7 +37,7 @@ function App() {
   const [home, setHome] = useState(true);
 
   function HideHome() {
-    document.getElementById("landing").stayle.visibility = "hidden";
+    document.getElementById("landsx6ing").stayle.visibility = "hidden";
   }
 
 
