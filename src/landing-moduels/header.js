@@ -72,17 +72,28 @@ export default function Header() {
             </Router>
             <Router forceRefresh>
               <div id="gsaplink3">
-                <NavLink id="Timeline-Btn" className="header-link" to="/landing-timeline"> 
+                <NavLink 
+                  id="Timeline-Btn" 
+                  className="header-link" 
+                  to="/landing-timeline"
+                > 
                   Timeline Game
                 </NavLink>
               </div>
             </Router>
 
-            <div id="gsaplink4">
-              <button id="Speedtyper-btn" className="header-link">
-                SpeedTyper
-              </button>
-            </div>
+            <Router forceRefresh>
+              <div id="gsaplink4">
+                <NavLink 
+                  id="Speedtyper-btn" 
+                  className="header-link" 
+                  to="/landing-typer"
+                >
+                  SpeedTyper
+                </NavLink>
+              </div>
+            </Router>
+
 
             <div id="gsaplink5">
               <button id="Spelling-btn" className="header-link">

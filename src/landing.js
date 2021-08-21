@@ -42,15 +42,27 @@ export default function Landing() {
 
   let counter = 0
   let reset = false
+
+  let sunX = 0
+  let sunY = 0
   document.addEventListener('keydown', function(event){
     console.log(`Key: ${event.key} with keycode ${event.keyCode} has been pressed`);
 
     if (event.key === 'f' && reset === true){
       gsap.to('#cata1, #cata2, #cata3, #cata4, #cata5, #cata6, #cata7, #cataHead, #eye', {x: counter})
       gsap.to('#cata1, #cata2, #cata3, #cata4, #cata5, #cata6, #cata7, #cataHead, #eye', {y: 0})
+      gsap.to('#sun', {y: sunY, x: sunX})
 
       counter += 30
       reset = false
+      if (counter <560){
+        sunY += -30
+        sunX += 60  
+      }
+      else{
+        sunY += 30
+        sunX += 60
+      }
       console.log(counter, 'counter is this')
     }
 
@@ -62,10 +74,22 @@ export default function Landing() {
       gsap.to('#cata5', {y: -20})
       gsap.to('#cata6', {y: -5})
       gsap.to('#cataHead, #eye', {y: -5})
+      gsap.to('#sun', {y: sunY, x: sunX})
 
       reset = true
       counter += 50
+     
+      if (counter <560){
+        sunY += -30
+        sunX += 60  
+      }
+      else{
+        sunY += 30
+        sunX += 60
+      }
+      console.log(counter, 'counter is this')
     }
+    // 1120 
   })
 
 
@@ -276,6 +300,7 @@ export default function Landing() {
       .to('#greetingText', { duration: 0, display: 'none'})
       .to('#grass', { duration: 1, display: 'block', opacity: 1})
       .to('#grass', { duration: 3, width: '70vw'})
+      .to('#cataContainer, #sun', {opacity: 1})
 
       // .to('#Home-Container', {backgroundColor: 'white'}).add('end', 8.3)
       // .to('#landing-left-container1', {marginLeft: '40vw', backgroundColor: "#05d9e8"}, 'end')
@@ -333,6 +358,9 @@ export default function Landing() {
               <div id="cataHead"></div>
               <div id="eye"></div>
             </div>
+          </div>
+          <div id='sun'>
+            
           </div>
         </div>
         {/* <p id="test1">Here</p> */}

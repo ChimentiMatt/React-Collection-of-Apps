@@ -565,7 +565,7 @@ text-shadow: 1px 1px #009cf5; */
 
 #cataContainer{
   display: flex;
-
+  opacity: 0;
 }
 
 #cata1{
@@ -674,10 +674,21 @@ text-shadow: 1px 1px #009cf5; */
 
 #eye{
   position: relative;
+  display: none;
   height: .5rem;
   width: .5rem;
   bottom: .3rem;
   right: 1.2rem;
   background-color: black  ;
   border-radius: 50%;
+}
+
+#sun{
+  opacity: 0;
+  position: absolute;
+  left: 2rem;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  background: yellow;
 }

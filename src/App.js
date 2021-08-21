@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from './landing.js'
 import MTMLanding from "./landing-moduels/mtm.js";
 import TimelineLanding from "./landing-moduels/timeline.js"
+import SpeedTyperLanding from "./landing-moduels/speedTyper";
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -79,8 +80,8 @@ function App() {
                   <Matching />
                 </Route>
 
-                <Route exact path="/typer">
-                  <TypingGame />
+                <Route exact path="/landing-typer">
+                  <SpeedTyperLanding />
                 </Route>
 
                 <Route exact path="/rps">
