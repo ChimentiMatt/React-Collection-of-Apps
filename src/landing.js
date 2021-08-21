@@ -40,10 +40,42 @@ export default function Landing() {
   const [mtmSelected, setMtmSelected] = useState(false);
   const [tlSelected, setTlSelected] = useState(false);
 
+  let counter = 0
+  let reset = false
+  document.addEventListener('keydown', function(event){
+    console.log(`Key: ${event.key} with keycode ${event.keyCode} has been pressed`);
+
+    if (event.key === 'f' && reset === true){
+      gsap.to('#cata1, #cata2, #cata3, #cata4, #cata5, #cata6, #cata7, #cataHead, #eye', {x: counter})
+      gsap.to('#cata1, #cata2, #cata3, #cata4, #cata5, #cata6, #cata7, #cataHead, #eye', {y: 0})
+
+      counter += 30
+      reset = false
+      console.log(counter, 'counter is this')
+    }
+
+    else if (event.key === 'f' && reset === false){
+      gsap.to('#cata1', {y: -5})
+      gsap.to('#cata2', {y: -20})
+      gsap.to('#cata3', {y: -25})
+      gsap.to('#cata4', {y: -30})
+      gsap.to('#cata5', {y: -20})
+      gsap.to('#cata6', {y: -5})
+      gsap.to('#cataHead, #eye', {y: -5})
+
+      reset = true
+      counter += 50
+    }
+  })
+
+
   useEffect(() => {
     animateGreetingText()
+    
+
+
     // ScrollGreensock();
-    HomePageScrollGSAP()
+    // HomePageScrollGSAP()
     document.getElementById('landing-h1').style.opacity = 0
     document.getElementById('Home-Btn').style.opacity = 0
     document.getElementById('GS-MTM-Btn').style.opacity = 0
@@ -64,6 +96,7 @@ export default function Landing() {
     //   gsap.to('#gsaplink1', {rotation: 0})
     // })
 
+
   }, []);
 
   gsap.utils.toArray('.gsap-section').forEach((section) => {
@@ -75,11 +108,22 @@ export default function Landing() {
     });
   });
 
-  function HomePageScrollGSAP() {
-    // gsap.to('#text1', {delay: 1, duration: 1, opacity: 1})
-    // gsap.to('#text2', {delay: 2, opacity: 1 })
-    gsap.registerPlugin(ScrollTrigger)
-  }
+  // function HomePageScrollGSAP() {
+  //   // gsap.to('#text1', {delay: 1, duration: 1, opacity: 1})
+  //   // gsap.to('#text2', {delay: 2, opacity: 1 })
+  //   gsap.registerPlugin(ScrollTrigger)
+  // }
+
+  // function Keys(e){
+  //   let counter = 10
+  //   if(e.keyCode  == '13'){
+  //     gsap('#blade', {x: counter})
+  //     counter += 10
+  //     console.log(counter)
+  //   }
+  // }
+
+
 
   function animateGreetingText() {
     let tl = gsap.timeline({ repeat: -1})
@@ -219,15 +263,20 @@ export default function Landing() {
       tl.to('#landing-h1', {opacity: 0, direction: 0})
       .to('#greetingText', {duration: 1, fontSize: 100})
       .to('#landing-right', {right: 0, width: '40vw'})
-      .to('#landing-left', {duration: 1,width: '60vw', display: 'block'})
+      .to('#landing-left', {duration: .5, width: '60vw', display: 'block'})
       
-      .to('#landing-h1, #Home-Btn, #GS-MTM-Btn, #Timeline-Btn, #Speedtyper-btn, #Spelling-btn', {opacity: 1} )
-      .to('#landing-line1', {opacity: 1})
+      .to('#landing-h1, #Home-Btn, #GS-MTM-Btn, #Timeline-Btn, #Speedtyper-btn, #Spelling-btn', { opacity: 1} )
+      .to('#landing-line1', {delay: .5, opacity: 1})
       .to('#landing-line2', {delay: .5, opacity: 1})
       .to('#landing-line3', {delay: .5, opacity: 1})
       .to('#landing-line4', {delay: .5, opacity: 1})
-      .to('#landing-line1, #landing-line2, #landing-line3, #landing-line4', { delay: 1,opacity: 0})
-      .to('#landing-right', {width: '40vw',})
+      .to('#landing-line1, #landing-line2, #landing-line3, #landing-line4', { delay: .5,opacity: 0})
+      .to('#landing-right', {width: '100vw',})
+      .to('#greetingText', { opacity: 0})
+      .to('#greetingText', { duration: 0, display: 'none'})
+      .to('#grass', { duration: 1, display: 'block', opacity: 1})
+      .to('#grass', { duration: 3, width: '70vw'})
+
       // .to('#Home-Container', {backgroundColor: 'white'}).add('end', 8.3)
       // .to('#landing-left-container1', {marginLeft: '40vw', backgroundColor: "#05d9e8"}, 'end')
       // .call(gsapCall)
@@ -246,10 +295,10 @@ export default function Landing() {
       {/* <div id="Home-Container"> */}
 
         <div id="landing-left">
-            <p id="landing-line1">One App For </p>
-            <p id="landing-line2">New Technologies</p>
-            <p id="landing-line3">Fun Projects</p>
-            <p id="landing-line4">Super Cool Things</p>
+            <p id="landing-line1">Experimentation</p>
+            <p id="landing-line2">GreenSock </p>
+            <p id="landing-line3">Games</p>
+            <p id="landing-line4">Animations</p>
         </div>
 
         <div id="landing-right">
@@ -270,6 +319,20 @@ export default function Landing() {
             <div id="greetingTextL13">i</div>
             <div id="greetingTextL14">o</div>
             <div id="greetingTextL15">n</div>
+          </div>
+
+          <div id="grass">
+            <div id="cataContainer">
+              <div id='cata1'></div>
+              <div id='cata2'></div>
+              <div id='cata3'></div>
+              <div id='cata4'></div>
+              <div id='cata5'></div>
+              <div id='cata6'></div>
+              <div id='cata7'></div>
+              <div id="cataHead"></div>
+              <div id="eye"></div>
+            </div>
           </div>
         </div>
         {/* <p id="test1">Here</p> */}
