@@ -519,6 +519,23 @@ text-shadow: 1px 1px #009cf5; */
   background: rgba(38, 97, 129, 0.767);
 }
 
+
+/* speedtyper landing */
+#landingSpeedTyper{
+  background-color: #1d1d1d;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+#speedTyperLink{
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
 @media (max-width: 1000px) {
   #landing-h1{
     margin-top: 10px;
@@ -567,6 +584,19 @@ text-shadow: 1px 1px #009cf5; */
   display: flex;
   opacity: 0;
 }
+
+#pressAnyKey{
+  opacity: 0;
+  position: absolute;
+  text-align: center;
+  color: white;
+  /* border: 1px solid white; */
+  font-size: 40px;
+  top: 300px;
+  width: 100vw;
+}
+
+
 
 #cata1{
   width: 2rem;

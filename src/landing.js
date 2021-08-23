@@ -45,6 +45,7 @@ export default function Landing() {
 
   let sunX = 0
   let sunY = 0
+  let text = true
   document.addEventListener('keydown', function(event){
     console.log(`Key: ${event.key} with keycode ${event.keyCode} has been pressed`);
 
@@ -79,9 +80,18 @@ export default function Landing() {
       reset = true
       counter += 50
      
-      if (counter <560){
+      if (counter < 560){
         sunY += -30
         sunX += 60  
+
+        if (counter > 150){
+          document.getElementById('pressAnyKey').style.opacity = 0
+        }
+      }
+      else if(counter === 240){
+        sunY += -30
+        sunX += 60   
+        document.getElementById('pressAnyKey').style.opacity = 0
       }
       else{
         sunY += 30
@@ -301,6 +311,7 @@ export default function Landing() {
       .to('#grass', { duration: 1, display: 'block', opacity: 1})
       .to('#grass', { duration: 3, width: '70vw'})
       .to('#cataContainer, #sun', {opacity: 1})
+      .to('#pressAnyKey', {opacity: 1})
 
       // .to('#Home-Container', {backgroundColor: 'white'}).add('end', 8.3)
       // .to('#landing-left-container1', {marginLeft: '40vw', backgroundColor: "#05d9e8"}, 'end')
@@ -345,6 +356,8 @@ export default function Landing() {
             <div id="greetingTextL14">o</div>
             <div id="greetingTextL15">n</div>
           </div>
+
+          <div id="pressAnyKey"><p>Press the 'f' Key</p></div>
 
           <div id="grass">
             <div id="cataContainer">

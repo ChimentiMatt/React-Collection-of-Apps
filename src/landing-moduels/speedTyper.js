@@ -8,15 +8,16 @@ import { NavLink } from "react-router-dom";
 
 export default function SpeedTyperLanding() {
     return(
-        <>
-        <Header />
-        <p>Speed Typer</p>
-        
-            <Router forceRefresh>
-              <NavLink id="GS-MTM-Link" to="/gsap">
-                Visit Page
-              </NavLink>
-            </Router>'
-        </>
+      <>
+      <Header />
+          <div id="landingSpeedTyper">
+              <p>Speed Typer</p>
+                <Router forceRefresh>
+                  <NavLink id="speedTyperLink" to="/typer">
+                    Visit Page
+                  </NavLink>
+                </Router>
+        </div>
+      </>
     )
 }
