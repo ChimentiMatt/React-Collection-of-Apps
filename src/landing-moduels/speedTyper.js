@@ -10,7 +10,13 @@ export default function SpeedTyperLanding() {
     return(
         <>
         <Header />
-        <p>Testdfsgsdgsdfgsgfadfgdagdfgsdfgdsfgdsgdsgsdgdgdfsgsdgrdgfdgsdgdgsdgdf</p>
+        <p>Speed Typer</p>
+        
+            <Router forceRefresh>
+              <NavLink id="GS-MTM-Link" to="/gsap">
+                Visit Page
+              </NavLink>
+            </Router>'
         </>
     )
 }
