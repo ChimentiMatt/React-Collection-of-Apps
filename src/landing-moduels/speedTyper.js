@@ -11,7 +11,8 @@ export default function SpeedTyperLanding() {
       <>
       <Header />
           <div id="landingSpeedTyper">
-              <p>Speed Typer</p>
+              <p id="speedTyperTitle">Speed Typer</p>
+              <p>Test yourself by seeing how many words you can type correctly in a minute. See how high of a score you can get.</p>
                 <Router forceRefresh>
                   <NavLink id="speedTyperLink" to="/typer">
                     Visit Page

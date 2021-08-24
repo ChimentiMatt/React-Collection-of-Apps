@@ -533,7 +533,14 @@ text-shadow: 1px 1px #009cf5; */
   text-decoration: none;
 }
 
-
+#speedTyperTitle{
+  color: #b7c1de;
+  text-shadow: -2px -2px #d1f7ff;
+  font-family: 'Arimo', sans-serif;
+  font-size: 55px;
+  position: relative;
+  top: 110px;
+}
 
 
 @media (max-width: 1000px) {
