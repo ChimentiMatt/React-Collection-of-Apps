@@ -9,7 +9,7 @@ export default function Header() {
     const MTM = document.getElementById("GS-MTM-Btn");
     const TL = document.getElementById("Timeline-Btn");
     const ST = document.getElementById("Speedtyper-btn");
-    const SP = document.getElementById("Spelling-btn");
+    // const SP = document.getElementById("Spelling-btn");
 
     Home.addEventListener("mouseenter", () => {
       let tl = gsap.timeline({});
@@ -36,12 +36,12 @@ export default function Header() {
       tl.to("#gsaplink4", { duration: 0.1, rotation: -5 });
       tl.to("#gsaplink4", { duration: 0.1, rotation: 0 });
     });
-    SP.addEventListener("mouseenter", () => {
-      let tl = gsap.timeline({});
-      tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
-      tl.to("#gsaplink5", { duration: 0.1, rotation: -5 });
-      tl.to("#gsaplink5", { duration: 0.1, rotation: 0 });
-    });
+    // SP.addEventListener("mouseenter", () => {
+    //   let tl = gsap.timeline({});
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: -5 });
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: 0 });
+    // });
   });
   return (
     <div id="landing-header-container">
@@ -82,7 +82,7 @@ export default function Header() {
               </div>
             </Router>
 
-            <Router forceRefresh>
+            {/* <Router forceRefresh>
               <div id="gsaplink4">
                 <NavLink 
                   id="Speedtyper-btn" 
@@ -92,14 +92,26 @@ export default function Header() {
                   SpeedTyper
                 </NavLink>
               </div>
+            </Router> */}
+
+            <Router forceRefresh>
+            <div id="gsaplink4">
+            <NavLink 
+                  id="Speedtyper-btn" 
+                  className="header-link" 
+                  to="/landing-spelling"
+                >
+                  SpeedTyper
+                </NavLink>
+                </div>
             </Router>
 
-
-            <div id="gsaplink5">
+{/* 
               <button id="Spelling-btn" className="header-link">
-                Spelling
-              </button>
-            </div>
+                
+              </button> */}
+              
+      
             <div id="card-links-deadspace"></div>
           </div>
         </div>

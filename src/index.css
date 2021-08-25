@@ -522,26 +522,69 @@ text-shadow: 1px 1px #009cf5; */
 
 /* speedtyper landing */
 #landingSpeedTyper{
+  /* display: flex;
+  justify-content: center;
+  flex-direction: column; */
   background-color: #1d1d1d;
-  height: 100vh;
+  height: 90vh;
   color: white;
   text-align: center;
+
 }
 
-#speedTyperLink{
-  color: white;
-  text-decoration: none;
-}
+
 
 #speedTyperTitle{
+  opacity: 0;
   color: #b7c1de;
   text-shadow: -2px -2px #d1f7ff;
   font-family: 'Arimo', sans-serif;
   font-size: 55px;
   position: relative;
-  top: 110px;
+  top: 20px;
 }
 
+#speedTyperText{
+  margin-top: 5rem;
+  font-size: 25px;
+  font-size: 0px;
+  margin-bottom: 10rem;
+  margin-left: 25%;
+  margin-right: 25%;
+  line-height: 1.6;
+}
+
+#clock{
+  /* display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center; */
+  margin-left: 45vw;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 50%;
+  background: blanchedalmond;
+}
+#clockHand{
+  position: relative;
+  left: 59%;
+
+  height: 50%;
+  /* margin-bottom: 50%; */
+  transform: rotate(120deg);
+  width: 2%;
+  background: black;
+}
+
+#speedTyperLink{
+  margin-top: 2rem;
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+  text-shadow: -1px -1px #617f85;
+  text-decoration: none;
+  font-family: 'Arimo', sans-serif;
+}
 
 @media (max-width: 1000px) {
   #landing-h1{

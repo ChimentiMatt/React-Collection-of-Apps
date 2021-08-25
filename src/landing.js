@@ -115,7 +115,7 @@ export default function Landing() {
     document.getElementById('GS-MTM-Btn').style.opacity = 0
     document.getElementById('Timeline-Btn').style.opacity = 0
     document.getElementById('Speedtyper-btn').style.opacity = 0
-    document.getElementById('Spelling-btn').style.opacity = 0
+    // document.getElementById('Spelling-btn').style.opacity = 0
 
     
     const trigger = [...document.getElementsByClassName("header-link")]

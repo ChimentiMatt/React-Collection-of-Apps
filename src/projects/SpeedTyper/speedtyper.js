@@ -134,9 +134,10 @@ export default function SpeedTyper() {
   });
 
   const Start = () => {
+
     if (!start) {
       setScore(0);
-
+ 
       intervalRef.current = setInterval(decreaseNum, 1000);
 
       document.getElementById("st-text").disabled = false;
@@ -200,8 +201,10 @@ export default function SpeedTyper() {
     <div className="typer-Page">
       <div className="st-container">
         <div className="st-box">
-          <h1 id="st-title">Typing Test</h1>
+          <div id="st-tile-and-time">
+          <h1 id="st-title">SpeedTyper</h1>
           <p id="st-time">Time Remaining: {num}s</p>
+          </div>
           <p id="st-score">Score: {score}</p>
           <p id="st-ending-text"></p>
 

@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nunito+Sans:wght@300;700&display=swap');
 .spelling-page{
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -9,8 +11,8 @@
     background-color: #57add8;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     font-family: 'Nunito Sans', sans-serif;
 }
 
@@ -19,7 +21,7 @@
     justify-content: center;
     align-items: center;
     height: 362px;
-
+    margin-top: 25vh;
 
 }
 
@@ -64,14 +66,16 @@
 }
 
 #sp-instruction{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: small;
 }
 
 #sp-start-btn{
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+    margin-top: 10px;
+    /* margin-bottom: 20px; */
+}
+#sp-speak{
+    margin-bottom: 10px;
 }
 
 #sp-text{
@@ -91,6 +95,23 @@
     height: 0;
 }
 
+#missed-Container{
+    display: flex;
+    flex-direction: row;
+    width: 60vw;
+    /* background: red; */
+    margin-left: 20vw;
+    margin-right: 20vw;
+    height: 40vh;
+
+}
+#spelling-ul{
+    color:  black;
+    overflow-wrap: break-word;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
 @media (max-width: 800px) {
 
     .sp-box{

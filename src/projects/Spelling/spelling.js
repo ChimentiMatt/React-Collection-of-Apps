@@ -4,7 +4,7 @@ import { useSpeechSynthesis } from 'react-speech-kit';
 export default function Spelling() {
   const [value, setValue] = useState('');
   const { speak } = useSpeechSynthesis();
-
+  let counter = 0
   let intervalRef = useRef();
   const [num, setNum] = useState(60);
   const [start, setStart] = useState(false);
@@ -127,6 +127,7 @@ export default function Spelling() {
 
   const Start = () => {
     if (!start) {
+      document.getElementById('sp-start-btn').innerHTML = "New Word"
       setRandomIndex(Math.floor(Math.random() * (100 - 0)) + 1);
       RandomIndex();
 
@@ -178,10 +179,11 @@ export default function Spelling() {
 
 
   return (
+    <>
     <div className="spelling-page">
       <div className="sp-container">
         <div className="sp-box">
-          <h1 id="sp-title">Spelling Blaster</h1>
+          <h1 id="sp-title">Spelling Master</h1>
 
           <p id="sp-score">Score: {score}</p>
           <p id="sp-ending-text"></p>
@@ -211,10 +213,32 @@ export default function Spelling() {
               value={value}
               onChange={(event) => setValue(event.target.value)}
             /> */}
-            <button onClick={() => speak({ text: displayWord })}>Speak</button>
+            <button id="sp-speak" onClick={() => speak({ text: displayWord })}>Speak</button>
           </div>
         </div>
       </div>
+      <div id="missed-Container">
+  
+        {spellingList.map(item => {
+          
+          if (counter > 0){
+
+          
+
+          return (
+            <p id="spelling-ul" >
+              Typo: {item.typo} | Word: {item.word} 
+            </p>
+          )
+        }
+          else{
+            counter += 1
+          }
+          
+        })}
+   
+        </div>
     </div>
+      </>
   );
 }

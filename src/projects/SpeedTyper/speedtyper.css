@@ -6,7 +6,9 @@
     padding: 0;
     text-align: center;
     font-size: 30px;
-    background-color: #57add8;
+    /* background-color: #57add8; */
+    background: #333;
+    background-image: linear-gradient(to bottom, #051937, #042d60, #02438c, #0559ba, #1270eb);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -24,7 +26,8 @@
 .st-box{
     border: 1px solid black;
     border-radius: 13px;
-    background-color: #cfe0e8;
+    /* background-color: #cfe0e8; */
+    background: white;
 
 }
 
@@ -36,21 +39,30 @@
     visibility: hidden
 }
 
+#st-tile-and-time{
+    background-image: linear-gradient(to bottom, #0b468c, #4563a0, #6c81b5, #92a0c9, #b7c1de);    
+    background-image: linear-gradient(to top, #05d9e8, #0fbbc7, #129da7, #138088, #12656b);   
+    background: white;
 
+     border-radius: 13px 13px 0px 0px;
+}
 #st-title{
     color: #000;
     padding-bottom: 10px;
     padding-top: 10px;
-    background-color: #87bdd8;
+    /* background-color: #87bdd8;
+    background: black; */
     border-radius: 13px 13px 0px 0px;
-    color: white;
+    /* color: white; */
 }
 
 #st-time {
-    border-top: 1px solid black;
+    /* border-top: 1px solid black; */
     border-bottom: 1px solid black;
     width: 500px;
-    background-color: #b7d7e8;
+    /* background: black; */
+    /* background-color: white; */
+    /* color: white; */
     padding-top: 10px;
     padding-bottom: 10px;
 }
