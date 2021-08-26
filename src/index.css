@@ -817,18 +817,7 @@ text-shadow: 1px 1px #009cf5; */
   text-shadow: 1px 1px 10px  white ;
 }
 #mobileNotice{
-  font-family: 'Arimo', sans-serif;
-  line-height: 1.5;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(255, 140, 198);
-  background-color: #1d1d1d;
-  color: rgb(140, 222, 255);
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  opacity: 0;
-  padding-top: 50%;
+display: none;
 }
 #mobileNotice p{
   font-size: 20px;
@@ -840,6 +829,39 @@ text-shadow: 1px 1px #009cf5; */
 
 
 @media (max-width: 1000px) {
+  body{
+    position: fixed;
+  }
+  #mobileNotice{
+    font-family: 'Arimo', sans-serif;
+    line-height: 1.5;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(255, 140, 198);
+    background-color: #1d1d1d;
+    color: rgb(140, 222, 255);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    display: block;
+    /* opacity: 0; */
+    padding-top: 200px;
+  }
+  #mobileNotice p{
+    font-size: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  #greetingText{
+    display: none;
+  }
+  #haveFun{
+    display: none;
+  }
+/* 
+
   #landing-h1{
     margin-top: 10px;
     text-align: center;
@@ -871,5 +893,5 @@ text-shadow: 1px 1px #009cf5; */
   }
   #Spelling-btn{
     font-size: 16px;
-  }
+  } */
 }
