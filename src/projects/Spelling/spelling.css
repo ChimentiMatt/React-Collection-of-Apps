@@ -134,9 +134,9 @@
     flex-direction: row;
     flex-direction: column;
     margin-top: 2rem;
-
 }
 #typoWordDisplay{
+
     margin-bottom: .2rem;
     width: 15vw;
     display: flex;
@@ -144,10 +144,11 @@
     /* justify-content: space-between; */
     /* border: 1px solid black; */
 
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 #spelling-ul{
     color:  black;
+    color: white;
     margin-left: 1rem;
     margin-right: 1rem;
     /* padding: 1rem; */
