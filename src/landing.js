@@ -36,10 +36,13 @@ import Spelling from "./projects/Spelling/spelling.js";
 import "./projects/Spelling/spelling.css";
 import gsapCore from "gsap/gsap-core";
 
+// const isMobile = window.innerWidth >= 500;
+// if (isMobile == true) {}
+
 export default function Landing() {
   const [mtmSelected, setMtmSelected] = useState(false);
   const [tlSelected, setTlSelected] = useState(false);
-  const [cataLeaf, setCataLeaf] = useState(false);
+  const [RCAnimated, setRCAnimated] = useState(false);
 
   let counter = 0;
   let reset = false;
@@ -52,7 +55,18 @@ export default function Landing() {
       `Key: ${event.key} with keycode ${event.keyCode} has been pressed`
     );
     if (counter === 1040){
-      
+      let tl = gsap.timeline({});
+      tl.to(
+        "#cata1, #cata2, #cata3, #cata4, #cata5, #cata6, #cata7, #cataHead, #sun, #grass, #leaf",
+        { duration: 2, opacity: 0 }
+      );
+      tl.to('#haveFun', {duration: 2,opacity: 1, zIndex: 100})
+
+      let tlr = gsap.timeline({ repeat: -1 });
+      tlr.to('#haveFunText', {duration: 2, color: '#009cf5'})
+      tlr.to('#haveFunText', {duration: 2, color: '#1d1d1d'})
+      tlr.to('#haveFunText', {duration: 2, color: '#009cf5'})
+
     }
     else if (event.code === "Space" && reset === true ) {
       gsap.to(
@@ -97,8 +111,10 @@ export default function Landing() {
         sunX += 60;
 
         if (counter > 150) {
-          // document.getElementById("pressAnyKey").style.opacity = 0;
-          gsap.to('#pressAnyKey', {duration: 4, opacity: 0})
+
+
+          gsap.to('#pressAnyKey', {duration: 2, opacity: 0})
+    
         }
       }
       // else if(counter === 240){
@@ -293,8 +309,10 @@ export default function Landing() {
   }
 
   function AnimateRC() {
-    const isMobile = window.innerWidth >= 500;
-    if (isMobile == true) {
+    if (RCAnimated === true)    {
+
+    }
+    else{ 
       console.log("cats");
       var tl = gsap.timeline({});
 
@@ -322,11 +340,9 @@ export default function Landing() {
         .to("#grass", { duration: 3, width: "70vw" })
         .to("#cataContainer, #sun, #leaf, #leafStem", { opacity: 1 })
         .to("#pressAnyKey", { opacity: 1 });
-
-      // .to('#Home-Container', {backgroundColor: 'white'}).add('end', 8.3)
-      // .to('#landing-left-container1', {marginLeft: '40vw', backgroundColor: "#05d9e8"}, 'end')
-      // .call(gsapCall)
-    }
+        setRCAnimated(true)
+      }
+  
   }
   function gsapCall() {
     document.getElementById("greetingText").innerHTML = "FUN TIMES";
@@ -386,6 +402,11 @@ export default function Landing() {
 
         <div id="sun"></div>
       </div>
+
+      <div id="haveFun">
+        <p id="haveFunText">Have Fun</p>
+
+        </div>
       {/* <p id="test1">Here</p> */}
       {/* </div> */}
       {/* 

@@ -230,6 +230,7 @@
   font-size: 200px;
   position: relative;
   top: -50px;
+
 }
 #greetingText:hover{
   cursor: pointer;
@@ -631,40 +632,7 @@ text-shadow: 1px 1px #009cf5; */
 }
 
 
-@media (max-width: 1000px) {
-  #landing-h1{
-    margin-top: 10px;
-    text-align: center;
-    font-size: 35px;
-    padding-left: 0px;
-    width: 100vw;
-  }
-  #text1{
-    position: relative;
-    top: -50px;
-    font-size: 80px;
 
-  }
-  #card-links{
-    width: 100vw;
-
-  }
-  #Home-Btn{
-    font-size: 16px;
-  }
-  #GS-MTM-Btn{
-    font-size: 16px;
-  }
-  #Speedtyper-btn{
-    font-size: 16px;
-  }
-  #Timeline-Btn{
-    font-size: 16px;
-  }
-  #Spelling-btn{
-    font-size: 16px;
-  }
-}
 
 
 #grass{
@@ -831,4 +799,57 @@ text-shadow: 1px 1px #009cf5; */
   transform: rotate(80deg);
   background-color: green;
   opacity: 0;
+}
+
+#haveFun{
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+
+  text-align: center;
+  z-index: 0;
+  color: #009cf5;
+  
+  font-family: 'Arimo', sans-serif;
+  font-size: 10rem;
+  text-shadow: 1px 1px 10px  white ;
+}
+
+
+
+@media (max-width: 1000px) {
+  #landing-h1{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 35px;
+    padding-left: 0px;
+    width: 100vw;
+  }
+  #text1{
+    position: relative;
+    top: -50px;
+    font-size: 80px;
+
+  }
+  #card-links{
+    width: 100vw;
+
+  }
+  #Home-Btn{
+    font-size: 16px;
+  }
+  #GS-MTM-Btn{
+    font-size: 16px;
+  }
+  #Speedtyper-btn{
+    font-size: 16px;
+  }
+  #Timeline-Btn{
+    font-size: 16px;
+  }
+  #Spelling-btn{
+    font-size: 16px;
+  }
 }
