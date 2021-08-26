@@ -121,6 +121,229 @@ export default function Spelling() {
     "made",
     "may",
     "part",
+
+    "advantage",
+    "admission",
+    'advertising',
+    'agency',
+    'agenda',
+    'analyst',
+    'anticipate',
+    'audience',
+    'awareness',
+
+    'barrier',
+    'beautiful',
+    'benefit',
+    'billion',
+    'breathe',
+    'burden',
+    'business',
+
+    'capability',
+    'capture',
+    'carrier',
+    'ceiling',
+    'ceremony',
+    'championship',
+    'characteristic',
+    'characterize',
+    'chocolate',
+    'circumstance',
+    'cognitive',
+    'communicate',
+    'congressional',
+    'correspondent',
+
+    'decision',
+    'decrease',
+    'defendant',
+    'democracy',
+    'demonstrate',
+    'deserve',
+    'dialogue',
+    'dimension',
+    'dismiss',
+    'distribution',
+
+    'economic',
+    'effectively',
+    'elementary',
+    'emphasis',
+    'enforcement',
+    'environment',
+    'extraordinary',
+
+    'facility',
+    'familiar',
+    'fellow',
+    'formation',
+    'fundamental',
+    'furthermore',
+
+    'generally',
+    'government',
+    'guarantee',
+    'guideline',
+
+    'headquarters',
+    'helicopter',
+    'hypothesis',
+
+    'identification',
+    'illustrate',
+    'incentive',
+    'independence',
+    'institutional',
+    'intervention',
+    'involvement',
+
+    'journalist',
+    'judgment',
+
+    'knowledge',
+
+    'language',
+    'legacy',
+    'legitimate',
+    'legislation',
+    'literature',
+
+    'magazine',
+    'management',
+    'manufacturing',
+    'marriage',
+    'measurement',
+    'mixture',
+    'mortgage',
+
+    'necessarily',
+    'neighborhood',
+    'nevertheless',
+    'occasionally',
+    'orientation',
+    
+    'participation',
+    'perception',
+    'phenomenon',
+    'phrase',
+    'prescription',
+
+    'quarterback',
+
+    'recommendation',
+    'regardless',
+    'representative',
+    'reservation',
+    'responsible',
+
+    'satisfaction',
+    'scholarship',
+    'secretary',
+    'significantly',
+    'sophisticated',
+
+    'technology',
+    'testimony',
+    'tournament',
+    'tremendous',
+
+    'unfortunately',
+    'unusual',
+
+    'vegetable',
+    'vulnerable',
+
+    'wisdom',
+    'whisper',
+
+    'xylophone',
+
+    'yearning',
+    'yielding',
+
+    'zeal',
+    'zealous',
+    'zestful'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
   ]);
   const [displayWord, setDisplayWord] = useState("");
   const decreaseNum = () => setNum((prev) => prev - 1);
