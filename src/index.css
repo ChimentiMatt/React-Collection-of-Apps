@@ -553,11 +553,14 @@ text-shadow: 1px 1px #009cf5; */
   opacity: 0;
 }
 
-
+#staticDemo{
+  margin-top: 6rem;
+  /* margin-bottom: 1rem; */
+  color: hsla(146, 63%, 63%, 0.50)
+}
 #enterWordBelow{
   font-size: 1.5rem;
   margin-bottom: .5rem;
-  margin-top: 8rem;
   font-family: 'Arimo', sans-serif;
   color: #65dc98;
 }
@@ -607,7 +610,8 @@ text-shadow: 1px 1px #009cf5; */
 #spLandingAnswer{
   /* display: flex; */
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
   opacity: 0;
 }
 #spLandingAnswer p{

@@ -54,6 +54,7 @@ export default function SpellerLanding() {
     
 
              <div id='spellingDemo'>
+                <p id="staticDemo">(Static Demo)</p>
                 <p id="enterWordBelow">Enter the word that you hear below</p>
                 <br></br>
                 <input id="inputText" ></input>            
