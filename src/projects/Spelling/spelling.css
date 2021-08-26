@@ -49,8 +49,8 @@
     padding-top: 10px;
     background-color: #333;
     border-radius: 5px 5px 0px 0px;
-    color: white;
     color: #65dc98;
+    color: white;
     padding: 20px;
     /* padding-bottom: 30px; */
 }
@@ -85,16 +85,32 @@
     font-weight: bolder;
     /* margin-bottom: 20px; */
     background-color: #65dc98;
+    background-color: #00aff2;
+    background: white;
     border-radius: 5px;
+    border: none;
 }
+#sp-start-btn:hover{
+    background: #00aff2;
+}
+
+
+
 #sp-speak{
     margin-bottom: 10px;
     height: 2rem;
     width: 4rem;
     font-weight: bolder;
-    background-color: #65dc98;
+    background-color: #00aff2;
+    background: white;
     border-radius: 5px;
+    border: none;
 }
+#sp-speak:hover{
+    background: #00aff2;
+}
+
+
 
 #sp-text{
     margin-top: 20px;

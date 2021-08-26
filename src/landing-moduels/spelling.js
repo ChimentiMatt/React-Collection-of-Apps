@@ -39,6 +39,8 @@ export default function SpellerLanding() {
     tl.to('#spellingTitle', {duration:1, opacity:1})
     tl.to('#spellingText', {duration:1, opacity: 1})
     tl.to('#spellingDemo', {duration: 1, opacity: 1})
+    tl.to('#spellingLink', {duration: 1, opacity: 1})
+
   })
     return(
       
@@ -46,18 +48,18 @@ export default function SpellerLanding() {
       <Header />
           <div id="landingSpeedTyper">
               <p id="spellingTitle">Spelling Assist</p>
-              <p id="spellingText">Listen to the word and then try to spell it.</p>
-              <p id="spellingText">If you are incorrect, Spelling Assist will display your spelling as well as the correct spelling to help you learn. Try the demo below.</p>
+
+              <p id="spellingText">Listen to the word and then try to spell it. If you are incorrect, Spelling Assist will display your spelling as well as the correct spelling to help you learn. Try the demo below.</p>
 
     
 
              <div id='spellingDemo'>
                 <p id="enterWordBelow">Enter the word that you hear below</p>
-                <button id="sp-speak-landing" onClick={() => speak({text: word}, showSubmit()  )}>Hear Word</button>
                 <br></br>
                 <input id="inputText" ></input>            
                 <button id="landingSpellBtn" type="submit" onClick={() => submitFunc() }>Submit</button>
                 <br></br>
+                <button id="sp-speak-landing" onClick={() => speak({text: word}, showSubmit()  )}>Hear Word</button>
     
                 <br></br>
              

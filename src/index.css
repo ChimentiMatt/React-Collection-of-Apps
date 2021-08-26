@@ -306,36 +306,35 @@
 
 #GS-MTM-Link{
   opacity: 0;
-  font-size: 30px;
+  font-size: 40px;
   text-decoration: none;
   /* color: #00aff2; */
   color: #00aff2;
-
 }
 
 #GS-MTM-Link:hover{
-  color: #00aff2;
+  color: white;
 }
 
 #GS-MTM-Mars-Image-Container{
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
 #GS-MTM-Mars-Image{
   position: relative;
-
+  margin-top: 1rem;
   z-index: 100;
   opacity: 0;
-  height: 400px;
+  height: 350px;
 }
 
 #GS-MTM-Ship-Image{
   position: absolute;
   z-index: 2;
   left: -475px;
-  height: 100px;
+  height: 70px;
   /* opacity: 0; */
 }
 
@@ -393,11 +392,13 @@
 
 #Timeline-Link{
   opacity: 0;
-  font-size: 40px;
+
   text-decoration: none;
   /* color: #00aff2; */
   color: #ff184c;
-  text-shadow: -1px -1px #d1f7ff;
+  color: #00aff2;
+  font-size: 40px;
+  /* text-shadow: -1px -1px #d1f7ff; */
   font-family: 'Arimo', sans-serif;
 
 }
@@ -543,19 +544,22 @@ text-shadow: 1px 1px #009cf5; */
   font-size: 55px;
   position: relative;
   top: 20px;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 #spellingDemo{
+
   margin-top: 3rem;
   opacity: 0;
 }
 
 
 #enterWordBelow{
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: .5rem;
+  margin-top: 8rem;
   font-family: 'Arimo', sans-serif;
+  color: #65dc98;
 }
 #spellingText{
   /* margin-top: 5rem; */
@@ -573,9 +577,11 @@ text-shadow: 1px 1px #009cf5; */
   width: 5rem;
   background-color:#65dc98;
   border-radius: .2rem;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
+  margin-top: 1rem;
   font-weight: bolder;
   border: none;
+  width: 15rem;
   
 }
 #sp-speak-landing:hover{
@@ -620,9 +626,11 @@ text-shadow: 1px 1px #009cf5; */
 
 #spellingLink{
   font-size: 40px;
+  opacity: 0;
   text-decoration: none;
   color: #65dc98;;
-  text-shadow: -1px -1px #a0ffe3;
+  color: #00aff2;
+  /* text-shadow: -1px -1px #a0ffe3; */
   text-decoration: none;
   font-family: 'Arimo', sans-serif;
 }

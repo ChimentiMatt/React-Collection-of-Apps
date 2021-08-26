@@ -27,6 +27,7 @@ export default function MTMLanding() {
   
         // Greensock Animations
         gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
+        
         var tl = gsap.timeline({});
         var tl2 = gsap.timeline({ repeat: -1 });
         var tl3 = gsap.timeline({ repeat: -1 });
@@ -41,7 +42,7 @@ export default function MTMLanding() {
         duration: 17,
         ease: "none",
         motionPath: {
-            path: 'M316.588,54.515 C320.091,45.009 550.13,-50.297 731.606,-91.171 899.107,-128.901 1142.962,-6.328 1300.229,102.041 1507.925,245.163 1708.421,379.131 1987.347,297.854 2288.73,210.033 2124.554,-65.119 1919.739,-14.263 1651.114,52.438 1491.464,116.669 1307.234,239.402 1162.588,335.763 988.005,321.839 732.236,315.242 426.053,307.344 310.082,150.499 310.565,150.751 ',
+            path: 'M309.588,112.515 C313.091,103.009 543.13,7.703 724.606,-33.171 892.107,-70.901 1135.962,51.672 1293.229,160.041 1438.6162,260.2264 1486.573,253.641 1653.373,273.839 1738.328,284.126 1817.0692,275.8371 1952.347,259.854 2264.096,223.02 2120.983,-31.357 1916.739,21.737 1805.151,50.745 1811.753,63.43 1647.86,125.717 1436.797,205.93 1137.5613,277.9234 748.236,241.242 386.47,207.156 303.082,208.499 303.565,208.751 ',
             autoRotate: true,
             },
         });
@@ -63,8 +64,7 @@ export default function MTMLanding() {
         document.getElementById('GS-MTM-Ship-Image').style.height = '25px'
 
         // GS-MTM-Des
-        // Greensock Animations
-        gsap.registerPlugin(MotionPathPlugin, MotionPathHelper);
+
         var tl = gsap.timeline({});
         var tl2 = gsap.timeline({ repeat: -1 });
         var tl4 = gsap.timeline({ repeat: -1 });
@@ -85,7 +85,11 @@ export default function MTMLanding() {
         });
         // Uncomment MotionPathHelper for Plugin, Works in Browser
         // MotionPathHelper.create('#GS-MTM-Ship-Image');
+
+        
         var tl3 = gsap.timeline({ repeat: 10 });
+
+
         tl3.to("#GS-MTM-Mars-Image", { delay: 5, zIndex: 0 });
         tl3.to("#GS-MTM-Mars-Image", { delay: 5, zIndex: 3 });
         // tl4.to("#GS-MTM-Ship-Image", { delay: 5, opacity: 1, height: 35 });
