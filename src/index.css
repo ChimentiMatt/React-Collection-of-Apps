@@ -816,7 +816,27 @@ text-shadow: 1px 1px #009cf5; */
   font-size: 10rem;
   text-shadow: 1px 1px 10px  white ;
 }
-
+#mobileNotice{
+  font-family: 'Arimo', sans-serif;
+  line-height: 1.5;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 140, 198);
+  background-color: #1d1d1d;
+  color: rgb(140, 222, 255);
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+  padding-top: 50%;
+}
+#mobileNotice p{
+  font-size: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
 
 
 @media (max-width: 1000px) {

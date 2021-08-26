@@ -4,9 +4,12 @@ import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import {isMobile} from 'react-device-detect';
+
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { DrawSVGPlugin } from "gsap/dist/DrawSVGPlugin";
+
 
 import Header from "./landing-moduels/header.js";
 
@@ -44,6 +47,9 @@ export default function Landing() {
   const [tlSelected, setTlSelected] = useState(false);
   const [RCAnimated, setRCAnimated] = useState(false);
 
+
+
+  
   let counter = 0;
   let reset = false;
 
@@ -134,6 +140,22 @@ export default function Landing() {
   });
 
   useEffect(() => {
+
+    // const isMobile = window.innerWidth <= 500;
+    // if (isMobile == true) {
+    //   document.getElementById('mobileNotice').style.opacity = 1
+      
+    // }
+
+    if (isMobile) {
+            document.getElementById('mobileNotice').style.opacity = 1
+            document.getElementById('greetingText').style.display = 'none'
+            document.getElementById('landing-right').style.display = 'none'
+            document.getElementById('haveFun').style.display = 'none'
+        
+        
+    }
+
     animateGreetingText();
 
     // ScrollGreensock();
@@ -348,6 +370,7 @@ export default function Landing() {
     document.getElementById("greetingText").innerHTML = "FUN TIMES";
   }
 
+
   return (
     <>
       <Header />
@@ -405,8 +428,17 @@ export default function Landing() {
 
       <div id="haveFun">
         <p id="haveFunText">Have Fun</p>
+      </div>
 
-        </div>
+
+      <div id="mobileNotice">
+        <p>This app was created for learning and experimentation. Because of this, a mobile version will not be created. </p>
+        <p>Please view the content on a PC</p>
+        <p>I kindly as for your understanding as this is my only work that does not offer responsive design and my resources are better applied to freelance projects. </p>
+        <p>I hope you will still view these works as there is some fun content to be seen. </p>
+        <p>Sincerly,</p>
+        <p>Matthew Chimenti</p>
+      </div>
       {/* <p id="test1">Here</p> */}
       {/* </div> */}
       {/* 
