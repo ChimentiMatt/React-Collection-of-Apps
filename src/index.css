@@ -534,57 +534,102 @@ text-shadow: 1px 1px #009cf5; */
 
 
 
-#speedTyperTitle{
+#spellingTitle{
   opacity: 0;
-  color: #b7c1de;
-  text-shadow: -2px -2px #d1f7ff;
+  color: #65dc98;
+  text-shadow: -2px -2px #a0ffe3;
   font-family: 'Arimo', sans-serif;
   font-size: 55px;
   position: relative;
   top: 20px;
+  margin-bottom: 5rem;
 }
 
-#speedTyperText{
-  margin-top: 5rem;
+#spellingDemo{
+  margin-top: 3rem;
+  opacity: 0;
+}
+
+
+#enterWordBelow{
+  font-size: 2rem;
+  margin-bottom: .5rem;
+  font-family: 'Arimo', sans-serif;
+}
+#spellingText{
+  /* margin-top: 5rem; */
   font-size: 25px;
-  font-size: 0px;
-  margin-bottom: 10rem;
+  opacity: 0;
+  font-family: 'Arimo', sans-serif;
+  /* margin-bottom: 10rem; */
   margin-left: 25%;
   margin-right: 25%;
   line-height: 1.6;
 }
-
-#clock{
-  /* display: flex;
-  justify-content: center;
-  text-align: center;
-  align-items: center; */
-  margin-left: 45vw;
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  background: blanchedalmond;
+#sp-speak-landing{
+  padding: .2rem;
+  height: 2rem;
+  width: 5rem;
+  background-color:#65dc98;
+  border-radius: .2rem;
+  margin-bottom: 1rem;
+  font-weight: bolder;
+  border: none;
+  
 }
-#clockHand{
-  position: relative;
-  left: 59%;
-
-  height: 50%;
-  /* margin-bottom: 50%; */
-  transform: rotate(120deg);
-  width: 2%;
-  background: black;
+#sp-speak-landing:hover{
+  background-color: #a0ffe3;
 }
 
-#speedTyperLink{
-  margin-top: 2rem;
+
+#landingSpellBtn{
+  pointer-events: none;
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  background-color:#65dc98;
+  font-weight: bolder;
+  border-radius: 0 .2rem .2rem 0;
+  opacity: .5;
+}
+#landingSpellBtn:hover{
+  background-color: #a0ffe3;
+}
+
+
+#spLandingAnswer{
+  /* display: flex; */
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+#spLandingAnswer p{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+#inputText{
+  padding: .5rem;
+  height: 2rem;
+  font-family: 'Arimo', sans-serif;
+}
+#inputText:focus{
+  outline: none;
+}
+
+#spellingLink{
   font-size: 40px;
   text-decoration: none;
-  color: white;
-  text-shadow: -1px -1px #617f85;
+  color: #65dc98;;
+  text-shadow: -1px -1px #a0ffe3;
   text-decoration: none;
   font-family: 'Arimo', sans-serif;
 }
+#spellingLink:hover{
+  color: #a0ffe3;;
+  text-shadow: -1px -1px #65dc98;
+}
+
 
 @media (max-width: 1000px) {
   #landing-h1{
@@ -750,6 +795,7 @@ text-shadow: 1px 1px #009cf5; */
   border: 5px solid rgb(217, 0, 255);
   background-color: rgb(217, 0, 255);
   border-radius: 50%;
+  z-index: 1;
 }
 
 #eye{
@@ -771,4 +817,18 @@ text-shadow: 1px 1px #009cf5; */
   height: 5rem;
   width: 5rem;
   background: yellow;
+}
+
+#leaf{
+  position: relative;
+  z-index: -1;
+  top: 160px;
+  left: -110px;
+  width: 100px; height: 100px;
+  -moz-border-radius: 100px 0px;
+  -webkit-border-radius: 100px 0px;
+  border-radius: 100px 0px;
+  transform: rotate(80deg);
+  background-color: green;
+  opacity: 0;
 }

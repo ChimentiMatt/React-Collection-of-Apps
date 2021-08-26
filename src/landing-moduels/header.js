@@ -82,18 +82,6 @@ export default function Header() {
               </div>
             </Router>
 
-            {/* <Router forceRefresh>
-              <div id="gsaplink4">
-                <NavLink 
-                  id="Speedtyper-btn" 
-                  className="header-link" 
-                  to="/landing-typer"
-                >
-                  SpeedTyper
-                </NavLink>
-              </div>
-            </Router> */}
-
             <Router forceRefresh>
             <div id="gsaplink4">
             <NavLink 
@@ -101,7 +89,7 @@ export default function Header() {
                   className="header-link" 
                   to="/landing-spelling"
                 >
-                  SpeedTyper
+                  Spelling Assist
                 </NavLink>
                 </div>
             </Router>

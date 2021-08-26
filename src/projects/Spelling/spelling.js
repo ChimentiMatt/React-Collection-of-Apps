@@ -183,7 +183,7 @@ export default function Spelling() {
     <div className="spelling-page">
       <div className="sp-container">
         <div className="sp-box">
-          <h1 id="sp-title">Spelling Master</h1>
+          <h1 id="sp-title">Spelling Assist</h1>
 
           <p id="sp-score">Score: {score}</p>
           <p id="sp-ending-text"></p>
@@ -204,7 +204,7 @@ export default function Spelling() {
           </form>
           
           <button id="sp-start-btn" onClick={() => Start()}>
-            START
+            Start
           </button>
           {/* <button id="" onClick={() => PlayAgain() }>Play Again?</button> */}
           <p>{spellingList[0].typo}</p>
@@ -223,12 +223,15 @@ export default function Spelling() {
           
           if (counter > 0){
 
-          
-
           return (
-            <p id="spelling-ul" >
-              Typo: {item.typo} | Word: {item.word} 
-            </p>
+            <div id="typoWordDisplay">
+              <p id="spelling-ul" >
+                Typo: {item.typo} 
+              </p>
+              <p id="spelling-ul" >
+                Word: {item.word} 
+              </p>
+            </div>
           )
         }
           else{

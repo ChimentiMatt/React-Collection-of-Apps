@@ -3,12 +3,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Nunito+Sans:wght@300;700&display=swap');
 .spelling-page{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     margin: 0;
     padding: 0;
     text-align: center;
     font-size: 30px;
-    background-color: #57add8;
+    background-color: #333;
     height: 100vh;
     display: flex;
     /* justify-content: center; */
@@ -17,16 +17,18 @@
 }
 
 .sp-container{
-    display: flex;
-    justify-content: center;
+    /* display: flex;
+    justify-content: center; */
     align-items: center;
     height: 362px;
     margin-top: 25vh;
-
+    /* width: 100rem; */
+    margin-left: 37vw;
+    /* border: 1px solid black; */
 }
 
 .sp-box{
-    border: 1px solid black;
+    border: 5px solid black;
     border-radius: 13px;
     background-color: #cfe0e8;
 
@@ -45,10 +47,16 @@
     color: #000;
     padding-bottom: 10px;
     padding-top: 10px;
-    background-color: #87bdd8;
-    border-radius: 13px 13px 0px 0px;
+    background-color: #333;
+    border-radius: 5px 5px 0px 0px;
     color: white;
+    color: #65dc98;
     padding: 20px;
+    /* padding-bottom: 30px; */
+}
+
+#sp-score{
+    margin-top: 20px;
 }
 
 #sp-time {
@@ -72,10 +80,20 @@
 
 #sp-start-btn{
     margin-top: 10px;
+    height: 2rem;
+    width: 5rem;
+    font-weight: bolder;
     /* margin-bottom: 20px; */
+    background-color: #65dc98;
+    border-radius: 5px;
 }
 #sp-speak{
     margin-bottom: 10px;
+    height: 2rem;
+    width: 4rem;
+    font-weight: bolder;
+    background-color: #65dc98;
+    border-radius: 5px;
 }
 
 #sp-text{
@@ -98,19 +116,30 @@
 #missed-Container{
     display: flex;
     flex-direction: row;
-    width: 60vw;
-    /* background: red; */
-    margin-left: 20vw;
-    margin-right: 20vw;
-    height: 40vh;
+    flex-direction: column;
+    margin-top: 2rem;
 
+}
+#typoWordDisplay{
+    margin-bottom: .2rem;
+    width: 15vw;
+    display: flex;
+    margin-left: 10vw;
+    /* justify-content: space-between; */
+    /* border: 1px solid black; */
+
+    border-bottom: 1px solid black;
 }
 #spelling-ul{
     color:  black;
-    overflow-wrap: break-word;
-    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /* padding: 1rem; */
     font-weight: bold;
     font-size: 1rem;
+
+    /* border: 1px solid black; */
+    /* height: 10rem; */
 }
 @media (max-width: 800px) {
 
