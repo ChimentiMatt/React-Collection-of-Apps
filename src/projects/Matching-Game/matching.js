@@ -12,12 +12,17 @@ import CardBack from "./img/boc2-transp.png";
 
 export default function Gameboard() {
   const [card1, setCard1] = useState("");
-  const [card1Id, setCard1Id] = useState(0);
+  // let card1 = ''
+  // const [card1Id, setCard1Id] = useState(0);
+  let card1Id = 0
 
   const [card2, setCard2] = useState("");
-  const [card2Id, setCard2Id] = useState(0);
+  // let card2 = ''
+  // const [card2Id, setCard2Id] = useState(0);
+  let card2Id = 0
 
   const [counter, setCounter] = useState(0);
+  // let counter = 0
 
   const [toggleState, setToggleState] = useState(true);
   const [toggleState2, setToggleState2] = useState(true);
@@ -125,32 +130,54 @@ export default function Gameboard() {
     cards.forEach((thisCard, thisIndex) => {
       if (thisIndex === index) {
         thisCard.backOc = thisCard.image;
+        console.log(thisIndex, 'this index')
+        console.log(index, 'index')
 
-        if (counter === 0) {
-          setCard1(thisCard.name);
-          setCard1Id(thisIndex);
-          setCounter(counter + 1);
-        } else if (counter === 1) {
-          console.log("cats poop");
-          setCard2(thisCard.name);
-          setCard2Id(thisIndex);
+        console.log(counter)
+        setCounter(counter +1) 
+        console.log(counter, 'b') 
 
-          if (card1 === thisCard.name) {
-            alert("match");
-            setCounter(0);
-            cards[card1Id].matched = true;
-            cards[thisIndex].matched = true;
-            // card1.matched = true
-            // card2.matched = true
-            // setCard2('')
-            // setCard1('')
-          } else {
-            console.log("Else Statement");
-            cards[card1Id].matched = false;
-            cards[thisIndex].matched = false;
-            setCounter(0);
+        if (counter === 1){
+          console.log('the counter is now 1')
+          setCard1(thisCard.name) 
+        }
+        else if (counter === 2){
+          setCard2(thisCard.name) 
+          console.log('the counter is now 2')
+          if (card1 === card2){
+            alert('match')
           }
         }
+        console.log(card1, 'card1')
+        console.log(card2, 'card2')
+      
+        // if (counter === 1) {
+        //   card1 = thisCard.name
+        //   card1Id = thisIndex
+        //   counter += 1
+        //   console.log(card1 , 'card 1')
+        //   console.log(counter, 'counter a')
+
+
+        // } else if (counter === 2) {
+        //   card2 = thisCard.name
+        //   card2Id = thisIndex
+        //   console.log(card2, 'card 2');
+        //   console.log(counter, 'counter b')
+
+        //   if (card1 === thisCard.name) {
+        //     alert("match");
+        //     counter = 0
+        //     cards[card1Id].matched = true;
+        //     cards[thisIndex].matched = true;
+
+        //   } else {
+        //     console.log("Else Statement");
+        //     cards[card1Id].matched = false;
+        //     cards[thisIndex].matched = false;
+        //     counter = 0
+        //   }
+        // }
       }
     });
   }

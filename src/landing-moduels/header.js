@@ -9,6 +9,7 @@ export default function Header() {
     const MTM = document.getElementById("GS-MTM-Btn");
     const TL = document.getElementById("Timeline-Btn");
     const ST = document.getElementById("Speedtyper-btn");
+    const ERC = document.getElementById("ERC-btn");
     // const SP = document.getElementById("Spelling-btn");
 
     Home.addEventListener("mouseenter", () => {
@@ -35,6 +36,12 @@ export default function Header() {
       tl.to("#gsaplink4", { duration: 0.1, rotation: 5 });
       tl.to("#gsaplink4", { duration: 0.1, rotation: -5 });
       tl.to("#gsaplink4", { duration: 0.1, rotation: 0 });
+    });
+    ERC.addEventListener("mouseenter", () => {
+      let tl = gsap.timeline({});
+      tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
+      tl.to("#gsaplink5", { duration: 0.1, rotation: -5 });
+      tl.to("#gsaplink5", { duration: 0.1, rotation: 0 });
     });
     // SP.addEventListener("mouseenter", () => {
     //   let tl = gsap.timeline({});
@@ -84,12 +91,24 @@ export default function Header() {
 
             <Router forceRefresh>
             <div id="gsaplink4">
-            <NavLink 
-                  id="Speedtyper-btn" 
-                  className="header-link" 
-                  to="/landing-spelling"
-                >
-                  Spelling Assist
+               <NavLink 
+                    id="Speedtyper-btn" 
+                    className="header-link" 
+                    to="/landing-spelling"
+                  >
+                    Spelling Assist
+                </NavLink>
+                </div>
+            </Router>
+
+            <Router forceRefresh>
+            <div id="gsaplink5">
+               <NavLink 
+                    id="ERC-btn" 
+                    className="header-link" 
+                    to="/landing-erc"
+                  >
+                    ERC
                 </NavLink>
                 </div>
             </Router>

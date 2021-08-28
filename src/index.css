@@ -119,6 +119,19 @@
   color: white;
   cursor: pointer;
 }
+#ERC-btn{
+  border: none;
+  background-color: #1d1d1d;
+  color: gray;
+  font-size: 20px;
+}
+#ERC-btn:hover{
+  color: white;
+  cursor: pointer;
+}
+
+
+
 
 #Spelling-btn{
   border: none;
@@ -642,6 +655,23 @@ text-shadow: 1px 1px #009cf5; */
   color: #a0ffe3;;
   text-shadow: -1px -1px #65dc98;
 }
+
+
+
+/* ERC Landing  --------------------------------*/
+#landingERC{
+  background: #1d1d1d;
+  height: 90vh;
+  width: 100vw;
+}
+
+
+
+
+
+
+
+
 
 
 

@@ -9,6 +9,7 @@ import TimelineLanding from "./landing-moduels/timeline.js"
 import SpeedTyperLanding from "./landing-moduels/speedTyper";
 import SpeedTyperPage from "./projects/SpeedTyper/speedtyper.js";
 import SpellerLanding from "./landing-moduels/spelling.js"
+import ERCLanding from "./landing-moduels/erc";
 
 import ERCPage from "./projects/Exchange-Rate-Calc/erc.js";
 import "./projects/Exchange-Rate-Calc/erc.css";
@@ -31,7 +32,7 @@ import "./projects/SpeedTyper/speedtyper.css";
 
 import { render } from "@testing-library/react";
 
-import RPS from "./projects/RPS/rps.js"
+
 
 import Spelling from "./projects/Spelling/spelling.js"
 import "./projects/Spelling/spelling.css";
@@ -57,6 +58,11 @@ function App() {
                 <Route exact path="/erc">
                   <ERCPage />
                 </Route>
+
+                <Route exact path="/landing-erc">
+                  <ERCLanding />
+                </Route>
+
 
                 <Route exact path="/timelinegame">
                   <TimelineGame />
@@ -90,9 +96,6 @@ function App() {
                   <SpeedTyperPage />
                 </Route>
 
-                <Route exact path="/rps">
-                  <RPS />
-                </Route>
 
                 <Route exact path="/spelling">
                   <Spelling />

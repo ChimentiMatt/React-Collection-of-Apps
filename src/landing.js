@@ -33,7 +33,7 @@ import "./projects/SpeedTyper/speedtyper.css";
 
 import { render } from "@testing-library/react";
 
-import RPS from "./projects/RPS/rps.js";
+
 
 import Spelling from "./projects/Spelling/spelling.js";
 import "./projects/Spelling/spelling.css";
@@ -165,6 +165,8 @@ export default function Landing() {
     document.getElementById("GS-MTM-Btn").style.opacity = 0;
     document.getElementById("Timeline-Btn").style.opacity = 0;
     document.getElementById("Speedtyper-btn").style.opacity = 0;
+    document.getElementById("ERC-btn").style.opacity = 0;
+
     // document.getElementById('Spelling-btn').style.opacity = 0
 
     const trigger = [...document.getElementsByClassName("header-link")];
@@ -344,7 +346,7 @@ export default function Landing() {
         .to("#landing-left", { duration: 0.5, width: "60vw", display: "block" })
 
         .to(
-          "#landing-h1, #Home-Btn, #GS-MTM-Btn, #Timeline-Btn, #Speedtyper-btn, #Spelling-btn",
+          "#landing-h1, #Home-Btn, #GS-MTM-Btn, #Timeline-Btn, #Speedtyper-btn, #Spelling-btn, #ERC-btn",
           { opacity: 1 }
         )
         .to("#landing-line1", { delay: 0.5, opacity: 1 })
