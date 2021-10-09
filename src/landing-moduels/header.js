@@ -37,12 +37,12 @@ export default function Header() {
       tl.to("#gsaplink4", { duration: 0.1, rotation: -5 });
       tl.to("#gsaplink4", { duration: 0.1, rotation: 0 });
     });
-    ERC.addEventListener("mouseenter", () => {
-      let tl = gsap.timeline({});
-      tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
-      tl.to("#gsaplink5", { duration: 0.1, rotation: -5 });
-      tl.to("#gsaplink5", { duration: 0.1, rotation: 0 });
-    });
+    // ERC.addEventListener("mouseenter", () => {
+    //   let tl = gsap.timeline({});
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: -5 });
+    //   tl.to("#gsaplink5", { duration: 0.1, rotation: 0 });
+    // });
     // SP.addEventListener("mouseenter", () => {
     //   let tl = gsap.timeline({});
     //   tl.to("#gsaplink5", { duration: 0.1, rotation: 5 });
@@ -101,7 +101,7 @@ export default function Header() {
                 </div>
             </Router>
 
-            <Router forceRefresh>
+            {/* <Router forceRefresh>
             <div id="gsaplink5">
                <NavLink 
                     id="ERC-btn" 
@@ -111,7 +111,7 @@ export default function Header() {
                     ERC
                 </NavLink>
                 </div>
-            </Router>
+            </Router> */}
 
 {/* 
               <button id="Spelling-btn" className="header-link">

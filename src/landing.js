@@ -165,7 +165,7 @@ export default function Landing() {
     document.getElementById("GS-MTM-Btn").style.opacity = 0;
     document.getElementById("Timeline-Btn").style.opacity = 0;
     document.getElementById("Speedtyper-btn").style.opacity = 0;
-    document.getElementById("ERC-btn").style.opacity = 0;
+    // document.getElementById("ERC-btn").style.opacity = 0;
 
     // document.getElementById('Spelling-btn').style.opacity = 0
 
@@ -337,12 +337,11 @@ export default function Landing() {
 
     }
     else{ 
-      console.log("cats");
       var tl = gsap.timeline({});
 
       tl.to("#landing-h1", { opacity: 0, direction: 0 })
-        .to("#greetingText", { duration: 1, fontSize: 100 })
-        .to("#landing-right", { right: 0, width: "40vw" })
+        .to("#greetingText", { duration: 1, fontSize: 80 })
+        .to("#landing-right", { right: 0, width: "50vw" })
         .to("#landing-left", { duration: 0.5, width: "60vw", display: "block" })
 
         .to(
@@ -363,7 +362,7 @@ export default function Landing() {
         .to("#grass", { duration: 1, display: "block", opacity: 1 })
         .to("#grass", { duration: 3, width: "70vw" })
         .to("#cataContainer, #sun, #leaf, #leafStem", { opacity: 1 })
-        .to("#pressAnyKey", { opacity: 1 });
+        .to("#pressAnyKey", { opacity: 1, zIndex: 10 });
         setRCAnimated(true)
       }
   

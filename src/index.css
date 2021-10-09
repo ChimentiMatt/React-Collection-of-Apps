@@ -182,7 +182,7 @@
   font-size: 100px;
 }
 #landing-line1{
-  margin-left: 20%;
+  margin-left: 10%;
   padding-top: 15%;
   width: 0;
   font-weight: bold;
@@ -193,7 +193,7 @@
   white-space: nowrap
 }
 #landing-line2{
-  margin-left: 20%;
+  margin-left: 10%;
   color: rgb(0, 255, 159);
   opacity: 0;
   width: 0;
@@ -201,7 +201,7 @@
   white-space: nowrap
 }
 #landing-line3{
-  margin-left: 20%;
+  margin-left: 10%;
   color: #005678;
   opacity: 0;
   width: 0;
@@ -209,7 +209,7 @@
   white-space: nowrap
 }
 #landing-line4{
-  margin-left: 20%;
+  margin-left: 10%;
   color: #ff2a6d;
   color: #d1f7ff;
   opacity: 0;
@@ -235,7 +235,6 @@
 
 #greetingText{
   display: flex;
-  
   position: absolute;
   color: #ff2a6a;
   text-shadow: -7px -3px  #05d9e8;
@@ -243,6 +242,7 @@
   font-size: 200px;
   position: relative;
   top: -50px;
+  left: 3rem;
 
 }
 #greetingText:hover{
@@ -311,7 +311,7 @@
 #GS-MTM-Des{
   color: white;
   /* margin-top: 20px; */
-  font-size: 25px;
+  font-size: 1rem;
   padding-bottom: 20px;
   position: relative;
   opacity: 0;
@@ -357,6 +357,7 @@
   /* background-color: rgba(128, 128, 128, 0.164)  ; */
   background-color: #1d1d1d;
   height: 90vh;
+  overflow-y: hidden;
 }
 
 #Timeline-Container-h1{
@@ -383,7 +384,7 @@
   line-height: 1.6;
   text-align: center;
   /* border: 1px solid black; */
-  height: 200px;
+  height: 15rem;
   overflow: hidden;
 }
 
@@ -567,7 +568,7 @@ text-shadow: 1px 1px #009cf5; */
 }
 
 #staticDemo{
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   /* margin-bottom: 1rem; */
   color: hsla(146, 63%, 63%, 0.50)
 }
@@ -623,7 +624,6 @@ text-shadow: 1px 1px #009cf5; */
 #spLandingAnswer{
   /* display: flex; */
   font-size: 2rem;
-  margin-bottom: 4rem;
   margin-top: 2rem;
   opacity: 0;
 }
@@ -693,12 +693,13 @@ text-shadow: 1px 1px #009cf5; */
 #pressAnyKey{
   opacity: 0;
   position: absolute;
+  z-index: -10;
   text-align: center;
   color: white;
   /* border: 1px solid white; */
   font-size: 40px;
   top: 300px;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 
@@ -832,7 +833,7 @@ text-shadow: 1px 1px #009cf5; */
 #leaf{
   position: relative;
   z-index: -1;
-  top: 160px;
+  top: 140px;
   left: -110px;
   width: 100px; height: 100px;
   -moz-border-radius: 100px 0px;
@@ -877,12 +878,13 @@ display: none;
   #mobileNotice{
     font-family: 'Arimo', sans-serif;
     line-height: 1.5;
-    height: 100vh;
+    height: 100rem;
     width: 100vw;
     background-color: rgb(255, 140, 198);
     background-color: #1d1d1d;
     color: rgb(140, 222, 255);
     position: absolute;
+    z-index: 9999;
     top: 0;
     z-index: 100;
     display: block;
